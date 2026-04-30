@@ -2,9 +2,9 @@
 # AUTO-GENERATED from cv_data.yaml by scripts/sync_publications.R
 # Edit cv_data.yaml in huntermartaindale/cv, not this file.
 #
-# Generated: 2026-04-30 00:17:22 CDT
+# Generated: 2026-04-30 14:10:11 CDT
 # Source:    ../cv/cv_data.yaml
-# Total:     54 publications
+# Total:     39 publications
 
 - title: Striking or grappling? Comparing public and officers' perceptions of police
     use of force
@@ -16,8 +16,11 @@
   volume: '103'
   pages: '102601'
   doi: 10.1016/j.jcrimjus.2026.102601
+  pdf: pubs/2026_eleuterio-da-rocha_striking-or-grappling-comparing-public-and-officer.pdf
+  plain_summary: |
+    This experiment showed short video clips of a police encounter to nearly 1,000 civilians and 744 law enforcement officers, with the clips varying in the type of force used, either a punch or a takedown, as well as the races of the officer and the suspect. Both civilians and officers consistently rated the takedown as more professional and appropriate than the punch, with takedown officers receiving excellent ratings roughly 15 to 25 percentage points more often across both groups. The race of the officer or suspect did not significantly affect judgments in either group. The findings highlight that perceptions of police force are shaped heavily by how the force looks, not just whether it is legally justified, underscoring the importance of both technique and appearance in public and professional evaluations.
   topics:
-  - policing-decisions
+  - policing-public-opinion
 - title: 'Clarifying methods and interpretations in law enforcement mortality surveillance:
     Response to Kamal'
   authors:
@@ -27,6 +30,9 @@
   volume: '53'
   pages: '101330'
   doi: 10.1016/j.lana.2025.101330
+  pdf: pubs/2026_tanksley_clarifying-methods-and-interpretations-in-law-enfo.pdf
+  plain_summary: |
+    This brief responds to a published commentary raising methodological concerns about a 2025 ALERRT study on law enforcement officer mortality. The authors address questions about how occupation is recorded in mortality data and the potential for statistical bias, explaining the reasoning behind their original analytical decisions. They reaffirm that the study was descriptive rather than causal and offer additional comparisons to further contextualize the findings, noting that the work provides a valuable baseline for understanding officer mortality that future studies can build upon.
   topics:
   - policing-stress
 - title: 'Public opinion and the immediate entry dilemma: A factorial survey experiment
@@ -38,8 +44,11 @@
   volume: '102'
   pages: '102578'
   doi: 10.1016/j.jcrimjus.2025.102578
+  pdf: pubs/2026_martaindale_public-opinion-and-the-immediate-entry-dilemma-a-f.pdf
+  plain_summary: |
+    This study measured what the general public thinks law enforcement officers should do when responding to active shooter events, using two national samples in which participants evaluated more than 15,800 fictional scenarios depicting different officer decisions. Law enforcement officers are most influenced by active threat cues like gunfire or injured victims, but citizens based their judgments primarily on the location of the event, strongly supporting immediate police entry in schools and at parades while being more accepting of a delayed response in settings like large shopping malls. These findings suggest that public expectations and law enforcement training may not always align, which has important implications for police legitimacy and community trust in the aftermath of high-profile events.
   topics:
-  - active-shooter
+  - policing-public-opinion
 - title: 'Mortality among law enforcement officers in the United States: A population-wide
     analysis of the National Occupational Mortality Surveillance data, 2020-2023'
   authors:
@@ -49,6 +58,9 @@
   volume: '52'
   pages: '101270'
   doi: 10.1016/j.lana.2025.101270
+  pdf: pubs/2025_tanksley_mortality-among-law-enforcement-officers-in-the-un.pdf
+  plain_summary: |
+    Using data from the National Occupational Mortality Surveillance program covering more than 15,000 law enforcement officer deaths from 2020 to 2023, this study provides one of the most comprehensive pictures to date of when, why, and among whom officers die. Law enforcement officers showed higher overall death rates compared to the general working-age population, with heart disease, cancer, suicide, and COVID-19 among the leading causes of death for male officers, and cancer being the leading cause for female officers. These findings highlight the urgent need for targeted prevention efforts addressing cardiovascular health, cancer screening, and mental health support within law enforcement.
   topics:
   - policing-stress
 - title: Shift schedule change from 24/48 to 1/3/2/3 improves markers of stress and
@@ -58,6 +70,9 @@
   year: 2025
   journal: Journal of Occupational and Environmental Medicine
   doi: 10.1097/JOM.0000000000003638
+  pdf: pubs/2025_mcallister_shift-schedule-change-from-24-48-to-1-3-2-3-improv.pdf
+  plain_summary: |
+    This study followed career firefighters from the Kyle Fire Department as they transitioned from the traditional 24-hours-on/48-hours-off schedule to a rotating schedule offering longer recovery periods between shifts. Over seven months, firefighters on the new schedule showed significantly lower cortisol levels (a key stress hormone), improved sleep quality, and better overall quality of life. The findings suggest that giving firefighters more time to recover between shifts may meaningfully reduce the physical and mental toll of the job.
   topics:
   - policing-stress
 - title: 'Virtual reality based active shooter training: Added physical stress increases
@@ -68,6 +83,9 @@
   year: 2025
   journal: Psychoneuroendocrinology
   doi: 10.1016/j.psyneuen.2025.107628
+  pdf: pubs/2025_sutton_virtual-reality-based-active-shooter-training-adde.pdf
+  plain_summary: |
+    This study compared the stress responses of 54 participants who either exercised alone or combined exercise with a virtual reality active shooter training drill. Both groups showed increases in biological stress markers, but those who experienced the combined physical and mental challenge reported significantly higher anxiety in the aftermath. The study also found that female participants showed lower stress biomarker responses than male participants overall. These findings suggest that mental stress, such as that encountered in high-stakes training scenarios, adds meaningfully to perceived anxiety beyond what physical exertion produces on its own.
   topics:
   - active-shooter
 - title: To what are we inferring? The widespread misuse of inferential testing in
@@ -77,6 +95,9 @@
   year: 2025
   journal: American Journal of Criminal Justice
   doi: 10.1007/s12103-025-09845-4
+  pdf: pubs/2025_blair_to-what-are-we-inferring-the-widespread-misuse-of.pdf
+  plain_summary: |
+    This study reviewed articles published in 18 of the top-ranked criminology and criminal justice journals to assess how often researchers apply statistical significance tests without meeting the basic requirement of random selection or random assignment. Nearly three-quarters of the reviewed articles used these tests inappropriately, and most researchers focused on whether results were statistically significant rather than on whether they were practically meaningful. The authors call for better statistical training in graduate education, reform of publishing standards, and greater use of exploratory research methods to strengthen the quality of evidence informing criminal justice policy.
   topics:
   - other
 - title: 'Active attacks with motor vehicles: A short report and case study of the
@@ -86,6 +107,9 @@
   year: 2025
   journal: American Journal of Criminal Justice
   doi: 10.1007/s12103-025-09806-x
+  pdf: pubs/2025_blair_active-attacks-with-motor-vehicles-a-short-report.pdf
+  plain_summary: |
+    Prompted by the deadly New Year’s Day 2025 truck attack on Bourbon Street in New Orleans that killed 14 people, this report examines vehicle-based attacks in the United States using data from the ALERRT Active Attack dataset. Although vehicle attacks make up only a small percentage of all active attacks, they result in significantly more injuries than attacks involving other weapons and are increasingly associated with terrorist organizations. The report outlines patterns in U.S. vehicle-based attacks from 2000 to 2025 and offers practical prevention recommendations, including the strategic placement of physical barriers at crowded public events.
   topics:
   - active-shooter
 - title: Relationships between physiological stress biomarkers and cardiovascular
@@ -96,6 +120,9 @@
   year: 2025
   journal: Journal of Occupational and Environmental Medicine
   doi: 10.1097/JOM.0000000000003389
+  pdf: pubs/2025_gonzalez_relationships-between-physiological-stress-biomark.pdf
+  plain_summary: |
+    This study examined the relationships between fitness, body composition, physiological stress, and cardiovascular disease risk among 97 career male firefighters. Firefighters with better cardiorespiratory fitness, greater muscular strength, and healthier body composition had lower markers of insulin resistance, inflammation, and oxidative stress, all of which are linked to heart disease. Notably, salivary stress biomarkers alone were not significantly associated with cardiovascular risk factors, suggesting that fitness and body composition play a more direct role in protecting firefighters' heart health than stress hormones measured in isolation.
   topics:
   - policing-stress
 - title: Markers of fitness, stress, and cardiometabolic disease risk among law enforcement
@@ -109,6 +136,9 @@
   issue: '6'
   pages: 437-444
   doi: 10.1097/JOM.0000000000003357
+  pdf: pubs/2025_mcallister_markers-of-fitness-stress-and-cardiometabolic-dise.pdf
+  plain_summary: |
+    This study examined fitness and health data from 66 male law enforcement officers in Texas to better understand the relationship between physical fitness and risk of heart disease and metabolic illness. Officers with higher cardiorespiratory and muscular fitness had lower insulin resistance, which is a key marker for metabolic disease, while those with higher body fat showed greater levels of inflammation and insulin resistance. The results reinforce that maintaining physical fitness and a healthy body composition are important tools for protecting law enforcement officers from serious long-term health problems.
   topics:
   - policing-stress
 - title: Can a Virtual Reality Training Scenario Elicit a Stress Response Similar
@@ -121,6 +151,8 @@
   issue: '3'
   pages: 17-19
   doi: 10.22215/apb.v1i3.5141
+  plain_summary: |
+    The main benefit of scenario-based training is to create realistic and stressful situations for trainees. Recently, departments have started to use virtual reality (VR) to also create scenario training for officers. The aim of this study is to explore whether virtual reality can also induce stress in the same ways an in-person scenario can. Salivary markers of stress were collected before and after a participant experienced either the VR or the in-person scenario. Results were compared and overall stress responses were shown to be similar, thus further implications for training are discussed.
   topics:
   - policing-stress
 - title: 'Oh, @#%$!: A replication and expansion of Martaindale et al. (2024)'
@@ -129,8 +161,11 @@
   year: 2024
   journal: 'Policing: An International Journal'
   doi: 10.1108/PIJPSM-05-2024-0089
+  pdf: pubs/2024_doyle_oh-a-replication-and-expansion-of-martaindale-et-a.pdf
+  plain_summary: |
+    A previous study looking into the effects of an officer’s use of vulgar language during use of force is elaborated on further. Originally, the lack of audio in videos shown during the study was highlighted as a limitation. Now, audio was added over each video condition showing use of force, and the study was replicated. Results proved to be similar, showing that public perception of use of force is affected by the use of profanity by the officer. With the presence of vulgar language, regardless of if only read or heard, being perceived as less reasonable.
   topics:
-  - other
+  - policing-public-opinion
 - title: 'Interviewing and interrogation practices and beliefs, twenty years later:
     A national self-report survey of American police'
   authors:
@@ -138,6 +173,9 @@
   year: 2024
   journal: Law and Human Behavior
   doi: 10.1037/lhb0000570
+  pdf: pubs/2024_brimbal_interviewing-and-interrogation-practices-and-belie.pdf
+  plain_summary: |
+    This study surveyed 526 U.S. law enforcement officers to see whether beliefs and practices around interviewing and interrogation have changed over the past two decades, comparing results to a landmark 2007 survey. The findings show real progress: more than half of interrogations are now recorded on video, compared to fewer than one in ten in 2007, and officers today are much more likely to acknowledge that false confessions happen. These results suggest that law enforcement has been moving in a more science-informed direction when it comes to questioning practices, even though the exact reasons for that shift remain unclear.
   topics:
   - policing-decisions
 - title: '#FalseFlag: Exploring themes in conspiracy theory tweets regarding the Robb
@@ -147,6 +185,9 @@
   year: 2024
   journal: Journal of Qualitative Criminology
   doi: 10.21428/88de04a1.01db6fab
+  pdf: pubs/2024_doyle_falseflag-exploring-themes-in-conspiracy-theory-tw.pdf
+  plain_summary: |
+    How do conspiracy theories affect the explanation of active shooter events? After confusing and tragic events like active attacks, the public can be more vulnerable to conspiratorial thinking. Two main themes are identified: False flag and Hypothesized reasoning. Results show that many posts following the attack in Uvalde tried to casually explain what happened. But how do these theories affect the people involved in these events?
   topics:
   - active-shooter
 - title: Impact of L-theanine and L-tyrosine on markers of stress and cognitive performance
@@ -159,6 +200,9 @@
   issue: '1'
   pages: '2375588'
   doi: 10.1080/10253890.2024.2375588
+  pdf: pubs/2024_mcallister_impact-of-l-theanine-and-l-tyrosine-on-markers-of.pdf
+  plain_summary: |
+    The ingestion of L-theanine and L-tyrosine has been shown to reduce salivary stress markers and improve cognitive performance. This study aims to take a closer look at if that is true while performing a mental stress challenge in virtual reality. Participants were randomly assigned doses or placebo, then performed a virtual reality active shooter training drill. Saliva samples were taken before and after the drill and results were compared. It was found that L-theanine and L-tyrosine did not affect the markers of stress but could impact cognitive performance.
   topics:
   - active-shooter
 - title: 'Stress response to virtual reality based active shooter training: Impact
@@ -168,6 +212,9 @@
   year: 2024
   journal: Psychoneuroendocrinology
   doi: 10.1016/j.psyneuen.2023.106923
+  pdf: pubs/2024_mcallister_stress-response-to-virtual-reality-based-active-sh.pdf
+  plain_summary: |
+    Virtual reality based active shooter training drills have been shown to induce stress in participants, but how does caffeine consumption affect these results? Caffeine can result in better physical and cognitive performance, so could it perform similarly in a virtual reality situation? Participants were randomly assigned caffeine or a placebo, and saliva samples were taken before and after performing a mental stress task in a virtual reality active shooter scenario. Results show that caffeine consumption increased levels of α-amylase after performing the mental stress task.
   topics:
   - active-shooter
 - title: Can a virtual reality training scenario elicit similar stress response as
@@ -180,6 +227,7 @@
   issue: '1'
   pages: 109-129
   doi: 10.1177/10986111231182729
+  pdf: pubs/2024_martaindale_can-a-virtual-reality-training-scenario-elicit-sim.pdf
   topics:
   - policing-stress
 - title: 'Arm the educators - but not without conditions: A qualitative assessment
@@ -192,6 +240,9 @@
   issue: '4'
   pages: 473-489
   doi: 10.1080/15614263.2023.2287218
+  pdf: pubs/2024_schildkraut_arm-the-educators-but-not-without-conditions-a-qua.pdf
+  plain_summary: |
+    When discussing options for protecting the safety of those in schools from active attacks, one of the most controversial options is to arm teachers. Without any research to support its efficacy, more than half of the U.S. has authorized policies to arm teachers. The public opinion for this is incredibly divided, but what do the responding police officers think of changes like these? Ten subthemes were identified and were grouped into three larger categories: value of armed teachers, training, and other considerations. Results and implications are discussed further.
   topics:
   - active-shooter
 - title: A scientific examination of the 21-foot rule
@@ -211,8 +262,11 @@
   year: 2023
   journal: Journal of Experimental Criminology
   doi: 10.1007/s11292-023-09592-8
+  pdf: pubs/2023_martaindale_wait-for-backup-or-not-how-police-officers-view-th.pdf
+  plain_summary: |
+    If there is an active threat to the public, would police officers wait for more officers to arrive before approaching? This study gathered 796 officers from over 43 states and presented various hypothetical attack situations. Respondents were 14 to 80 times more likely to agree with the hypothetical officer’s decision to approach an attack immediately if a driving force was present. Driving force typically includes things like gunfire or injured victims. If there is an ongoing threat, law enforcement agreed with the public that officers should immediately enter.
   topics:
-  - active-shooter
+  - policing-public-opinion
 - title: Slow breathing reduces biomarkers of stress in response to a virtual-reality
     active shooter training drill
   authors:
@@ -222,6 +276,9 @@
   volume: '11'
   issue: '16'
   doi: 10.3390/healthcare11162351
+  pdf: pubs/2023_dillard_slow-breathing-reduces-biomarkers-of-stress-in-res.pdf
+  plain_summary: |
+    Police, military, and firefighters often experience life-threatening situations. These individuals are trained to use slow breathing techniques while encountering these stressful situations but there is no evidence that tests the effects of these techniques in virtual reality active shooter drills. This study measures biomarkers of stress in response to being assigned one of two slow breathing methods or normal breathing. It is shown that both slow breathing methods resulted in much lower stress markers when compared to normal breathing practices.
   topics:
   - active-shooter
 - title: 'Successfully securing a classroom door in an active shooter event: Examining
@@ -231,6 +288,9 @@
   year: 2023
   journal: Journal of Mass Violence Research
   doi: 10.53076/JMVR74565
+  pdf: pubs/2023_martaindale_successfully-securing-a-classroom-door-in-an-activ.pdf
+  plain_summary: |
+    Can the type of door lock have an impact on someone’s ability to quickly and accurately secure? This study assessed two types of door locks, one that used a push button from the inside to lock the door and another that required a key to activate the lock. Results showed that simple, push-button door locks can be secured with fewer errors and faster than a keyed door lock. Policy recommendations are included.
   topics:
   - active-shooter
 - title: Risk factors for cardiometabolic disease in professional firefighters
@@ -243,6 +303,9 @@
   issue: '2'
   pages: 119-124
   doi: 10.1097/JOM.0000000000002743
+  pdf: pubs/2023_mcallister_risk-factors-for-cardiometabolic-disease-in-profes.pdf
+  plain_summary: |
+    Firefighters are often diagnosed with cardiometabolic disease, which is linked to multiple risk factors. This study looks into how markers of oxidative stress, inflammation, and insulin resistance can also have information vital to cardiometabolic disease risk. Multiple fitness metrics were taken from firefighters of various years of experience, and the results show an importance of a strong cardiorespiratory fitness and low waist circumference could reduce the markers of cardiovascular disease.
   topics:
   - policing-stress
 - title: What are we talking about? Definitional confusion within mass and active
@@ -255,6 +318,9 @@
   issue: '2'
   pages: 4-16
   doi: 10.53076/jmvr47829
+  pdf: pubs/2022_sandel_what-are-we-talking-about-definitional-confusion-w.pdf
+  plain_summary: |
+    Active-shooting events have become a big topic for many, including practitioners, researchers, and the media. With so many points of view, there is usually some confusion around what exactly some of the defining characteristics of these events are. The purpose of this paper is to explore and elaborate more to define these cases with recorded examples. Databases that exist are discussed as well, along with their inclusion criteria.
   topics:
   - active-shooter
 - title: Firefighters with higher cardiorespiratory fitness demonstrate lower markers
@@ -265,6 +331,9 @@
   year: 2022
   journal: Journal of Occupational and Environmental Medicine
   doi: 10.1097/JOM.0000000000002632
+  pdf: pubs/2022_mcallister_firefighters-with-higher-cardiorespiratory-fitness.pdf
+  plain_summary: |
+    A stronger cardiorespiratory fitness level is associated with lower oxidative stress and cardiovascular disease. Yet this correlation has not been studied in firefighters. This study examines firefighters with higher and lower cardiorespiratory levels and their corresponding risk for cardiovascular disease. It was found that high fitness firefighters show significantly lower markers of cardiovascular disease risk and should maintain high cardiorespiratory fitness.
   topics:
   - policing-stress
 - title: '#&$@!!: The impact of swear words on civilians'' perception of officer use
@@ -277,8 +346,11 @@
   issue: '2'
   pages: 194-212
   doi: 10.1177/10986111221111332
+  pdf: pubs/2022_martaindale_the-impact-of-swear-words-on-civilians-perception.pdf
+  plain_summary: |
+    Does an officer’s use of profanity affect how the public responds and reacts to a use of force incident? This study examines two scenarios that show excessive language or a lack of language. The results from 234 responses show that the people considered the exact same video with excessive language to be less reasonable. Possible policy discussions are included due to police officer language can affect civilian perception.
   topics:
-  - policing-decisions
+  - policing-public-opinion
 - title: Virtual reality based active shooter training drill increases salivary and
     subjective markers of stress
   authors:
@@ -288,6 +360,7 @@
   volume: '95'
   issue: '1'
   pages: 105-113
+  pdf: pubs/2022_mcallister_virtual-reality-based-active-shooter-training-dril.pdf
   topics:
   - active-shooter
 - title: Armed and considered capable? Law enforcement officers' attitudes about armed
@@ -299,8 +372,9 @@
   volume: '24'
   issue: '2'
   doi: 10.1057/s41300-022-00142-4
+  pdf: pubs/2022_martaindale_armed-and-considered-capable-law-enforcement-offic.pdf
   topics:
-  - active-shooter
+  - policing-public-opinion
 - title: Should firearms be allowed in K-12 public schools? An analysis of law enforcement's
     perceptions of armed teacher policies
   authors:
@@ -308,6 +382,7 @@
   year: 2022
   journal: Security Journal
   doi: 10.1057/s41284-022-00327-4
+  pdf: pubs/2022_schildkraut_should-firearms-be-allowed-in-k-12-public-schools.pdf
   topics:
   - active-shooter
 - title: An evaluation of light positioning on suspect accuracy in low light environments
@@ -318,6 +393,7 @@
   volume: '5'
   issue: '1'
   doi: 10.1080/24751979.2021.1970482
+  pdf: pubs/2021_blair_an-evaluation-of-light-positioning-on-suspect-accu.pdf
   topics:
   - policing-decisions
 - title: Women demonstrate lower markers of stress and oxidative stress during active
@@ -329,6 +405,7 @@
   volume: '6'
   pages: '100046'
   doi: 10.1016/j.cpnec.2021.100046
+  pdf: pubs/2021_mcallister_women-demonstrate-lower-markers-of-stress-and-oxid.pdf
   topics:
   - active-shooter
 - title: Improving the accuracy of firearm identification in a dynamic use of force
@@ -341,6 +418,7 @@
   issue: '1'
   pages: 104-130
   doi: 10.1177/1098611120944387
+  pdf: pubs/2021_martaindale_improving-the-accuracy-of-firearm-identification-i.pdf
   topics:
   - policing-decisions
 - title: A scientific examination of the 21-foot rule
@@ -352,6 +430,7 @@
   issue: '3'
   pages: 1314-1329
   doi: 10.1080/15614263.2020.1772785
+  pdf: pubs/2021_sandel_a-scientific-examination-of-the-21-foot-rule.pdf
   topics:
   - policing-decisions
 - title: Active shooter training drill increases blood and salivary markers of stress
@@ -362,6 +441,7 @@
   volume: '17'
   issue: '14'
   doi: 10.3390/ijerph17145042
+  pdf: pubs/2020_mcallister_active-shooter-training-drill-increases-blood-and.pdf
   topics:
   - active-shooter
 - title: Correlates of the number shot and killed in active shooter events
@@ -373,6 +453,7 @@
   issue: '4'
   pages: 335-360
   doi: 10.1177/1088767920976727
+  pdf: pubs/2020_blair_correlates-of-the-number-shot-and-killed-in-active.pdf
   topics:
   - active-shooter
 - title: 'Peek or push: An examination of two types of room clearing tactics for active
@@ -384,6 +465,7 @@
   volume: '9'
   issue: '3'
   doi: 10.1177/2158244019871052
+  pdf: pubs/2019_blair_peek-or-push-an-examination-of-two-types-of-room-c.pdf
   topics:
   - active-shooter
 - title: 'The evolution of active shooter response training protocols since Columbine:
@@ -395,6 +477,7 @@
   volume: '35'
   issue: '3'
   doi: 10.1177/1043986219840237
+  pdf: pubs/2019_martaindale_the-evolution-of-active-shooter-response-training.pdf
   topics:
   - active-shooter
 - title: Throwing a chair could save officers' lives during room entries
@@ -405,6 +488,7 @@
   volume: '19'
   issue: '2'
   doi: 10.1177/1461355717711452
+  pdf: pubs/2017_blair_throwing-a-chair-could-save-officers-lives-during.pdf
   topics:
   - policing-decisions
 - title: 'Active shooter events in the workplace: Findings and policy implications'
@@ -415,125 +499,7 @@
   volume: '11'
   issue: '1'
   doi: 10.69554/lcym6472
-  topics:
-  - active-shooter
-- title: 'Inflammation on the frontlines: Linking salivary blood biomarkers to cardiometabolic
-    health and physical fitness parameters in firefighters'
-  authors:
-  - '*McAllister, M. J., Tanksley, P. T., Martaindale, M. H., DeArman, A., Samora,
-    M., Martin, S. E., & Gonzalez, D. E.'
-  year: 2025
-  journal: Preventative Medicine Reports
-  topics:
-  - policing-stress
-- title: 'The Chain of Survival: Responding to an Active Attack'
-  authors:
-  - Blair, J. P., & Martaindale, M. H.
-  year: 2024
-  journal: TPPP, LLC
-  topics:
-  - active-shooter
-- title: Active Shooter/Hostile Event Overview (Data)
-  authors:
-  - Martaindale, M. H.
-  year: 2021
-  journal: In Moore-Merrell, L., Delaney, J. B., & Marino, M. J. Introduction to Active
-    Shooter/Hostile Event Response. Fire Protection Publications
-  topics:
-  - active-shooter
-- title: Active shooter events in the United States - 2000 to 2010
-  authors:
-  - Blair, J. P., & Martaindale, M. H.
-  year: 2013
-  journal: In Blair, J. P., Nichols, T., Burns, D., & Curnutt, J. R. Active Shooter
-    Events and Response. CRC Press LLC
-  topics:
-  - active-shooter
-- title: 'Evaluating police tactics: An empirical assessment of room entry techniques'
-  authors:
-  - Blair, J. P., & Martaindale, M. H.
-  year: 2013
-  journal: Elsevier
-  doi: 10.4324/9781315721644
-  topics:
-  - active-shooter
-- title: 'Putting the lock in lockdown: Examining different options for schools'
-  authors:
-  - Martaindale, M. H.
-  year: 2023
-  journal: Rockefeller Institute of Government
-  topics:
-  - active-shooter
-- title: Assessing acute stress response during live-action and virtual reality training
-  authors:
-  - Martaindale, M. H.
-  year: 2023
-  journal: Police Chief Magazine, IACP
-  topics:
-  - policing-stress
-- title: Active Shooter Events in Schools
-  authors:
-  - Martaindale, M. H., & Blair, J. P.
-  year: 2017
-  journal: The Journal of School Safety
-  topics:
-  - active-shooter
-- title: Police considerations in active shooter events
-  authors:
-  - Martaindale, M. H.
-  year: 2015
-  journal: Royal Canadian Mounted Police Gazette
-  volume: '77'
-  issue: '1'
-  topics:
-  - active-shooter
-- title: Active shooter events from 2000 to 2012
-  authors:
-  - Blair, J. P., Martaindale, M. H., & Nichols, T.
-  year: 2014
-  journal: FBI Law Enforcement Bulletin
-  topics:
-  - active-shooter
-- title: Comparing the effects of acute participation in target practice versus active
-    shooter virtual reality training on stress biomarkers
-  authors:
-  - Gaitan, A. N., DeArman, A. S., Shakya, L., Martaindale, M. H., & McAllister, M.
-    J.
-  year: 2026
-  journal: Texas American College of Sports Medicine Annual Conference
-  topics:
-  - active-shooter
-- title: The ALERRT Room Entry System
-  authors:
-  - Blair, J. P., Martaindale, M. H., & Curnutt, J.
-  year: 2020
-  journal: Advanced Law Enforcement Rapid Response Training Center at Texas State
-    University
-  topics:
-  - active-shooter
-- title: 'Junior College Audit Report: Findings on Safety and Security in Texas Junior
-    Colleges 2009-2012'
-  authors:
-  - Martinez-Prather, K., McKenna, J. M., Calder, V., & Martaindale, M. H.
-  year: 2013
-  journal: Texas School Safety Center, Texas State University
-  topics:
-  - active-shooter
-- title: 'Bexar County Felony Probation Terminations 2010 and 2011: Quantitative and
-    Qualitative Data Results'
-  authors:
-  - Sanders, B. A., Bowman, S., Kringen, A. L., Martaindale, M. H., Schildkraut, J.,
-    Terranova, V., & Vaughan, T.
-  year: 2013
-  journal: Bexar County Probation, San Antonio, TX
-  topics:
-  - other
-- title: 'United States Active Shooter Events from 2000 to 2010: Training and Equipment
-    Implications'
-  authors:
-  - Blair, J. P., & Martaindale, M. H.
-  year: 2013
-  journal: ALERRT Center, Texas State University
+  pdf: pubs/2017_martaindale_active-shooter-events-in-the-workplace-findings-an.pdf
   topics:
   - active-shooter
 

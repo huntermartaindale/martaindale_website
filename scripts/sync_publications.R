@@ -47,14 +47,22 @@ if (is.null(cv$publications) || length(cv$publications) == 0) {
 }
 
 # --- topic tagging --------------------------------------------------------
-# Priority order: active-shooter > policing-stress > policing-decisions
-#                 > policing-public-opinion > other
-# A publication gets the FIRST topic whose keywords match (case-insensitive
-# substring match against title + venue). Edit topic_keywords below to
-# refine; or override per-paper by adding a `topics:` field directly in
-# cv_data.yaml (this script will respect it if present).
+# Priority order: policing-public-opinion > active-shooter > policing-stress
+#                 > policing-decisions > other
+# Public-opinion is checked first so papers explicitly studying public
+# attitudes don't get swallowed by active-shooter just because they study
+# attitudes about an active-shooter scenario.
+# Override per-paper by adding a `topics:` field directly in cv_data.yaml.
 
 topic_keywords <- list(
+  `policing-public-opinion` = c(
+    "public opinion", "public perception", "legitimacy",
+    "community trust", "perception of police", "perceptions of police",
+    "civilians' perception", "civilians perception",
+    "attitudes toward", "attitudes about", "officers' attitudes",
+    "officer attitudes", "view their role",
+    "comparing public", "public and officer"
+  ),
   `active-shooter` = c(
     "active shooter", "active attack", "active killer", "active shooting",
     "school shooter", "school shoot", "mass shooter", "mass shoot",
@@ -82,12 +90,6 @@ topic_keywords <- list(
     "firearm identification", "officer accuracy", "suspect accuracy",
     "swear", "throw a chair", "chair could save",
     "interrogation", "interview"
-  ),
-  `policing-public-opinion` = c(
-    "public opinion", "public perception", "legitimacy",
-    "community trust", "perception of police", "perceptions of police",
-    "attitudes toward", "attitudes about", "officers' attitudes",
-    "officer attitudes", "view their role"
   )
 )
 
@@ -103,8 +105,13 @@ assign_topic <- function(title, venue) {
 }
 
 # --- transform ------------------------------------------------------------
+# Only peer-reviewed journal articles appear on the website. Book chapters,
+# reports, conference proceedings, etc. are tracked in the CV but excluded
+# here.
 
-out <- lapply(cv$publications, function(p) {
+pubs_pr <- Filter(function(p) identical(p$type, "journal_article"), cv$publications)
+
+out <- lapply(pubs_pr, function(p) {
   # Respect a manual topic override if cv_data.yaml provides one
   topic <- if (!is.null(p$topics)) p$topics[[1]] else assign_topic(p$title, p$venue)
 
