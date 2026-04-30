@@ -1,0 +1,13 @@
+# media.yaml
+# One entry per appearance or mention. Keep sorted newest-first.
+# The site re-sorts by date automatically, but keeping it ordered here is cleaner.
+#
+# TYPES: print, online, radio, tv, podcast
+# Set url to null if no link is available.
+
+- date: "2024-01-01"
+  outlet: "Example News Outlet"
+  title: "Example Story or Interview Title"
+  type: online
+  url: null
+  description: "Brief description of the story, segment, or your contribution."

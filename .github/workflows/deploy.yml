@@ -1,0 +1,69 @@
+# deploy.yml
+# Builds the Quarto site and deploys it to GitHub Pages.
+#
+# IMPORTANT: This file must live at .github/workflows/deploy.yml relative to
+# the ROOT of your website GitHub repository. If you are developing in a
+# subdirectory of a larger workspace, create a new repo for the website and
+# place this file at the repo root.
+#
+# SETUP STEPS (one time):
+#   1. Create a new GitHub repo (e.g., huntermartaindale/website or
+#      huntermartaindale/huntermartaindale.com)
+#   2. Push the contents of the website/ directory to that repo's main branch
+#   3. In the repo Settings > Pages, set Source to "GitHub Actions"
+#   4. Add your custom domain (huntermartaindale.com) in Settings > Pages
+#   5. At your domain registrar (Google Domains), add these DNS records:
+#        A     @   185.199.108.153
+#        A     @   185.199.109.153
+#        A     @   185.199.110.153
+#        A     @   185.199.111.153
+#        CNAME www huntermartaindale.github.io.
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 7 * * 1'    # Every Monday at 7am UTC - refreshes Scholar stats
+  workflow_dispatch:         # Allow manual trigger from the GitHub Actions UI
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - name: Install R packages
+        run: install.packages(c("scholar", "yaml", "htmltools"))
+        shell: Rscript {0}
+
+      - name: Refresh Google Scholar stats
+        run: Rscript data/update_scholar.R
+
+      - name: Commit updated stats if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/scholar_stats.yaml
+          git diff --staged --quiet || git commit -m "chore: update scholar stats [skip ci]"
+          git push || true
+
+      - name: Render and publish to gh-pages branch
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,208 @@
+/*-- scss:defaults --*/
+$primary:                   #1a365d;
+$link-color:                #1a365d;
+$font-family-sans-serif:    "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$headings-font-weight:      600;
+$navbar-bg:                 #ffffff;
+$navbar-fg:                 #2d3748;
+
+/*-- scss:rules --*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  color: #2d3748;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4 {
+  color: #1a2744;
+}
+
+// Navbar
+.navbar {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #1a2744 !important;
+}
+
+// Scholar stats bar on homepage
+.scholar-stats {
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a365d;
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #718096;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 0.2rem;
+}
+
+// Publication entries
+.pub-entry {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.pub-entry:last-child {
+  border-bottom: none;
+}
+
+.pub-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1a365d;
+  margin-bottom: 0.2rem;
+  line-height: 1.4;
+}
+
+.pub-authors {
+  font-size: 0.875rem;
+  color: #4a5568;
+  margin-bottom: 0.2rem;
+}
+
+.pub-journal {
+  font-size: 0.875rem;
+  color: #718096;
+  font-style: italic;
+  margin-bottom: 0.6rem;
+}
+
+.pub-summary {
+  font-size: 0.925rem;
+  color: #4a5568;
+  margin-bottom: 0.75rem;
+  line-height: 1.65;
+}
+
+.pub-links a {
+  font-size: 0.78rem;
+  margin-right: 0.5rem;
+  text-decoration: none;
+  color: #1a365d;
+  border: 1px solid #1a365d;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  display: inline-block;
+  margin-bottom: 0.25rem;
+}
+
+.pub-links a:hover {
+  background: #1a365d;
+  color: white;
+}
+
+.pub-citations {
+  font-size: 0.78rem;
+  color: #718096;
+  margin-top: 0.4rem;
+}
+
+// Topic section headings on research page
+.topic-section {
+  margin-bottom: 3rem;
+}
+
+.topic-section h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a2744;
+  border-bottom: 2px solid #1a365d;
+  padding-bottom: 0.4rem;
+  margin-bottom: 0;
+}
+
+// Media entries
+.media-entry {
+  padding: 0.875rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.media-entry:last-child {
+  border-bottom: none;
+}
+
+.media-outlet {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #1a365d;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.media-title {
+  font-size: 0.95rem;
+  margin-bottom: 0.15rem;
+  line-height: 1.4;
+}
+
+.media-meta {
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+// CTA buttons
+.btn-primary {
+  background-color: #1a365d;
+  border-color: #1a365d;
+}
+
+.btn-primary:hover {
+  background-color: #152a4a;
+  border-color: #152a4a;
+}
+
+.btn-outline-primary {
+  color: #1a365d;
+  border-color: #1a365d;
+}
+
+.btn-outline-primary:hover {
+  background-color: #1a365d;
+  color: white;
+}
+
+// Footer
+.nav-footer {
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+// Contact / consulting forms
+.form-label {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.form-control,
+.form-select {
+  border-color: #e2e8f0;
+  font-size: 0.9rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #1a365d;
+  box-shadow: 0 0 0 0.2rem rgba(26, 54, 93, 0.15);
+}

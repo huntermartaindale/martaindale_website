@@ -1,0 +1,23 @@
+# Quarto build artifacts
+/.quarto/
+/_site/
+/_freeze/
+*_files/
+**/*.quarto_ipynb
+
+# R / RStudio session files
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+*.Rproj
+
+# Local Claude config (machine-specific)
+.claude/settings.local.json
+.claude/state/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/

@@ -1,0 +1,108 @@
+---
+title: "Research"
+---
+
+My research spans two primary areas: policing (with emphases on officer stress and physiology, use of force and decision making, and public opinion) and active shooter preparedness and response. Summaries below are written for a general audience. For full abstracts and citation information, use the DOI or PDF links.
+
+```{r setup}
+library(yaml)
+library(htmltools)
+
+pubs <- yaml::read_yaml("data/publications.yaml")
+
+render_pub <- function(pub) {
+  # Build links
+  links <- character(0)
+  if (!is.null(pub$doi) && !is.na(pub$doi))
+    links <- c(links, sprintf('<a href="https://doi.org/%s">DOI</a>', pub$doi))
+  if (!is.null(pub$pdf) && !is.na(pub$pdf))
+    links <- c(links, sprintf('<a href="%s">PDF</a>', pub$pdf))
+  if (!is.null(pub$preprint) && !is.na(pub$preprint))
+    links <- c(links, sprintf('<a href="%s">Preprint</a>', pub$preprint))
+
+  # Build journal string
+  authors_str <- paste(pub$authors, collapse = ", ")
+  journal_str <- pub$journal
+  if (!is.null(pub$volume) && !is.na(pub$volume))
+    journal_str <- paste0(journal_str, ", ", pub$volume)
+  if (!is.null(pub$issue) && !is.na(pub$issue))
+    journal_str <- paste0(journal_str, "(", pub$issue, ")")
+  if (!is.null(pub$pages) && !is.na(pub$pages))
+    journal_str <- paste0(journal_str, ", ", pub$pages)
+
+  citations_html <- ""
+  if (!is.null(pub$citations) && !is.na(pub$citations) && pub$citations > 0)
+    citations_html <- sprintf(
+      '<div class="pub-citations">Cited %d times (Google Scholar)</div>',
+      as.integer(pub$citations)
+    )
+
+  HTML(sprintf(
+    '<div class="pub-entry">
+  <div class="pub-title">%s</div>
+  <div class="pub-authors">%s</div>
+  <div class="pub-journal">%s (%s)</div>
+  <div class="pub-summary">%s</div>
+  <div class="pub-links">%s</div>
+  %s
+</div>',
+    pub$title,
+    authors_str,
+    journal_str,
+    pub$year,
+    pub$plain_summary,
+    paste(links, collapse = ""),
+    citations_html
+  ))
+}
+
+render_topic <- function(topic_id, pubs) {
+  topic_pubs <- Filter(function(p) topic_id %in% p$topics, pubs)
+  if (length(topic_pubs) == 0) {
+    return(HTML('<p style="color: #a0aec0; font-style: italic; padding: 0.75rem 0; margin: 0;">No publications listed yet.</p>'))
+  }
+  years <- sapply(topic_pubs, function(p) as.integer(p$year))
+  topic_pubs <- topic_pubs[order(years, decreasing = TRUE)]
+  tagList(lapply(topic_pubs, render_pub))
+}
+```
+
+::: {.topic-section}
+## Active Shooter Events
+
+```{r}
+render_topic("active-shooter", pubs)
+```
+:::
+
+::: {.topic-section}
+## Policing: Stress, Physiology, and Performance
+
+```{r}
+render_topic("policing-stress", pubs)
+```
+:::
+
+::: {.topic-section}
+## Policing: Decision Making and Use of Force
+
+```{r}
+render_topic("policing-decisions", pubs)
+```
+:::
+
+::: {.topic-section}
+## Policing: Public Opinion and Legitimacy
+
+```{r}
+render_topic("policing-public-opinion", pubs)
+```
+:::
+
+::: {.topic-section}
+## Other Publications
+
+```{r}
+render_topic("other", pubs)
+```
+:::

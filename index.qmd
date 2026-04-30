@@ -1,0 +1,60 @@
+---
+title: ""
+page-layout: full
+---
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-3 style="text-align: center; padding-top: 0.5rem;"}
+![](img/headshot.jpg){.img-fluid .rounded style="max-width: 200px;"}
+:::
+
+::: {.g-col-12 .g-col-md-9 style="padding-left: 1.5rem;"}
+
+# Hunter Martaindale
+
+**Director of Research, ALERRT Center**\
+**Associate Research Professor, School of Criminal Justice and Criminology**\
+Texas State University
+
+My research focuses on policing and public safety, with particular emphasis on active shooter preparedness and response, officer stress and performance under pressure, use of force decision making, and public opinion of police. As Director of Research at the [ALERRT Center](https://alerrt.org), I work to translate research findings into practical guidance for law enforcement training and policy.
+
+[Research](research.qmd){.btn .btn-primary style="margin-right: 0.5rem; margin-bottom: 0.5rem;"}
+[CV](cv.qmd){.btn .btn-outline-primary style="margin-right: 0.5rem; margin-bottom: 0.5rem;"}
+[Consulting](consulting.qmd){.btn .btn-outline-primary style="margin-bottom: 0.5rem;"}
+
+:::
+
+:::
+
+```{r stats}
+library(yaml)
+
+stats <- tryCatch(
+  yaml::read_yaml("data/scholar_stats.yaml"),
+  error = function(e) list(total_citations = "--", h_index = "--", i10_index = "--", last_updated = "")
+)
+```
+
+::: {.scholar-stats}
+::: {.grid}
+
+::: {.g-col-4 .stat-item}
+<div class="stat-value">`r stats$total_citations`</div>
+<div class="stat-label">Citations</div>
+:::
+
+::: {.g-col-4 .stat-item}
+<div class="stat-value">`r stats$h_index`</div>
+<div class="stat-label">h-index</div>
+:::
+
+::: {.g-col-4 .stat-item}
+<div class="stat-value">`r stats$i10_index`</div>
+<div class="stat-label">i10-index</div>
+:::
+
+:::
+:::
+
+<p style="font-size: 0.78rem; color: #a0aec0; margin-top: -0.5rem;">Citation data from Google Scholar. Updated weekly.</p>

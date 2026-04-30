@@ -1,0 +1,51 @@
+---
+title: "Contact"
+---
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-5}
+
+**Hunter Martaindale**\
+ALERRT Center\
+Texas State University\
+San Marcos, TX
+
+**Email:** [MartaindaleLLC\@gmail.com](mailto:MartaindaleLLC@gmail.com)
+
+**Links**
+
+- [Google Scholar](https://scholar.google.com/citations?user=_7PlqKYAAAAJ)
+- [GitHub](https://github.com/huntermartaindale)
+- [LinkedIn](https://www.linkedin.com/in/hmartaindale/)
+- [ORCID](https://orcid.org/0000-0002-8100-7698)
+- [ALERRT Center](https://alerrt.org)
+
+For consulting or expert witness inquiries, please use the dedicated [Consulting](consulting.qmd) page.
+
+:::
+
+::: {.g-col-12 .g-col-md-7}
+
+<!-- TODO: Replace YOUR_FORMSPREE_FORM_ID (same account as consulting.qmd,
+     or create a separate form for general contact). -->
+
+<form action="https://formspree.io/f/mykbwyyn" method="POST">
+  <div class="mb-3">
+    <label for="g-name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="g-name" name="name" required>
+  </div>
+  <div class="mb-3">
+    <label for="g-email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="g-email" name="email" required>
+  </div>
+  <div class="mb-3">
+    <label for="g-message" class="form-label">Message</label>
+    <textarea class="form-control" id="g-message" name="message" rows="5" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Send</button>
+</form>
+
+:::
+
+:::

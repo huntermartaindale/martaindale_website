@@ -1,0 +1,53 @@
+---
+title: "Consulting"
+---
+
+I am available for research consulting, expert witness testimony, and training consultation on topics related to policing and active shooter preparedness. My work bridges academic research and practical law enforcement application, and I have experience translating complex findings for legal, policy, and operational audiences.
+
+**Areas of Expertise**
+
+- Active shooter incident analysis, response protocols, and training program evaluation
+- Law enforcement performance under stress and high-stakes decision making
+- Use of force analysis and officer decision making
+- Public opinion of police and community-police relations
+- Expert witness services in use of force and police practices litigation
+
+**Inquiry**
+
+For consulting inquiries, expert witness requests, or speaking engagements, please complete the form below or email directly at [MartaindaleLLC\@gmail.com](mailto:MartaindaleLLC@gmail.com).
+
+<!-- TODO: Replace YOUR_FORMSPREE_FORM_ID with your Formspree endpoint.
+     Sign up free at https://formspree.io — 50 submissions/month on the free tier.
+     After creating a form, your endpoint looks like: https://formspree.io/f/abcd1234 -->
+
+<form action="https://formspree.io/f/mykbwyyn" method="POST" style="margin-top: 1.5rem;">
+  <div class="mb-3">
+    <label for="c-name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="c-name" name="name" required>
+  </div>
+  <div class="mb-3">
+    <label for="c-email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="c-email" name="email" required>
+  </div>
+  <div class="mb-3">
+    <label for="c-org" class="form-label">Organization</label>
+    <input type="text" class="form-control" id="c-org" name="organization">
+  </div>
+  <div class="mb-3">
+    <label for="c-type" class="form-label">Type of Inquiry</label>
+    <select class="form-select" id="c-type" name="inquiry_type">
+      <option value="">Select...</option>
+      <option value="consulting">Research Consulting</option>
+      <option value="expert-witness">Expert Witness</option>
+      <option value="speaking">Speaking Engagement</option>
+      <option value="training">Training Consultation</option>
+      <option value="media">Media Request</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="c-message" class="form-label">Message</label>
+    <textarea class="form-control" id="c-message" name="message" rows="5" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Send Inquiry</button>
+</form>

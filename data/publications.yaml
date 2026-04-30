@@ -1,0 +1,99 @@
+# publications.yaml
+# One entry per publication. Add new entries at the top of each topic group.
+#
+# TOPIC IDs (must match exactly what research.qmd uses):
+#   active-shooter        - Active shooter events and response
+#   policing-stress       - Officer stress, physiology, and performance
+#   policing-decisions    - Decision making, use of force
+#   policing-public-opinion - Public opinion, legitimacy, trust
+#   other                 - Everything else
+#
+# FIELDS:
+#   citations is updated automatically by data/update_scholar.R
+#   Set pdf to a path like "pubs/filename.pdf" once you add the file
+#   Set doi, preprint, pdf to null if not applicable
+
+# --- ACTIVE SHOOTER ---------------------------------------------------------
+
+- id: sample-active-shooter-01
+  title: "Replace This With Your Publication Title"
+  authors:
+    - "Martaindale, M. Hunter"
+    - "Blair, J. Pete"
+  year: 2024
+  journal: "Journal Name"
+  volume: null
+  issue: null
+  pages: null
+  doi: null
+  pdf: null
+  preprint: null
+  abstract: "Full academic abstract text."
+  plain_summary: "Replace with a plain-language description of what this study did, what was found, and why it matters for law enforcement or public safety."
+  topics:
+    - active-shooter
+  citations: 0
+  featured: true
+
+# --- POLICING: STRESS -------------------------------------------------------
+
+- id: sample-stress-01
+  title: "Replace This With Your Publication Title"
+  authors:
+    - "Martaindale, M. Hunter"
+  year: 2023
+  journal: "Journal Name"
+  volume: null
+  issue: null
+  pages: null
+  doi: null
+  pdf: null
+  preprint: null
+  abstract: "Full academic abstract text."
+  plain_summary: "Replace with a plain-language description."
+  topics:
+    - policing-stress
+  citations: 0
+  featured: false
+
+# --- POLICING: DECISIONS / USE OF FORCE ------------------------------------
+
+- id: sample-decisions-01
+  title: "Replace This With Your Publication Title"
+  authors:
+    - "Martaindale, M. Hunter"
+  year: 2023
+  journal: "Journal Name"
+  volume: null
+  issue: null
+  pages: null
+  doi: null
+  pdf: null
+  preprint: null
+  abstract: "Full academic abstract text."
+  plain_summary: "Replace with a plain-language description."
+  topics:
+    - policing-decisions
+  citations: 0
+  featured: false
+
+# --- POLICING: PUBLIC OPINION / LEGITIMACY ---------------------------------
+
+- id: sample-public-opinion-01
+  title: "Replace This With Your Publication Title"
+  authors:
+    - "Martaindale, M. Hunter"
+  year: 2022
+  journal: "Journal Name"
+  volume: null
+  issue: null
+  pages: null
+  doi: null
+  pdf: null
+  preprint: null
+  abstract: "Full academic abstract text."
+  plain_summary: "Replace with a plain-language description."
+  topics:
+    - policing-public-opinion
+  citations: 0
+  featured: false
