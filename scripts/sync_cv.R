@@ -33,7 +33,7 @@ cat("Rendering CV at", cv_repo, "...\n")
 old_wd <- getwd()
 setwd(cv_repo)
 on.exit(setwd(old_wd), add = TRUE)
-rc <- system2(quarto, args = c("render", "cv.qmd"))
+rc <- system2(quarto, args = c("render", "cv.qmd", "--to", "all"))
 setwd(old_wd)
 if (rc != 0) stop("quarto render failed (exit ", rc, ")")
 
