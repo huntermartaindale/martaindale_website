@@ -2,7 +2,7 @@
 # AUTO-GENERATED from cv_data.yaml by scripts/sync_publications.R
 # Edit cv_data.yaml in huntermartaindale/cv, not this file.
 #
-# Generated: 2026-04-30 14:33:27 CDT
+# Generated: 2026-04-30 15:17:27 CDT
 # Source:    ../cv/cv_data.yaml
 # Total:     39 publications
 
@@ -87,7 +87,7 @@
   plain_summary: |
     This study compared the stress responses of 54 participants who either exercised alone or combined exercise with a virtual reality active shooter training drill. Both groups showed increases in biological stress markers, but those who experienced the combined physical and mental challenge reported significantly higher anxiety in the aftermath. The study also found that female participants showed lower stress biomarker responses than male participants overall. These findings suggest that mental stress, such as that encountered in high-stakes training scenarios, adds meaningfully to perceived anxiety beyond what physical exertion produces on its own.
   topics:
-  - active-shooter
+  - policing-stress
 - title: To what are we inferring? The widespread misuse of inferential testing in
     the most cited criminology and criminal justice journals
   authors:
@@ -204,7 +204,7 @@
   plain_summary: |
     The ingestion of L-theanine and L-tyrosine has been shown to reduce salivary stress markers and improve cognitive performance. This study aims to take a closer look at if that is true while performing a mental stress challenge in virtual reality. Participants were randomly assigned doses or placebo, then performed a virtual reality active shooter training drill. Saliva samples were taken before and after the drill and results were compared. It was found that L-theanine and L-tyrosine did not affect the markers of stress but could impact cognitive performance.
   topics:
-  - active-shooter
+  - policing-stress
 - title: 'Stress response to virtual reality based active shooter training: Impact
     of caffeine consumption'
   authors:
@@ -216,7 +216,7 @@
   plain_summary: |
     Virtual reality based active shooter training drills have been shown to induce stress in participants, but how does caffeine consumption affect these results? Caffeine can result in better physical and cognitive performance, so could it perform similarly in a virtual reality situation? Participants were randomly assigned caffeine or a placebo, and saliva samples were taken before and after performing a mental stress task in a virtual reality active shooter scenario. Results show that caffeine consumption increased levels of α-amylase after performing the mental stress task.
   topics:
-  - active-shooter
+  - policing-stress
 - title: Can a virtual reality training scenario elicit similar stress response as
     a realistic scenario-based training scenario?
   authors:
@@ -284,7 +284,7 @@
   plain_summary: |
     Police, military, and firefighters often experience life-threatening situations. These individuals are trained to use slow breathing techniques while encountering these stressful situations but there is no evidence that tests the effects of these techniques in virtual reality active shooter drills. This study measures biomarkers of stress in response to being assigned one of two slow breathing methods or normal breathing. It is shown that both slow breathing methods resulted in much lower stress markers when compared to normal breathing practices.
   topics:
-  - active-shooter
+  - policing-stress
 - title: 'Successfully securing a classroom door in an active shooter event: Examining
     two types of door locks'
   authors:
@@ -368,7 +368,7 @@
   plain_summary: |
     Officers regularly face dangerous, life-threatening situations on the job. This study tested whether a brief virtual reality active shooter drill could trigger a measurable physiological stress response, and whether men and women respond differently. Twenty-nine participants completed a roughly 50-second VR scenario while saliva was sampled four times before and after. The drill produced significant increases in salivary stress markers, and women showed lower cortisol and uric acid concentrations than men. The findings suggest VR is a viable, low-cost training tool for inducing realistic stress in tactical occupations.
   topics:
-  - active-shooter
+  - policing-stress
 - title: Armed and considered capable? Law enforcement officers' attitudes about armed
     teacher policies in the United States
   authors:
@@ -421,7 +421,7 @@
   plain_summary: |
     Officer stress takes a measurable toll on long-term cardiovascular health, but most studies assume the response looks the same in men and women. This study compared salivary and blood stress markers in 31 participants (15 men, 16 women) immediately before and after a roughly 50-second active shooter training drill. Women showed lower markers of stress and oxidative stress than men, suggesting acute stress affects the sexes differently. The findings imply that interventions and training stress protocols may need to be tailored by sex rather than designed uniformly.
   topics:
-  - active-shooter
+  - policing-stress
 - title: Improving the accuracy of firearm identification in a dynamic use of force
     scenario
   authors:
@@ -463,7 +463,7 @@
   plain_summary: |
     This study tested whether a short, realistic active shooter training drill produces a measurable physiological stress response. Thirty-one participants completed a roughly 50-second drill featuring professional actors as a gunman and four victims, with blood and saliva collected before and after. The drill produced significant increases in epinephrine and salivary stress markers (alpha-amylase and SIgA), with norepinephrine increases approaching significance. The findings confirm that even brief training drills generate genuine stress responses, with implications for how repeated exposure may affect long-term cardiometabolic health in officers and military personnel.
   topics:
-  - active-shooter
+  - policing-stress
 - title: Correlates of the number shot and killed in active shooter events
   authors:
   - Blair, J. P., Sandel, W. L., & Martaindale, M. H.
