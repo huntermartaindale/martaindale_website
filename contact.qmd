@@ -4,22 +4,14 @@ title: "Contact"
 
 ::: {.grid}
 
-::: {.g-col-12 .g-col-md-5}
+::: {.g-col-12 .g-col-md-5 .contact-info}
 
-**Hunter Martaindale**\
-ALERRT Center\
-Texas State University\
+**Hunter Martaindale, Ph.D.**\
+Director of Research\
+ALERRT Center, Texas State University\
 San Marcos, TX
 
 **Email:** [MartaindaleLLC\@gmail.com](mailto:MartaindaleLLC@gmail.com)
-
-**Links**
-
-- [Google Scholar](https://scholar.google.com/citations?user=_7PlqKYAAAAJ)
-- [GitHub](https://github.com/huntermartaindale)
-- [LinkedIn](https://www.linkedin.com/in/hmartaindale/)
-- [ORCID](https://orcid.org/0000-0002-8100-7698)
-- [ALERRT Center](https://alerrt.org)
 
 **Areas of Expertise**
 
@@ -34,23 +26,31 @@ I am available for research consulting, expert witness testimony, training consu
 
 ::: {.g-col-12 .g-col-md-7}
 
-<form action="https://formspree.io/f/mykbwyyn" method="POST">
-  <div class="mb-3">
-    <label for="c-name" class="form-label">Name</label>
-    <input type="text" class="form-control" id="c-name" name="name" required>
+::: {.contact-card}
+
+### Send a Message
+
+<form action="https://formspree.io/f/mykbwyyn" method="POST" class="contact-form" novalidate>
+  <div class="row g-3">
+    <div class="col-md-6">
+      <label for="c-name" class="form-label">Name <span class="req">*</span></label>
+      <input type="text" class="form-control" id="c-name" name="name" required>
+    </div>
+    <div class="col-md-6">
+      <label for="c-email" class="form-label">Email <span class="req">*</span></label>
+      <input type="email" class="form-control" id="c-email" name="email" required>
+    </div>
   </div>
-  <div class="mb-3">
-    <label for="c-email" class="form-label">Email</label>
-    <input type="email" class="form-control" id="c-email" name="email" required>
-  </div>
-  <div class="mb-3">
+
+  <div class="mt-3">
     <label for="c-org" class="form-label">Organization</label>
-    <input type="text" class="form-control" id="c-org" name="organization">
+    <input type="text" class="form-control" id="c-org" name="organization" placeholder="Optional">
   </div>
-  <div class="mb-3">
-    <label for="c-type" class="form-label">Type of Inquiry</label>
-    <select class="form-select" id="c-type" name="inquiry_type">
-      <option value="">Select...</option>
+
+  <div class="mt-3">
+    <label for="c-type" class="form-label">Type of Inquiry <span class="req">*</span></label>
+    <select class="form-select" id="c-type" name="inquiry_type" required>
+      <option value="" disabled selected>Select an inquiry type...</option>
       <option value="consulting">Research Consulting</option>
       <option value="expert-witness">Expert Witness</option>
       <option value="speaking">Speaking Engagement</option>
@@ -59,12 +59,23 @@ I am available for research consulting, expert witness testimony, training consu
       <option value="other">Other</option>
     </select>
   </div>
-  <div class="mb-3">
-    <label for="c-message" class="form-label">Message</label>
-    <textarea class="form-control" id="c-message" name="message" rows="5" required></textarea>
+
+  <div class="mt-3">
+    <label for="c-message" class="form-label">Message <span class="req">*</span></label>
+    <textarea class="form-control" id="c-message" name="message" rows="6" required
+      placeholder="Brief description of the project, timeline, and any relevant context."></textarea>
   </div>
-  <button type="submit" class="btn btn-primary">Send</button>
+
+  <input type="hidden" name="_subject" value="Website inquiry: huntermartaindale.com">
+  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+  <div class="d-flex justify-content-between align-items-center mt-4">
+    <small class="text-muted">Required fields marked <span class="req">*</span>. Replies typically within 2 business days.</small>
+    <button type="submit" class="btn btn-primary px-4">Send Inquiry</button>
+  </div>
 </form>
+
+:::
 
 :::
 

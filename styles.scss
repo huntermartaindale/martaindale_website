@@ -242,3 +242,50 @@ h1, h2, h3, h4 {
   border-color: #1a365d;
   box-shadow: 0 0 0 0.2rem rgba(26, 54, 93, 0.15);
 }
+
+// Contact page
+.contact-info {
+  padding-right: 1.5rem;
+}
+
+.contact-info p {
+  margin-bottom: 0.6rem;
+}
+
+.contact-info ul {
+  padding-left: 1.2rem;
+}
+
+.contact-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.75rem 2rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.contact-card h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1a2744;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.contact-form .form-label {
+  font-size: 0.85rem;
+  color: #4a5568;
+  margin-bottom: 0.3rem;
+}
+
+.contact-form .form-control,
+.contact-form .form-select {
+  padding: 0.5rem 0.75rem;
+}
+
+.contact-form .req {
+  color: #c53030;
+  font-weight: 600;
+}
