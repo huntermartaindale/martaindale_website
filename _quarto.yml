@@ -24,6 +24,12 @@ website:
       - text: "Contact"
         href: contact.qmd
     right:
+      - text: "<i class='ai ai-google-scholar' style='font-size:1.1rem;'></i>"
+        href: https://scholar.google.com/citations?user=_7PlqKYAAAAJ
+        aria-label: Google Scholar
+      - text: "<i class='ai ai-orcid' style='font-size:1.1rem;'></i>"
+        href: https://orcid.org/0000-0002-8100-7698
+        aria-label: ORCID
       - icon: github
         href: https://github.com/huntermartaindale
         aria-label: GitHub
@@ -44,6 +50,9 @@ format:
     toc: false
     link-external-newwindow: true
     link-external-icon: false
+    include-in-header:
+      text: |
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
 
 execute:
   freeze: auto
