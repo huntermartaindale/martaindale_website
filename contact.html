@@ -43,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-dccea622c3aca375569bc79e36bb5626.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-6468e06f7105c8ca1b4475838e7b9e02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -160,20 +160,12 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="grid">
-<div class="g-col-12 g-col-md-5">
-<p><strong>Hunter Martaindale</strong><br>
-ALERRT Center<br>
-Texas State University<br>
+<div class="g-col-12 g-col-md-5 contact-info">
+<p><strong>Hunter Martaindale, Ph.D.</strong><br>
+Director of Research<br>
+ALERRT Center, Texas State University<br>
 San Marcos, TX</p>
 <p><strong>Email:</strong> <a href="mailto:MartaindaleLLC@gmail.com">MartaindaleLLC@gmail.com</a></p>
-<p><strong>Links</strong></p>
-<ul>
-<li><a href="https://scholar.google.com/citations?user=_7PlqKYAAAAJ">Google Scholar</a></li>
-<li><a href="https://github.com/huntermartaindale">GitHub</a></li>
-<li><a href="https://www.linkedin.com/in/hmartaindale/">LinkedIn</a></li>
-<li><a href="https://orcid.org/0000-0002-8100-7698">ORCID</a></li>
-<li><a href="https://alerrt.org">ALERRT Center</a></li>
-</ul>
 <p><strong>Areas of Expertise</strong></p>
 <ul>
 <li>Active shooter incident analysis, response protocols, and training program evaluation</li>
@@ -184,23 +176,27 @@ San Marcos, TX</p>
 <p>I am available for research consulting, expert witness testimony, training consultation, speaking engagements, and media commentary. Use the form to introduce your inquiry, or email directly.</p>
 </div>
 <div class="g-col-12 g-col-md-7">
-<form action="https://formspree.io/f/mykbwyyn" method="POST">
-<div class="mb-3">
-<pre><code>&lt;label for="c-name" class="form-label"&gt;Name&lt;/label&gt;
-&lt;input type="text" class="form-control" id="c-name" name="name" required&gt;</code></pre>
+<section id="send-a-message" class="level3 contact-card">
+<h3 class="anchored" data-anchor-id="send-a-message">Send a Message</h3>
+<form action="https://formspree.io/f/mykbwyyn" method="POST" class="contact-form" novalidate="">
+<div class="row g-3">
+<pre><code>&lt;div class="col-md-6"&gt;
+  &lt;label for="c-name" class="form-label"&gt;Name &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;
+  &lt;input type="text" class="form-control" id="c-name" name="name" required&gt;
+&lt;/div&gt;
+&lt;div class="col-md-6"&gt;
+  &lt;label for="c-email" class="form-label"&gt;Email &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;
+  &lt;input type="email" class="form-control" id="c-email" name="email" required&gt;
+&lt;/div&gt;</code></pre>
 </div>
-<div class="mb-3">
-<pre><code>&lt;label for="c-email" class="form-label"&gt;Email&lt;/label&gt;
-&lt;input type="email" class="form-control" id="c-email" name="email" required&gt;</code></pre>
-</div>
-<div class="mb-3">
+<div class="mt-3">
 <pre><code>&lt;label for="c-org" class="form-label"&gt;Organization&lt;/label&gt;
-&lt;input type="text" class="form-control" id="c-org" name="organization"&gt;</code></pre>
+&lt;input type="text" class="form-control" id="c-org" name="organization" placeholder="Optional"&gt;</code></pre>
 </div>
-<div class="mb-3">
-<pre><code>&lt;label for="c-type" class="form-label"&gt;Type of Inquiry&lt;/label&gt;
-&lt;select class="form-select" id="c-type" name="inquiry_type"&gt;
-  &lt;option value=""&gt;Select...&lt;/option&gt;
+<div class="mt-3">
+<pre><code>&lt;label for="c-type" class="form-label"&gt;Type of Inquiry &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;
+&lt;select class="form-select" id="c-type" name="inquiry_type" required&gt;
+  &lt;option value="" disabled selected&gt;Select an inquiry type...&lt;/option&gt;
   &lt;option value="consulting"&gt;Research Consulting&lt;/option&gt;
   &lt;option value="expert-witness"&gt;Expert Witness&lt;/option&gt;
   &lt;option value="speaking"&gt;Speaking Engagement&lt;/option&gt;
@@ -209,14 +205,18 @@ San Marcos, TX</p>
   &lt;option value="other"&gt;Other&lt;/option&gt;
 &lt;/select&gt;</code></pre>
 </div>
-<div class="mb-3">
-<pre><code>&lt;label for="c-message" class="form-label"&gt;Message&lt;/label&gt;
-&lt;textarea class="form-control" id="c-message" name="message" rows="5" required&gt;&lt;/textarea&gt;</code></pre>
+<div class="mt-3">
+<pre><code>&lt;label for="c-message" class="form-label"&gt;Message &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;
+&lt;textarea class="form-control" id="c-message" name="message" rows="6" required
+  placeholder="Brief description of the project, timeline, and any relevant context."&gt;&lt;/textarea&gt;</code></pre>
 </div>
-<button type="submit" class="btn btn-primary">
-Send
-</button>
+<p><input type="hidden" name="_subject" value="Website inquiry: huntermartaindale.com"> <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off"></p>
+<div class="d-flex justify-content-between align-items-center mt-4">
+<pre><code>&lt;small class="text-muted"&gt;Required fields marked &lt;span class="req"&gt;*&lt;/span&gt;. Replies typically within 2 business days.&lt;/small&gt;
+&lt;button type="submit" class="btn btn-primary px-4"&gt;Send Inquiry&lt;/button&gt;</code></pre>
+</div>
 </form>
+</section>
 </div>
 </div>
 
