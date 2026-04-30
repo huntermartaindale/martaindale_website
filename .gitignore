@@ -21,3 +21,8 @@
 Thumbs.db
 *.swp
 .vscode/
+
+# CV outputs (rendered by CI from huntermartaindale/cv; sync locally
+# for preview with: Rscript scripts/sync_cv.R)
+/cv/index.html
+/cv/martaindale_cv.pdf
