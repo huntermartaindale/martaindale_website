@@ -11,7 +11,7 @@ page-layout: full
 
 ::: {.g-col-12 .g-col-md-9 style="padding-left: 1.5rem;"}
 
-# Hunter Martaindale
+# Hunter Martaindale, PhD
 
 **Director of Research, ALERRT Center**\
 **Associate Research Professor, School of Criminal Justice and Criminology**\

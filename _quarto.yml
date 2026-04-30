@@ -10,6 +10,7 @@ project:
     - "contact.qmd"
   resources:
     - CNAME
+    - cv/
 
 website:
   title: "Hunter Martaindale"
