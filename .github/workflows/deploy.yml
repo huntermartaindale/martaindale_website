@@ -1,23 +1,14 @@
-# deploy.yml
-# Builds the Quarto site and deploys it to GitHub Pages.
+# Build huntermartaindale.com (Quarto + R) and deploy to GitHub Pages.
 #
-# IMPORTANT: This file must live at .github/workflows/deploy.yml relative to
-# the ROOT of your website GitHub repository. If you are developing in a
-# subdirectory of a larger workspace, create a new repo for the website and
-# place this file at the repo root.
+# Pulls the private CV from huntermartaindale/cv via a read-only deploy key
+# (secret: CV_DEPLOY_KEY) and renders it into _site/cv/ before publishing.
 #
-# SETUP STEPS (one time):
-#   1. Create a new GitHub repo (e.g., huntermartaindale/website or
-#      huntermartaindale/huntermartaindale.com)
-#   2. Push the contents of the website/ directory to that repo's main branch
-#   3. In the repo Settings > Pages, set Source to "GitHub Actions"
-#   4. Add your custom domain (huntermartaindale.com) in Settings > Pages
-#   5. At your domain registrar (Google Domains), add these DNS records:
-#        A     @   185.199.108.153
-#        A     @   185.199.109.153
-#        A     @   185.199.110.153
-#        A     @   185.199.111.153
-#        CNAME www huntermartaindale.github.io.
+# DNS for huntermartaindale.com (one-time, at registrar):
+#   A     @   185.199.108.153
+#   A     @   185.199.109.153
+#   A     @   185.199.110.153
+#   A     @   185.199.111.153
+#   CNAME www huntermartaindale.github.io.
 
 name: Deploy to GitHub Pages
 
@@ -25,8 +16,8 @@ on:
   push:
     branches: [main]
   schedule:
-    - cron: '0 7 * * 1'    # Every Monday at 7am UTC - refreshes Scholar stats
-  workflow_dispatch:         # Allow manual trigger from the GitHub Actions UI
+    - cron: '0 7 * * 1'      # Mondays 7am UTC: refresh Scholar stats
+  workflow_dispatch:           # Manual trigger from Actions UI
 
 jobs:
   build-deploy:
@@ -35,11 +26,21 @@ jobs:
       contents: write
 
     steps:
-      - name: Check out repository
+      - name: Check out website repository
         uses: actions/checkout@v4
+
+      - name: Check out private CV repository
+        uses: actions/checkout@v4
+        with:
+          repository: huntermartaindale/cv
+          ssh-key: ${{ secrets.CV_DEPLOY_KEY }}
+          path: cv-source
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Install TinyTeX (for CV PDF rendering)
+        uses: r-lib/actions/setup-tinytex@v2
 
       - name: Set up R
         uses: r-lib/actions/setup-r@v2
@@ -47,13 +48,13 @@ jobs:
           use-public-rspm: true
 
       - name: Install R packages
-        run: install.packages(c("scholar", "yaml", "htmltools"))
+        run: install.packages(c("scholar", "yaml", "htmltools", "dplyr", "purrr", "stringr", "knitr", "rmarkdown"))
         shell: Rscript {0}
 
-      - name: Refresh Google Scholar stats
+      - name: Refresh Google Scholar stats (website)
         run: Rscript data/update_scholar.R
 
-      - name: Commit updated stats if changed
+      - name: Commit updated Scholar stats if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -61,9 +62,22 @@ jobs:
           git diff --staged --quiet || git commit -m "chore: update scholar stats [skip ci]"
           git push || true
 
-      - name: Render and publish to gh-pages branch
-        uses: quarto-dev/quarto-actions/publish@v2
+      - name: Render CV (HTML + PDF)
+        working-directory: cv-source
+        run: quarto render
+
+      - name: Render website
+        run: quarto render
+
+      - name: Place CV outputs into site
+        run: |
+          mkdir -p _site/cv
+          cp cv-source/cv.html _site/cv/index.html
+          cp cv-source/cv.pdf  _site/cv/martaindale_cv.pdf
+
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          target: gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          cname: huntermartaindale.com
