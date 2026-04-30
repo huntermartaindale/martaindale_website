@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "Hunter Martaindale\nALERRT Center\nTexas State University\nSan Marcos, TX\nEmail: MartaindaleLLC@gmail.com\nLinks\n\nGoogle Scholar\nGitHub\nLinkedIn\nORCID\nALERRT Center\n\nFor consulting or expert witness inquiries, please use the dedicated Consulting page.\n\n\n\n\n\n&lt;label for=\"g-name\" class=\"form-label\"&gt;Name&lt;/label&gt;\n&lt;input type=\"text\" class=\"form-control\" id=\"g-name\" name=\"name\" required&gt;\n\n\n&lt;label for=\"g-email\" class=\"form-label\"&gt;Email&lt;/label&gt;\n&lt;input type=\"email\" class=\"form-control\" id=\"g-email\" name=\"email\" required&gt;\n\n\n&lt;label for=\"g-message\" class=\"form-label\"&gt;Message&lt;/label&gt;\n&lt;textarea class=\"form-control\" id=\"g-message\" name=\"message\" rows=\"5\" required&gt;&lt;/textarea&gt;\n\n\nSend"
+  },
+  {
+    "objectID": "media.html",
+    "href": "media.html",
+    "title": "Media",
+    "section": "",
+    "text": "My research has been covered by news organizations and I am available as a commentator on policing and active shooter topics. If you are a journalist or producer seeking comment, please use the contact form.\n\n\n\n  Example News OutletOnline\n  Example Story or Interview Title\n  2024-01-01\n  Brief description of the story, segment, or your contribution."
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "My research spans two primary areas: policing (with emphases on officer stress and physiology, use of force and decision making, and public opinion) and active shooter preparedness and response. Summaries below are written for a general audience. For full abstracts and citation information, use the DOI or PDF links."
+  },
+  {
+    "objectID": "research.html#active-shooter-events",
+    "href": "research.html#active-shooter-events",
+    "title": "Research",
+    "section": "Active Shooter Events",
+    "text": "Active Shooter Events\n\n\n\n  Replace This With Your Publication Title\n  Martaindale, M. Hunter, Blair, J. Pete\n  Journal Name (2024)\n  Replace with a plain-language description of what this study did, what was found, and why it matters for law enforcement or public safety."
+  },
+  {
+    "objectID": "research.html#policing-stress-physiology-and-performance",
+    "href": "research.html#policing-stress-physiology-and-performance",
+    "title": "Research",
+    "section": "Policing: Stress, Physiology, and Performance",
+    "text": "Policing: Stress, Physiology, and Performance\n\n\n\n  Replace This With Your Publication Title\n  Martaindale, M. Hunter\n  Journal Name (2023)\n  Replace with a plain-language description."
+  },
+  {
+    "objectID": "research.html#policing-decision-making-and-use-of-force",
+    "href": "research.html#policing-decision-making-and-use-of-force",
+    "title": "Research",
+    "section": "Policing: Decision Making and Use of Force",
+    "text": "Policing: Decision Making and Use of Force\n\n\n\n  Replace This With Your Publication Title\n  Martaindale, M. Hunter\n  Journal Name (2023)\n  Replace with a plain-language description."
+  },
+  {
+    "objectID": "research.html#policing-public-opinion-and-legitimacy",
+    "href": "research.html#policing-public-opinion-and-legitimacy",
+    "title": "Research",
+    "section": "Policing: Public Opinion and Legitimacy",
+    "text": "Policing: Public Opinion and Legitimacy\n\n\n\n  Replace This With Your Publication Title\n  Martaindale, M. Hunter\n  Journal Name (2022)\n  Replace with a plain-language description."
+  },
+  {
+    "objectID": "research.html#other-publications",
+    "href": "research.html#other-publications",
+    "title": "Research",
+    "section": "Other Publications",
+    "text": "Other Publications\n\n\nNo publications listed yet."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Hunter Martaindale",
+    "section": "",
+    "text": "Hunter Martaindale\nDirector of Research, ALERRT Center\nAssociate Research Professor, School of Criminal Justice and Criminology\nTexas State University\nMy research focuses on policing and public safety, with particular emphasis on active shooter preparedness and response, officer stress and performance under pressure, use of force decision making, and public opinion of police. As Director of Research at the ALERRT Center, I work to translate research findings into practical guidance for law enforcement training and policy.\nResearch CV Consulting\n\n\n\n\n\n\n745\n\n\nCitations\n\n\n\n\n16\n\n\nh-index\n\n\n\n\n23\n\n\ni10-index\n\n\n\n\n\nCitation data from Google Scholar. Updated weekly."
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "Download PDF\n\nFull CV available for download above. An interactive version is in development."
+  },
+  {
+    "objectID": "consulting.html",
+    "href": "consulting.html",
+    "title": "Consulting",
+    "section": "",
+    "text": "I am available for research consulting, expert witness testimony, and training consultation on topics related to policing and active shooter preparedness. My work bridges academic research and practical law enforcement application, and I have experience translating complex findings for legal, policy, and operational audiences.\nAreas of Expertise\n\nActive shooter incident analysis, response protocols, and training program evaluation\nLaw enforcement performance under stress and high-stakes decision making\nUse of force analysis and officer decision making\nPublic opinion of police and community-police relations\nExpert witness services in use of force and police practices litigation\n\nInquiry\nFor consulting inquiries, expert witness requests, or speaking engagements, please complete the form below or email directly at MartaindaleLLC@gmail.com.\n\n\n\n&lt;label for=\"c-name\" class=\"form-label\"&gt;Name&lt;/label&gt;\n&lt;input type=\"text\" class=\"form-control\" id=\"c-name\" name=\"name\" required&gt;\n\n\n&lt;label for=\"c-email\" class=\"form-label\"&gt;Email&lt;/label&gt;\n&lt;input type=\"email\" class=\"form-control\" id=\"c-email\" name=\"email\" required&gt;\n\n\n&lt;label for=\"c-org\" class=\"form-label\"&gt;Organization&lt;/label&gt;\n&lt;input type=\"text\" class=\"form-control\" id=\"c-org\" name=\"organization\"&gt;\n\n\n&lt;label for=\"c-type\" class=\"form-label\"&gt;Type of Inquiry&lt;/label&gt;\n&lt;select class=\"form-select\" id=\"c-type\" name=\"inquiry_type\"&gt;\n  &lt;option value=\"\"&gt;Select...&lt;/option&gt;\n  &lt;option value=\"consulting\"&gt;Research Consulting&lt;/option&gt;\n  &lt;option value=\"expert-witness\"&gt;Expert Witness&lt;/option&gt;\n  &lt;option value=\"speaking\"&gt;Speaking Engagement&lt;/option&gt;\n  &lt;option value=\"training\"&gt;Training Consultation&lt;/option&gt;\n  &lt;option value=\"media\"&gt;Media Request&lt;/option&gt;\n  &lt;option value=\"other\"&gt;Other&lt;/option&gt;\n&lt;/select&gt;\n\n\n&lt;label for=\"c-message\" class=\"form-label\"&gt;Message&lt;/label&gt;\n&lt;textarea class=\"form-control\" id=\"c-message\" name=\"message\" rows=\"5\" required&gt;&lt;/textarea&gt;\n\n\nSend Inquiry"
+  }
+]
