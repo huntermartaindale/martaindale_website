@@ -66,6 +66,9 @@ jobs:
         working-directory: cv-source
         run: quarto render
 
+      - name: Sync publications from cv_data.yaml
+        run: Rscript scripts/sync_publications.R cv-source/cv_data.yaml
+
       - name: Render website
         run: quarto render
 

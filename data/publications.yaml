@@ -1,99 +1,539 @@
 # publications.yaml
-# One entry per publication. Add new entries at the top of each topic group.
+# AUTO-GENERATED from cv_data.yaml by scripts/sync_publications.R
+# Edit cv_data.yaml in huntermartaindale/cv, not this file.
 #
-# TOPIC IDs (must match exactly what research.qmd uses):
-#   active-shooter        - Active shooter events and response
-#   policing-stress       - Officer stress, physiology, and performance
-#   policing-decisions    - Decision making, use of force
-#   policing-public-opinion - Public opinion, legitimacy, trust
-#   other                 - Everything else
-#
-# FIELDS:
-#   citations is updated automatically by data/update_scholar.R
-#   Set pdf to a path like "pubs/filename.pdf" once you add the file
-#   Set doi, preprint, pdf to null if not applicable
+# Generated: 2026-04-30 00:17:22 CDT
+# Source:    ../cv/cv_data.yaml
+# Total:     54 publications
 
-# --- ACTIVE SHOOTER ---------------------------------------------------------
-
-- id: sample-active-shooter-01
-  title: "Replace This With Your Publication Title"
+- title: Striking or grappling? Comparing public and officers' perceptions of police
+    use of force
   authors:
-    - "Martaindale, M. Hunter"
-    - "Blair, J. Pete"
+  - '*Eleuterio-da-Rocha, J., Tanksley, P. T., Martaindale, M. H., Johncox, J., &
+    Blair, J. P.'
+  year: 2026
+  journal: Journal of Criminal Justice
+  volume: '103'
+  pages: '102601'
+  doi: 10.1016/j.jcrimjus.2026.102601
+  topics:
+  - policing-decisions
+- title: 'Clarifying methods and interpretations in law enforcement mortality surveillance:
+    Response to Kamal'
+  authors:
+  - Tanksley, P. T., Barnes, J. C., Blair, J. P., & Martaindale, M. H.
+  year: 2026
+  journal: The Lancet Regional Health - Americas
+  volume: '53'
+  pages: '101330'
+  doi: 10.1016/j.lana.2025.101330
+  topics:
+  - policing-stress
+- title: 'Public opinion and the immediate entry dilemma: A factorial survey experiment
+    on active shooter response'
+  authors:
+  - Martaindale, M. H., & Tanksley, P. T.
+  year: 2026
+  journal: Journal of Criminal Justice
+  volume: '102'
+  pages: '102578'
+  doi: 10.1016/j.jcrimjus.2025.102578
+  topics:
+  - active-shooter
+- title: 'Mortality among law enforcement officers in the United States: A population-wide
+    analysis of the National Occupational Mortality Surveillance data, 2020-2023'
+  authors:
+  - Tanksley, P. T., Barnes, J. C., Blair, J. P., & Martaindale, M. H.
+  year: 2025
+  journal: The Lancet Regional Health - Americas
+  volume: '52'
+  pages: '101270'
+  doi: 10.1016/j.lana.2025.101270
+  topics:
+  - policing-stress
+- title: Shift schedule change from 24/48 to 1/3/2/3 improves markers of stress and
+    quality of life in career firefighters
+  authors:
+  - McAllister, M. J., Martaindale, M. H., Womble, A., Sutton, N., & Uriegas, S.
+  year: 2025
+  journal: Journal of Occupational and Environmental Medicine
+  doi: 10.1097/JOM.0000000000003638
+  topics:
+  - policing-stress
+- title: 'Virtual reality based active shooter training: Added physical stress increases
+    anxiety but not stress biomarkers'
+  authors:
+  - '*Sutton, N., Martaindale, M. H., Uriegas, S., Dillard, C. C., & McAllister, M.
+    J.'
+  year: 2025
+  journal: Psychoneuroendocrinology
+  doi: 10.1016/j.psyneuen.2025.107628
+  topics:
+  - active-shooter
+- title: To what are we inferring? The widespread misuse of inferential testing in
+    the most cited criminology and criminal justice journals
+  authors:
+  - Blair, J. P., Tanksley, P. T., Spivey, E., & Martaindale, M. H.
+  year: 2025
+  journal: American Journal of Criminal Justice
+  doi: 10.1007/s12103-025-09845-4
+  topics:
+  - other
+- title: 'Active attacks with motor vehicles: A short report and case study of the
+    2025 New Year''s Day attack in New Orleans, LA'
+  authors:
+  - Blair, J. P., Martaindale, M. H., Tanksley, P. T., & Johncox, J. D.
+  year: 2025
+  journal: American Journal of Criminal Justice
+  doi: 10.1007/s12103-025-09806-x
+  topics:
+  - active-shooter
+- title: Relationships between physiological stress biomarkers and cardiovascular
+    disease risk factors among career firefighters
+  authors:
+  - '*Gonzalez, D. E., Coles, M. E., Tanksley, P. T., Martaindale, M. H., Martin,
+    S. E., & McAllister, M. J.'
+  year: 2025
+  journal: Journal of Occupational and Environmental Medicine
+  doi: 10.1097/JOM.0000000000003389
+  topics:
+  - policing-stress
+- title: Markers of fitness, stress, and cardiometabolic disease risk among law enforcement
+    officers
+  authors:
+  - '*McAllister, M. J., Dodge, C., Tanksley, P. T., Martaindale, M. H., Martin, S.
+    E., & Gonzalez, D. E.'
+  year: 2025
+  journal: Journal of Occupational and Environmental Medicine
+  volume: '67'
+  issue: '6'
+  pages: 437-444
+  doi: 10.1097/JOM.0000000000003357
+  topics:
+  - policing-stress
+- title: Can a Virtual Reality Training Scenario Elicit a Stress Response Similar
+    to a Realistic Scenario Based Training Scenario?
+  authors:
+  - Johncox, J. D., Martaindale, M. H., & Sandel, W. L.
+  year: 2025
+  journal: Applied Police Briefings
+  volume: '1'
+  issue: '3'
+  pages: 17-19
+  doi: 10.22215/apb.v1i3.5141
+  topics:
+  - policing-stress
+- title: 'Oh, @#%$!: A replication and expansion of Martaindale et al. (2024)'
+  authors:
+  - '*Doyle, M. K., Sandel, W. L., & Martaindale, M. H.'
   year: 2024
-  journal: "Journal Name"
-  volume: null
-  issue: null
-  pages: null
-  doi: null
-  pdf: null
-  preprint: null
-  abstract: "Full academic abstract text."
-  plain_summary: "Replace with a plain-language description of what this study did, what was found, and why it matters for law enforcement or public safety."
+  journal: 'Policing: An International Journal'
+  doi: 10.1108/PIJPSM-05-2024-0089
   topics:
-    - active-shooter
-  citations: 0
-  featured: true
-
-# --- POLICING: STRESS -------------------------------------------------------
-
-- id: sample-stress-01
-  title: "Replace This With Your Publication Title"
+  - other
+- title: 'Interviewing and interrogation practices and beliefs, twenty years later:
+    A national self-report survey of American police'
   authors:
-    - "Martaindale, M. Hunter"
+  - Brimbal, L., Roche, S. P., & Martaindale, M. H.
+  year: 2024
+  journal: Law and Human Behavior
+  doi: 10.1037/lhb0000570
+  topics:
+  - policing-decisions
+- title: '#FalseFlag: Exploring themes in conspiracy theory tweets regarding the Robb
+    Elementary School active shooter event'
+  authors:
+  - '*Doyle, M. K., & Martaindale, M. H.'
+  year: 2024
+  journal: Journal of Qualitative Criminology
+  doi: 10.21428/88de04a1.01db6fab
+  topics:
+  - active-shooter
+- title: Impact of L-theanine and L-tyrosine on markers of stress and cognitive performance
+    in response to a virtual reality based active shooter training drill
+  authors:
+  - '*McAllister, M. J., Martaindale, M. H., Dillard, C. C., & McCullough, R.'
+  year: 2024
+  journal: Stress
+  volume: '27'
+  issue: '1'
+  pages: '2375588'
+  doi: 10.1080/10253890.2024.2375588
+  topics:
+  - active-shooter
+- title: 'Stress response to virtual reality based active shooter training: Impact
+    of caffeine consumption'
+  authors:
+  - '*McAllister, M. J., Martaindale, M. H., Dillard, C. C., & Gonzalez, D. E.'
+  year: 2024
+  journal: Psychoneuroendocrinology
+  doi: 10.1016/j.psyneuen.2023.106923
+  topics:
+  - active-shooter
+- title: Can a virtual reality training scenario elicit similar stress response as
+    a realistic scenario-based training scenario?
+  authors:
+  - '*Martaindale, M. H., Sandel, W. L., Duron, A., & McAllister, M. J.'
+  year: 2024
+  journal: Police Quarterly
+  volume: '27'
+  issue: '1'
+  pages: 109-129
+  doi: 10.1177/10986111231182729
+  topics:
+  - policing-stress
+- title: 'Arm the educators - but not without conditions: A qualitative assessment
+    of law enforcement officers'' support for armed teacher policies'
+  authors:
+  - Schildkraut, J., & Martaindale, M. H.
+  year: 2024
+  journal: Police Practice and Research
+  volume: '25'
+  issue: '4'
+  pages: 473-489
+  doi: 10.1080/15614263.2023.2287218
+  topics:
+  - active-shooter
+- title: A scientific examination of the 21-foot rule
+  authors:
+  - Sandel, W. L., Martaindale, M. H., & Blair, J. P.
+  year: 2024
+  journal: Applied Police Briefs
+  volume: '1'
+  issue: '1'
+  doi: 10.22215/apb.v1i1
+  topics:
+  - policing-decisions
+- title: Wait for backup or not? How police officers view their role when responding
+    to an active shooter event
+  authors:
+  - Martaindale, M. H., Sandel, W. L., & Blair, J. P.
   year: 2023
-  journal: "Journal Name"
-  volume: null
-  issue: null
-  pages: null
-  doi: null
-  pdf: null
-  preprint: null
-  abstract: "Full academic abstract text."
-  plain_summary: "Replace with a plain-language description."
+  journal: Journal of Experimental Criminology
+  doi: 10.1007/s11292-023-09592-8
   topics:
-    - policing-stress
-  citations: 0
-  featured: false
-
-# --- POLICING: DECISIONS / USE OF FORCE ------------------------------------
-
-- id: sample-decisions-01
-  title: "Replace This With Your Publication Title"
+  - active-shooter
+- title: Slow breathing reduces biomarkers of stress in response to a virtual-reality
+    active shooter training drill
   authors:
-    - "Martaindale, M. Hunter"
+  - '*Dillard, C. C., Martaindale, M. H., Hunter, S. D., & McAllister, M. J.'
   year: 2023
-  journal: "Journal Name"
-  volume: null
-  issue: null
-  pages: null
-  doi: null
-  pdf: null
-  preprint: null
-  abstract: "Full academic abstract text."
-  plain_summary: "Replace with a plain-language description."
+  journal: Healthcare
+  volume: '11'
+  issue: '16'
+  doi: 10.3390/healthcare11162351
   topics:
-    - policing-decisions
-  citations: 0
-  featured: false
-
-# --- POLICING: PUBLIC OPINION / LEGITIMACY ---------------------------------
-
-- id: sample-public-opinion-01
-  title: "Replace This With Your Publication Title"
+  - active-shooter
+- title: 'Successfully securing a classroom door in an active shooter event: Examining
+    two types of door locks'
   authors:
-    - "Martaindale, M. Hunter"
+  - '*Martaindale, M. H., Sandel, W. L., & Duron, A.'
+  year: 2023
+  journal: Journal of Mass Violence Research
+  doi: 10.53076/JMVR74565
+  topics:
+  - active-shooter
+- title: Risk factors for cardiometabolic disease in professional firefighters
+  authors:
+  - '*McAllister, M. J., Gonzalez, D. E., Leonard, M., Martaindale, M. H., Bloomer,
+    R. J., Pence, J., & Martin, S. E.'
+  year: 2023
+  journal: Safety and Health at Work
+  volume: '65'
+  issue: '2'
+  pages: 119-124
+  doi: 10.1097/JOM.0000000000002743
+  topics:
+  - policing-stress
+- title: What are we talking about? Definitional confusion within mass and active
+    shooting research
+  authors:
+  - Sandel, W. L., & Martaindale, M. H.
   year: 2022
-  journal: "Journal Name"
-  volume: null
-  issue: null
-  pages: null
-  doi: null
-  pdf: null
-  preprint: null
-  abstract: "Full academic abstract text."
-  plain_summary: "Replace with a plain-language description."
+  journal: Journal of Mass Violence Research
+  volume: '1'
+  issue: '2'
+  pages: 4-16
+  doi: 10.53076/jmvr47829
   topics:
-    - policing-public-opinion
-  citations: 0
-  featured: false
+  - active-shooter
+- title: Firefighters with higher cardiorespiratory fitness demonstrate lower markers
+    of cardiovascular disease risk
+  authors:
+  - '*McAllister, M. J., Gonzalez, D. E., Leonard, M., Martaindale, M. H., Bloomer,
+    R. J., Pence, J., & Martin, S. E.'
+  year: 2022
+  journal: Journal of Occupational and Environmental Medicine
+  doi: 10.1097/JOM.0000000000002632
+  topics:
+  - policing-stress
+- title: '#&$@!!: The impact of swear words on civilians'' perception of officer use
+    of force'
+  authors:
+  - '*Martaindale, M. H., Sandel, W. L., Duron, A., & Blair, J. P.'
+  year: 2022
+  journal: Police Quarterly
+  volume: '26'
+  issue: '2'
+  pages: 194-212
+  doi: 10.1177/10986111221111332
+  topics:
+  - policing-decisions
+- title: Virtual reality based active shooter training drill increases salivary and
+    subjective markers of stress
+  authors:
+  - '*McAllister, M. J., Martaindale, M. H., Gonzalez, A. E., & Case, M. J.'
+  year: 2022
+  journal: Yale Journal of Biology and Medicine
+  volume: '95'
+  issue: '1'
+  pages: 105-113
+  topics:
+  - active-shooter
+- title: Armed and considered capable? Law enforcement officers' attitudes about armed
+    teacher policies in the United States
+  authors:
+  - Martaindale, M. H., & Schildkraut, J.
+  year: 2022
+  journal: Crime Prevention and Community Safety
+  volume: '24'
+  issue: '2'
+  doi: 10.1057/s41300-022-00142-4
+  topics:
+  - active-shooter
+- title: Should firearms be allowed in K-12 public schools? An analysis of law enforcement's
+    perceptions of armed teacher policies
+  authors:
+  - Schildkraut, J., & Martaindale, M. H.
+  year: 2022
+  journal: Security Journal
+  doi: 10.1057/s41284-022-00327-4
+  topics:
+  - active-shooter
+- title: An evaluation of light positioning on suspect accuracy in low light environments
+  authors:
+  - '*Blair, J. P., Martaindale, M. H., & Spivey, E. D.'
+  year: 2021
+  journal: Justice Evaluation Journal
+  volume: '5'
+  issue: '1'
+  doi: 10.1080/24751979.2021.1970482
+  topics:
+  - policing-decisions
+- title: Women demonstrate lower markers of stress and oxidative stress during active
+    shooter training drill
+  authors:
+  - McAllister, M. J., & Martaindale, M. H.
+  year: 2021
+  journal: Comprehensive Psychoneuroendocrinology
+  volume: '6'
+  pages: '100046'
+  doi: 10.1016/j.cpnec.2021.100046
+  topics:
+  - active-shooter
+- title: Improving the accuracy of firearm identification in a dynamic use of force
+    scenario
+  authors:
+  - Martaindale, M. H.
+  year: 2021
+  journal: Police Quarterly
+  volume: '24'
+  issue: '1'
+  pages: 104-130
+  doi: 10.1177/1098611120944387
+  topics:
+  - policing-decisions
+- title: A scientific examination of the 21-foot rule
+  authors:
+  - Sandel, W. L., Martaindale, M. H., & Blair, J. P.
+  year: 2021
+  journal: Police Practice & Research
+  volume: '22'
+  issue: '3'
+  pages: 1314-1329
+  doi: 10.1080/15614263.2020.1772785
+  topics:
+  - policing-decisions
+- title: Active shooter training drill increases blood and salivary markers of stress
+  authors:
+  - '*McAllister, M. J., Martaindale, M. H., & Renteria, L. I.'
+  year: 2020
+  journal: International Journal of Environmental Research and Public Health
+  volume: '17'
+  issue: '14'
+  doi: 10.3390/ijerph17145042
+  topics:
+  - active-shooter
+- title: Correlates of the number shot and killed in active shooter events
+  authors:
+  - Blair, J. P., Sandel, W. L., & Martaindale, M. H.
+  year: 2020
+  journal: Homicide Studies
+  volume: '25'
+  issue: '4'
+  pages: 335-360
+  doi: 10.1177/1088767920976727
+  topics:
+  - active-shooter
+- title: 'Peek or push: An examination of two types of room clearing tactics for active
+    shooter event response'
+  authors:
+  - Blair, J. P., Martaindale, M. H., & Sandel, W. L.
+  year: 2019
+  journal: Journal of Police Emergency Response
+  volume: '9'
+  issue: '3'
+  doi: 10.1177/2158244019871052
+  topics:
+  - active-shooter
+- title: 'The evolution of active shooter response training protocols since Columbine:
+    Lessons from the advanced law enforcement rapid response training center'
+  authors:
+  - Martaindale, M. H., & Blair, J. P.
+  year: 2019
+  journal: Journal of Contemporary Criminal Justice
+  volume: '35'
+  issue: '3'
+  doi: 10.1177/1043986219840237
+  topics:
+  - active-shooter
+- title: Throwing a chair could save officers' lives during room entries
+  authors:
+  - Blair, J. P., & Martaindale, M. H.
+  year: 2017
+  journal: International Journal of Police Science and Management
+  volume: '19'
+  issue: '2'
+  doi: 10.1177/1461355717711452
+  topics:
+  - policing-decisions
+- title: 'Active shooter events in the workplace: Findings and policy implications'
+  authors:
+  - '*Martaindale, M. H., Sandel, W. L., & Blair, J. P.'
+  year: 2017
+  journal: Journal of Business Continuity and Emergency Planning
+  volume: '11'
+  issue: '1'
+  doi: 10.69554/lcym6472
+  topics:
+  - active-shooter
+- title: 'Inflammation on the frontlines: Linking salivary blood biomarkers to cardiometabolic
+    health and physical fitness parameters in firefighters'
+  authors:
+  - '*McAllister, M. J., Tanksley, P. T., Martaindale, M. H., DeArman, A., Samora,
+    M., Martin, S. E., & Gonzalez, D. E.'
+  year: 2025
+  journal: Preventative Medicine Reports
+  topics:
+  - policing-stress
+- title: 'The Chain of Survival: Responding to an Active Attack'
+  authors:
+  - Blair, J. P., & Martaindale, M. H.
+  year: 2024
+  journal: TPPP, LLC
+  topics:
+  - active-shooter
+- title: Active Shooter/Hostile Event Overview (Data)
+  authors:
+  - Martaindale, M. H.
+  year: 2021
+  journal: In Moore-Merrell, L., Delaney, J. B., & Marino, M. J. Introduction to Active
+    Shooter/Hostile Event Response. Fire Protection Publications
+  topics:
+  - active-shooter
+- title: Active shooter events in the United States - 2000 to 2010
+  authors:
+  - Blair, J. P., & Martaindale, M. H.
+  year: 2013
+  journal: In Blair, J. P., Nichols, T., Burns, D., & Curnutt, J. R. Active Shooter
+    Events and Response. CRC Press LLC
+  topics:
+  - active-shooter
+- title: 'Evaluating police tactics: An empirical assessment of room entry techniques'
+  authors:
+  - Blair, J. P., & Martaindale, M. H.
+  year: 2013
+  journal: Elsevier
+  doi: 10.4324/9781315721644
+  topics:
+  - active-shooter
+- title: 'Putting the lock in lockdown: Examining different options for schools'
+  authors:
+  - Martaindale, M. H.
+  year: 2023
+  journal: Rockefeller Institute of Government
+  topics:
+  - active-shooter
+- title: Assessing acute stress response during live-action and virtual reality training
+  authors:
+  - Martaindale, M. H.
+  year: 2023
+  journal: Police Chief Magazine, IACP
+  topics:
+  - policing-stress
+- title: Active Shooter Events in Schools
+  authors:
+  - Martaindale, M. H., & Blair, J. P.
+  year: 2017
+  journal: The Journal of School Safety
+  topics:
+  - active-shooter
+- title: Police considerations in active shooter events
+  authors:
+  - Martaindale, M. H.
+  year: 2015
+  journal: Royal Canadian Mounted Police Gazette
+  volume: '77'
+  issue: '1'
+  topics:
+  - active-shooter
+- title: Active shooter events from 2000 to 2012
+  authors:
+  - Blair, J. P., Martaindale, M. H., & Nichols, T.
+  year: 2014
+  journal: FBI Law Enforcement Bulletin
+  topics:
+  - active-shooter
+- title: Comparing the effects of acute participation in target practice versus active
+    shooter virtual reality training on stress biomarkers
+  authors:
+  - Gaitan, A. N., DeArman, A. S., Shakya, L., Martaindale, M. H., & McAllister, M.
+    J.
+  year: 2026
+  journal: Texas American College of Sports Medicine Annual Conference
+  topics:
+  - active-shooter
+- title: The ALERRT Room Entry System
+  authors:
+  - Blair, J. P., Martaindale, M. H., & Curnutt, J.
+  year: 2020
+  journal: Advanced Law Enforcement Rapid Response Training Center at Texas State
+    University
+  topics:
+  - active-shooter
+- title: 'Junior College Audit Report: Findings on Safety and Security in Texas Junior
+    Colleges 2009-2012'
+  authors:
+  - Martinez-Prather, K., McKenna, J. M., Calder, V., & Martaindale, M. H.
+  year: 2013
+  journal: Texas School Safety Center, Texas State University
+  topics:
+  - active-shooter
+- title: 'Bexar County Felony Probation Terminations 2010 and 2011: Quantitative and
+    Qualitative Data Results'
+  authors:
+  - Sanders, B. A., Bowman, S., Kringen, A. L., Martaindale, M. H., Schildkraut, J.,
+    Terranova, V., & Vaughan, T.
+  year: 2013
+  journal: Bexar County Probation, San Antonio, TX
+  topics:
+  - other
+- title: 'United States Active Shooter Events from 2000 to 2010: Training and Equipment
+    Implications'
+  authors:
+  - Blair, J. P., & Martaindale, M. H.
+  year: 2013
+  journal: ALERRT Center, Texas State University
+  topics:
+  - active-shooter
+
