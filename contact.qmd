@@ -21,27 +21,47 @@ San Marcos, TX
 - [ORCID](https://orcid.org/0000-0002-8100-7698)
 - [ALERRT Center](https://alerrt.org)
 
-Media inquiries are welcome via the form. For consulting or expert witness inquiries, please use the dedicated [Consulting](consulting.qmd) page.
+**Areas of Expertise**
+
+- Active shooter incident analysis, response protocols, and training program evaluation
+- Officer decision making
+- Public opinion of police and community-police relations
+- Expert witness services in use of force and police practices litigation
+
+I am available for research consulting, expert witness testimony, training consultation, speaking engagements, and media commentary. Use the form to introduce your inquiry, or email directly.
 
 :::
 
 ::: {.g-col-12 .g-col-md-7}
 
-<!-- TODO: Replace YOUR_FORMSPREE_FORM_ID (same account as consulting.qmd,
-     or create a separate form for general contact). -->
-
 <form action="https://formspree.io/f/mykbwyyn" method="POST">
   <div class="mb-3">
-    <label for="g-name" class="form-label">Name</label>
-    <input type="text" class="form-control" id="g-name" name="name" required>
+    <label for="c-name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="c-name" name="name" required>
   </div>
   <div class="mb-3">
-    <label for="g-email" class="form-label">Email</label>
-    <input type="email" class="form-control" id="g-email" name="email" required>
+    <label for="c-email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="c-email" name="email" required>
   </div>
   <div class="mb-3">
-    <label for="g-message" class="form-label">Message</label>
-    <textarea class="form-control" id="g-message" name="message" rows="5" required></textarea>
+    <label for="c-org" class="form-label">Organization</label>
+    <input type="text" class="form-control" id="c-org" name="organization">
+  </div>
+  <div class="mb-3">
+    <label for="c-type" class="form-label">Type of Inquiry</label>
+    <select class="form-select" id="c-type" name="inquiry_type">
+      <option value="">Select...</option>
+      <option value="consulting">Research Consulting</option>
+      <option value="expert-witness">Expert Witness</option>
+      <option value="speaking">Speaking Engagement</option>
+      <option value="training">Training Consultation</option>
+      <option value="media">Media Request</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="c-message" class="form-label">Message</label>
+    <textarea class="form-control" id="c-message" name="message" rows="5" required></textarea>
   </div>
   <button type="submit" class="btn btn-primary">Send</button>
 </form>

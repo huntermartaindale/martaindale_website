@@ -21,7 +21,7 @@ My research focuses on policing and public safety, with particular emphasis on a
 
 [Research](research.qmd){.btn .btn-primary style="margin-right: 0.5rem; margin-bottom: 0.5rem;"}
 [CV](cv.qmd){.btn .btn-outline-primary style="margin-right: 0.5rem; margin-bottom: 0.5rem;"}
-[Consulting](consulting.qmd){.btn .btn-outline-primary style="margin-bottom: 0.5rem;"}
+[Contact](contact.qmd){.btn .btn-outline-primary style="margin-bottom: 0.5rem;"}
 
 :::
 

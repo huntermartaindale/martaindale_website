@@ -5,7 +5,6 @@ project:
     - "index.qmd"
     - "research.qmd"
     - "cv.qmd"
-    - "consulting.qmd"
     - "contact.qmd"
   resources:
     - CNAME
@@ -22,8 +21,6 @@ website:
         href: research.qmd
       - text: "CV"
         href: cv.qmd
-      - text: "Consulting"
-        href: consulting.qmd
       - text: "Contact"
         href: contact.qmd
     right:
