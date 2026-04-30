@@ -26,10 +26,9 @@ I am available for research consulting, expert witness testimony, training consu
 
 ::: {.g-col-12 .g-col-md-7}
 
-::: {.contact-card}
-
-### Send a Message
-
+```{=html}
+<div class="contact-card">
+<h3>Send a Message</h3>
 <form action="https://formspree.io/f/mykbwyyn" method="POST" class="contact-form" novalidate>
   <div class="row g-3">
     <div class="col-md-6">
@@ -41,12 +40,10 @@ I am available for research consulting, expert witness testimony, training consu
       <input type="email" class="form-control" id="c-email" name="email" required>
     </div>
   </div>
-
   <div class="mt-3">
     <label for="c-org" class="form-label">Organization</label>
     <input type="text" class="form-control" id="c-org" name="organization" placeholder="Optional">
   </div>
-
   <div class="mt-3">
     <label for="c-type" class="form-label">Type of Inquiry <span class="req">*</span></label>
     <select class="form-select" id="c-type" name="inquiry_type" required>
@@ -59,23 +56,19 @@ I am available for research consulting, expert witness testimony, training consu
       <option value="other">Other</option>
     </select>
   </div>
-
   <div class="mt-3">
     <label for="c-message" class="form-label">Message <span class="req">*</span></label>
-    <textarea class="form-control" id="c-message" name="message" rows="6" required
-      placeholder="Brief description of the project, timeline, and any relevant context."></textarea>
+    <textarea class="form-control" id="c-message" name="message" rows="6" required placeholder="Brief description of the project, timeline, and any relevant context."></textarea>
   </div>
-
   <input type="hidden" name="_subject" value="Website inquiry: huntermartaindale.com">
   <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-
   <div class="d-flex justify-content-between align-items-center mt-4">
     <small class="text-muted">Required fields marked <span class="req">*</span>. Replies typically within 2 business days.</small>
     <button type="submit" class="btn btn-primary px-4">Send Inquiry</button>
   </div>
 </form>
-
-:::
+</div>
+```
 
 :::
 
