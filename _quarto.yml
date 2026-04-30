@@ -1,6 +1,13 @@
 project:
   type: website
   output-dir: _site
+  render:
+    - "index.qmd"
+    - "research.qmd"
+    - "cv.qmd"
+    - "media.qmd"
+    - "consulting.qmd"
+    - "contact.qmd"
   resources:
     - CNAME
 
