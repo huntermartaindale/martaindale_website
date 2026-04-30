@@ -14,6 +14,32 @@ library(htmltools)
 
 pubs <- yaml::read_yaml("data/publications.yaml")
 
+stats <- tryCatch(
+  yaml::read_yaml("data/scholar_stats.yaml"),
+  error = function(e) list(total_citations = "--", h_index = "--", i10_index = "--")
+)
+```
+
+::: {.scholar-stats-compact}
+::: {.grid}
+::: {.g-col-4 .stat-item-compact}
+<div class="stat-value-compact">`r stats$total_citations`</div>
+<div class="stat-label-compact">Citations</div>
+:::
+::: {.g-col-4 .stat-item-compact}
+<div class="stat-value-compact">`r stats$h_index`</div>
+<div class="stat-label-compact">h-index</div>
+:::
+::: {.g-col-4 .stat-item-compact}
+<div class="stat-value-compact">`r stats$i10_index`</div>
+<div class="stat-label-compact">i10-index</div>
+:::
+:::
+<div class="scholar-stats-caption">Google Scholar, updated weekly.</div>
+:::
+
+```{r render-helpers}
+
 render_pub <- function(pub) {
   has_val <- function(x) !is.null(x) && length(x) > 0 && !(is.atomic(x) && length(x) == 1 && is.na(x))
 

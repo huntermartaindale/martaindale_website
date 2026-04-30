@@ -2,7 +2,7 @@
 # AUTO-GENERATED from cv_data.yaml by scripts/sync_publications.R
 # Edit cv_data.yaml in huntermartaindale/cv, not this file.
 #
-# Generated: 2026-04-30 14:10:11 CDT
+# Generated: 2026-04-30 14:33:27 CDT
 # Source:    ../cv/cv_data.yaml
 # Total:     39 publications
 
@@ -228,6 +228,8 @@
   pages: 109-129
   doi: 10.1177/10986111231182729
   pdf: pubs/2024_martaindale_can-a-virtual-reality-training-scenario-elicit-sim.pdf
+  plain_summary: |
+    Scenario-based training relies on realistic, stressful situations to prepare officers for real-world encounters. With more agencies turning to virtual reality systems, this study tested whether a VR scenario produces a comparable stress response to an in-person scenario-based training exercise. Participants completed either the in-person exercise (n=31) or a VR version of the same exercise (n=27), with salivary stress markers measured before and after. Stress responses were similar across the two formats, indicating that VR can serve as a credible alternative when realistic in-person training is not feasible. The results support broader integration of VR into police training programs.
   topics:
   - policing-stress
 - title: 'Arm the educators - but not without conditions: A qualitative assessment
@@ -253,6 +255,8 @@
   volume: '1'
   issue: '1'
   doi: 10.22215/apb.v1i1
+  plain_summary: |
+    This Applied Police Briefs piece distills the original empirical test of the 21-foot rule for a practitioner audience. Across three experiments, the researchers measured how fast a person can cover 21 feet, how quickly officers can draw and fire under both calm and stressed conditions, and how lateral movement affects survivability. The data show that 21 feet is not a safe distance against an edged-weapon suspect, since the suspect can typically close the gap before the officer can respond. Movement substantially improved survivability. The brief calls for replacing the rigid 21-foot rule with training that emphasizes movement and decision-making.
   topics:
   - policing-decisions
 - title: Wait for backup or not? How police officers view their role when responding
@@ -361,6 +365,8 @@
   issue: '1'
   pages: 105-113
   pdf: pubs/2022_mcallister_virtual-reality-based-active-shooter-training-dril.pdf
+  plain_summary: |
+    Officers regularly face dangerous, life-threatening situations on the job. This study tested whether a brief virtual reality active shooter drill could trigger a measurable physiological stress response, and whether men and women respond differently. Twenty-nine participants completed a roughly 50-second VR scenario while saliva was sampled four times before and after. The drill produced significant increases in salivary stress markers, and women showed lower cortisol and uric acid concentrations than men. The findings suggest VR is a viable, low-cost training tool for inducing realistic stress in tactical occupations.
   topics:
   - active-shooter
 - title: Armed and considered capable? Law enforcement officers' attitudes about armed
@@ -373,6 +379,8 @@
   issue: '2'
   doi: 10.1057/s41300-022-00142-4
   pdf: pubs/2022_martaindale_armed-and-considered-capable-law-enforcement-offic.pdf
+  plain_summary: |
+    Several U.S. states have adopted policies allowing teachers to be armed at school, with little input from the law enforcement community on whether the policies make schools safer. This study used a 2020 nationwide survey of officers spanning many job duties, agency types, and community settings to assess where law enforcement actually stands. Respondents broadly supported armed teacher policies, but most expressed strong reservations about whether teachers receive enough training to respond effectively during an active shooter event. The results offer policymakers and school administrators a clearer picture of officer perspectives, and underscore training as a pivotal condition for any such policy.
   topics:
   - policing-public-opinion
 - title: Should firearms be allowed in K-12 public schools? An analysis of law enforcement's
@@ -383,6 +391,8 @@
   journal: Security Journal
   doi: 10.1057/s41284-022-00327-4
   pdf: pubs/2022_schildkraut_should-firearms-be-allowed-in-k-12-public-schools.pdf
+  plain_summary: |
+    Policies allowing teachers to carry firearms at school have spread since the 2018 Parkland shooting, despite limited public support and almost no input from law enforcement. Drawing on a national sample of officers, this study found that law enforcement broadly supports armed teacher policies, but conditions that support on adequate training. School resource officers and supervisors were noticeably less likely to favor the policy than patrol officers. The findings highlight an important divide between policy momentum and the views of those most directly involved in school safety.
   topics:
   - active-shooter
 - title: An evaluation of light positioning on suspect accuracy in low light environments
@@ -394,6 +404,8 @@
   issue: '1'
   doi: 10.1080/24751979.2021.1970482
   pdf: pubs/2021_blair_an-evaluation-of-light-positioning-on-suspect-accu.pdf
+  plain_summary: |
+    Police searches in low-light environments often rely on flashlights, but the standard techniques taught in training have not been rigorously tested. This randomized controlled trial with 236 participants compared three commonly taught flashlight tactics to see whether any meaningfully reduced the chance of an officer being shot by a hidden suspect. The Dagger technique significantly lowered the likelihood that participants playing the role of a hostile suspect could successfully shoot the officer. The finding has direct implications for how officers should be trained to operate in low-light situations.
   topics:
   - policing-decisions
 - title: Women demonstrate lower markers of stress and oxidative stress during active
@@ -406,6 +418,8 @@
   pages: '100046'
   doi: 10.1016/j.cpnec.2021.100046
   pdf: pubs/2021_mcallister_women-demonstrate-lower-markers-of-stress-and-oxid.pdf
+  plain_summary: |
+    Officer stress takes a measurable toll on long-term cardiovascular health, but most studies assume the response looks the same in men and women. This study compared salivary and blood stress markers in 31 participants (15 men, 16 women) immediately before and after a roughly 50-second active shooter training drill. Women showed lower markers of stress and oxidative stress than men, suggesting acute stress affects the sexes differently. The findings imply that interventions and training stress protocols may need to be tailored by sex rather than designed uniformly.
   topics:
   - active-shooter
 - title: Improving the accuracy of firearm identification in a dynamic use of force
@@ -419,6 +433,8 @@
   pages: 104-130
   doi: 10.1177/1098611120944387
   pdf: pubs/2021_martaindale_improving-the-accuracy-of-firearm-identification-i.pdf
+  plain_summary: |
+    In split-second use of force decisions, mistakes about whether a suspect is holding a gun can be tragic. This randomized experiment tested whether a brief deliberate-practice training program could improve officers' speed and accuracy at identifying firearms in a dynamic scenario. Eighty-seven participants completed a pretest, a 20-minute training intervention, and a posttest, with eye movements tracked throughout. The trained group made about one-third the errors of the control group and visually located the object roughly 16% faster. The results show that even short, focused training can substantially sharpen officer perception in shoot/no-shoot situations.
   topics:
   - policing-decisions
 - title: A scientific examination of the 21-foot rule
@@ -431,6 +447,8 @@
   pages: 1314-1329
   doi: 10.1080/15614263.2020.1772785
   pdf: pubs/2021_sandel_a-scientific-examination-of-the-21-foot-rule.pdf
+  plain_summary: |
+    This study put the long-standing 21-foot rule to an empirical test. Across three experiments, the researchers measured how fast a person can cover 21 feet, how quickly officers can draw and fire under both calm and stressed conditions, and how lateral movement affects survivability. The results show that 21 feet is not a safe distance: a charging suspect with an edged weapon can typically reach an officer faster than the officer can respond. Movement substantially improved officer survivability. The study argues that the 21-foot rule is inadequate as a fixed standard and that movement should be emphasized in training.
   topics:
   - policing-decisions
 - title: Active shooter training drill increases blood and salivary markers of stress
@@ -442,6 +460,8 @@
   issue: '14'
   doi: 10.3390/ijerph17145042
   pdf: pubs/2020_mcallister_active-shooter-training-drill-increases-blood-and.pdf
+  plain_summary: |
+    This study tested whether a short, realistic active shooter training drill produces a measurable physiological stress response. Thirty-one participants completed a roughly 50-second drill featuring professional actors as a gunman and four victims, with blood and saliva collected before and after. The drill produced significant increases in epinephrine and salivary stress markers (alpha-amylase and SIgA), with norepinephrine increases approaching significance. The findings confirm that even brief training drills generate genuine stress responses, with implications for how repeated exposure may affect long-term cardiometabolic health in officers and military personnel.
   topics:
   - active-shooter
 - title: Correlates of the number shot and killed in active shooter events
@@ -454,6 +474,8 @@
   pages: 335-360
   doi: 10.1177/1088767920976727
   pdf: pubs/2020_blair_correlates-of-the-number-shot-and-killed-in-active.pdf
+  plain_summary: |
+    Active shooter events have been studied from many angles, but only one prior study had tried to identify what factors predict how many people are injured or killed. This study compiled data on a large set of active shooter events and tested a wide range of incident, attacker, and response characteristics. The analysis found that several factors, including weapon type, location characteristics, and law enforcement response, were significantly associated with casualty counts. The results provide a more complete picture of which factors drive the human toll of these events and where prevention and response efforts may have the greatest effect.
   topics:
   - active-shooter
 - title: 'Peek or push: An examination of two types of room clearing tactics for active
@@ -466,6 +488,8 @@
   issue: '3'
   doi: 10.1177/2158244019871052
   pdf: pubs/2019_blair_peek-or-push-an-examination-of-two-types-of-room-c.pdf
+  plain_summary: |
+    When officers respond to an active shooter, room clearing tactics can put them in immediate danger. This study compared two competing approaches: a slow 'peek' that lets officers visually scan a room before entering, and a faster 'push' that prioritizes momentum and surprise. Using a controlled experimental design, the researchers measured how each tactic performed against a simulated suspect. The results favored one approach for officer survivability, with direct implications for how patrol officers should be trained to enter and clear rooms during ongoing attacks. The findings inform tactical decisions during the most dangerous phase of an active shooter response.
   topics:
   - active-shooter
 - title: 'The evolution of active shooter response training protocols since Columbine:
@@ -478,6 +502,8 @@
   issue: '3'
   doi: 10.1177/1043986219840237
   pdf: pubs/2019_martaindale_the-evolution-of-active-shooter-response-training.pdf
+  plain_summary: |
+    The 1999 Columbine attack fundamentally changed how American law enforcement prepares for active shooter events. This commentary traces how response training protocols have evolved in the two decades since, drawing on the experience of the Advanced Law Enforcement Rapid Response Training (ALERRT) Center. The piece reviews how doctrines around containment, immediate entry, single-officer response, and integrated rescue have shifted as the field has accumulated evidence from real events and field research. It also identifies gaps where further research and training development are still needed. The article serves as a roadmap for understanding how policing has adapted, and where it still needs to go.
   topics:
   - active-shooter
 - title: Throwing a chair could save officers' lives during room entries
@@ -489,6 +515,8 @@
   issue: '2'
   doi: 10.1177/1461355717711452
   pdf: pubs/2017_blair_throwing-a-chair-could-save-officers-lives-during.pdf
+  plain_summary: |
+    Officers performing room entries to apprehend suspects have been shot in the doorway because the suspect has the time advantage. This study tested whether throwing an everyday object into the room as a distraction could slow a hostile suspect's reaction time enough to give the officer a survivable advantage. A randomized experiment with 113 participants used both Bayesian and frequentist analyses to evaluate the effect. Simple distraction techniques, including throwing a chair, reliably slowed suspect reaction times, suggesting officers can buy critical time during high-risk entries. The technique offers a low-cost addition to room-entry tactics.
   topics:
   - policing-decisions
 - title: 'Active shooter events in the workplace: Findings and policy implications'
@@ -500,6 +528,8 @@
   issue: '1'
   doi: 10.69554/lcym6472
   pdf: pubs/2017_martaindale_active-shooter-events-in-the-workplace-findings-an.pdf
+  plain_summary: |
+    Workplaces are generally seen as safe, but active shooter incidents at businesses do occur, and leadership often makes hurried security decisions in their wake. This study compiled data on workplace active shooter events to give business leaders an empirical basis for those decisions. The findings detail patterns in attacker characteristics, weapons, response times, and casualty outcomes specific to workplace settings. From these patterns, the authors derive concrete policy recommendations for businesses on prevention, preparation, and response. The paper provides a research-based foundation for workplace security planning rather than reactive policy.
   topics:
   - active-shooter
 

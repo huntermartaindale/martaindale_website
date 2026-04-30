@@ -57,6 +57,42 @@ h1, h2, h3, h4 {
   margin-top: 0.2rem;
 }
 
+// Compact scholar stats variant (research page)
+.scholar-stats-compact {
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  margin: 0.75rem 0 1.5rem 0;
+  max-width: 360px;
+}
+
+.stat-item-compact {
+  text-align: center;
+}
+
+.stat-value-compact {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a365d;
+  line-height: 1.1;
+}
+
+.stat-label-compact {
+  font-size: 0.65rem;
+  color: #718096;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 0.1rem;
+}
+
+.scholar-stats-caption {
+  font-size: 0.7rem;
+  color: #a0aec0;
+  margin-top: 0.3rem;
+  text-align: center;
+}
+
 // Publication entries
 .pub-entry {
   padding: 1.25rem 0;
