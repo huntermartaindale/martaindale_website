@@ -4,21 +4,7 @@
     "href": "contact.html",
     "title": "Contact",
     "section": "",
-    "text": "Hunter Martaindale\nALERRT Center\nTexas State University\nSan Marcos, TX\nEmail: MartaindaleLLC@gmail.com\nLinks\n\nGoogle Scholar\nGitHub\nLinkedIn\nORCID\nALERRT Center\n\nMedia inquiries are welcome via the form. For consulting or expert witness inquiries, please use the dedicated Consulting page.\n\n\n\n\n\n&lt;label for=\"g-name\" class=\"form-label\"&gt;Name&lt;/label&gt;\n&lt;input type=\"text\" class=\"form-control\" id=\"g-name\" name=\"name\" required&gt;\n\n\n&lt;label for=\"g-email\" class=\"form-label\"&gt;Email&lt;/label&gt;\n&lt;input type=\"email\" class=\"form-control\" id=\"g-email\" name=\"email\" required&gt;\n\n\n&lt;label for=\"g-message\" class=\"form-label\"&gt;Message&lt;/label&gt;\n&lt;textarea class=\"form-control\" id=\"g-message\" name=\"message\" rows=\"5\" required&gt;&lt;/textarea&gt;\n\n\nSend"
-  },
-  {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "Curriculum Vitae",
-    "section": "",
-    "text": "Download PDF Open Full Page"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Hunter Martaindale, PhD",
-    "section": "",
-    "text": "Hunter Martaindale, PhD\nDirector of Research, ALERRT Center\nAssociate Research Professor, School of Criminal Justice and Criminology\nTexas State University\nMy research focuses on policing and public safety, with particular emphasis on active shooter preparedness and response, officer stress and performance under pressure, use of force decision making, and public opinion of police. As Director of Research at the ALERRT Center, I work to translate research findings into practical guidance for law enforcement training and policy.\nResearch CV Consulting"
+    "text": "Hunter Martaindale\nALERRT Center\nTexas State University\nSan Marcos, TX\nEmail: MartaindaleLLC@gmail.com\nLinks\n\nGoogle Scholar\nGitHub\nLinkedIn\nORCID\nALERRT Center\n\nAreas of Expertise\n\nActive shooter incident analysis, response protocols, and training program evaluation\nOfficer decision making\nPublic opinion of police and community-police relations\nExpert witness services in use of force and police practices litigation\n\nI am available for research consulting, expert witness testimony, training consultation, speaking engagements, and media commentary. Use the form to introduce your inquiry, or email directly.\n\n\n\n\n&lt;label for=\"c-name\" class=\"form-label\"&gt;Name&lt;/label&gt;\n&lt;input type=\"text\" class=\"form-control\" id=\"c-name\" name=\"name\" required&gt;\n\n\n&lt;label for=\"c-email\" class=\"form-label\"&gt;Email&lt;/label&gt;\n&lt;input type=\"email\" class=\"form-control\" id=\"c-email\" name=\"email\" required&gt;\n\n\n&lt;label for=\"c-org\" class=\"form-label\"&gt;Organization&lt;/label&gt;\n&lt;input type=\"text\" class=\"form-control\" id=\"c-org\" name=\"organization\"&gt;\n\n\n&lt;label for=\"c-type\" class=\"form-label\"&gt;Type of Inquiry&lt;/label&gt;\n&lt;select class=\"form-select\" id=\"c-type\" name=\"inquiry_type\"&gt;\n  &lt;option value=\"\"&gt;Select...&lt;/option&gt;\n  &lt;option value=\"consulting\"&gt;Research Consulting&lt;/option&gt;\n  &lt;option value=\"expert-witness\"&gt;Expert Witness&lt;/option&gt;\n  &lt;option value=\"speaking\"&gt;Speaking Engagement&lt;/option&gt;\n  &lt;option value=\"training\"&gt;Training Consultation&lt;/option&gt;\n  &lt;option value=\"media\"&gt;Media Request&lt;/option&gt;\n  &lt;option value=\"other\"&gt;Other&lt;/option&gt;\n&lt;/select&gt;\n\n\n&lt;label for=\"c-message\" class=\"form-label\"&gt;Message&lt;/label&gt;\n&lt;textarea class=\"form-control\" id=\"c-message\" name=\"message\" rows=\"5\" required&gt;&lt;/textarea&gt;\n\n\nSend"
   },
   {
     "objectID": "research.html",
@@ -63,10 +49,17 @@
     "text": "Other Publications\n\n\n\n  To what are we inferring? The widespread misuse of inferential testing in the most cited criminology and criminal justice journals\n  Blair, J. P., Tanksley, P. T., Spivey, E., & Martaindale, M. H.\n  American Journal of Criminal Justice (2025)\n  This study reviewed articles published in 18 of the top-ranked criminology and criminal justice journals to assess how often researchers apply statistical significance tests without meeting the basic requirement of random selection or random assignment. Nearly three-quarters of the reviewed articles used these tests inappropriately, and most researchers focused on whether results were statistically significant rather than on whether they were practically meaningful. The authors call for better statistical training in graduate education, reform of publishing standards, and greater use of exploratory research methods to strengthen the quality of evidence informing criminal justice policy.\n\n  DOIPDF"
   },
   {
-    "objectID": "consulting.html",
-    "href": "consulting.html",
-    "title": "Consulting",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Hunter Martaindale, PhD",
     "section": "",
-    "text": "I am available for research consulting, expert witness testimony, and training consultation on topics related to policing and active shooter preparedness. My work bridges academic research and practical law enforcement application, and I have experience translating complex findings for legal, policy, and operational audiences.\nAreas of Expertise\n\nActive shooter incident analysis, response protocols, and training program evaluation\nOfficer decision making\nPublic opinion of police and community-police relations\nExpert witness services in use of force and police practices litigation\n\nInquiry\nFor consulting inquiries, expert witness requests, or speaking engagements, please complete the form below or email directly at MartaindaleLLC@gmail.com.\n\n\n\n&lt;label for=\"c-name\" class=\"form-label\"&gt;Name&lt;/label&gt;\n&lt;input type=\"text\" class=\"form-control\" id=\"c-name\" name=\"name\" required&gt;\n\n\n&lt;label for=\"c-email\" class=\"form-label\"&gt;Email&lt;/label&gt;\n&lt;input type=\"email\" class=\"form-control\" id=\"c-email\" name=\"email\" required&gt;\n\n\n&lt;label for=\"c-org\" class=\"form-label\"&gt;Organization&lt;/label&gt;\n&lt;input type=\"text\" class=\"form-control\" id=\"c-org\" name=\"organization\"&gt;\n\n\n&lt;label for=\"c-type\" class=\"form-label\"&gt;Type of Inquiry&lt;/label&gt;\n&lt;select class=\"form-select\" id=\"c-type\" name=\"inquiry_type\"&gt;\n  &lt;option value=\"\"&gt;Select...&lt;/option&gt;\n  &lt;option value=\"consulting\"&gt;Research Consulting&lt;/option&gt;\n  &lt;option value=\"expert-witness\"&gt;Expert Witness&lt;/option&gt;\n  &lt;option value=\"speaking\"&gt;Speaking Engagement&lt;/option&gt;\n  &lt;option value=\"training\"&gt;Training Consultation&lt;/option&gt;\n  &lt;option value=\"media\"&gt;Media Request&lt;/option&gt;\n  &lt;option value=\"other\"&gt;Other&lt;/option&gt;\n&lt;/select&gt;\n\n\n&lt;label for=\"c-message\" class=\"form-label\"&gt;Message&lt;/label&gt;\n&lt;textarea class=\"form-control\" id=\"c-message\" name=\"message\" rows=\"5\" required&gt;&lt;/textarea&gt;\n\n\nSend Inquiry"
+    "text": "Hunter Martaindale, PhD\nDirector of Research, ALERRT Center\nAssociate Research Professor, School of Criminal Justice and Criminology\nTexas State University\nMy research focuses on policing and public safety, with particular emphasis on active shooter preparedness and response, officer stress and performance under pressure, use of force decision making, and public opinion of police. As Director of Research at the ALERRT Center, I work to translate research findings into practical guidance for law enforcement training and policy.\nResearch CV Contact"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "Download PDF Open Full Page"
   }
 ]

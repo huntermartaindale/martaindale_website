@@ -101,10 +101,6 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./consulting.html"> 
-<span class="menu-text">Consulting</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link active" href="./contact.html" aria-current="page"> 
 <span class="menu-text">Contact</span></a>
   </li>  
@@ -169,23 +165,44 @@ San Marcos, TX</p>
 <li><a href="https://orcid.org/0000-0002-8100-7698">ORCID</a></li>
 <li><a href="https://alerrt.org">ALERRT Center</a></li>
 </ul>
-<p>Media inquiries are welcome via the form. For consulting or expert witness inquiries, please use the dedicated <a href="./consulting.html">Consulting</a> page.</p>
+<p><strong>Areas of Expertise</strong></p>
+<ul>
+<li>Active shooter incident analysis, response protocols, and training program evaluation</li>
+<li>Officer decision making</li>
+<li>Public opinion of police and community-police relations</li>
+<li>Expert witness services in use of force and police practices litigation</li>
+</ul>
+<p>I am available for research consulting, expert witness testimony, training consultation, speaking engagements, and media commentary. Use the form to introduce your inquiry, or email directly.</p>
 </div>
 <div class="g-col-12 g-col-md-7">
-<!-- TODO: Replace YOUR_FORMSPREE_FORM_ID (same account as consulting.qmd,
-     or create a separate form for general contact). -->
 <form action="https://formspree.io/f/mykbwyyn" method="POST">
 <div class="mb-3">
-<pre><code>&lt;label for="g-name" class="form-label"&gt;Name&lt;/label&gt;
-&lt;input type="text" class="form-control" id="g-name" name="name" required&gt;</code></pre>
+<pre><code>&lt;label for="c-name" class="form-label"&gt;Name&lt;/label&gt;
+&lt;input type="text" class="form-control" id="c-name" name="name" required&gt;</code></pre>
 </div>
 <div class="mb-3">
-<pre><code>&lt;label for="g-email" class="form-label"&gt;Email&lt;/label&gt;
-&lt;input type="email" class="form-control" id="g-email" name="email" required&gt;</code></pre>
+<pre><code>&lt;label for="c-email" class="form-label"&gt;Email&lt;/label&gt;
+&lt;input type="email" class="form-control" id="c-email" name="email" required&gt;</code></pre>
 </div>
 <div class="mb-3">
-<pre><code>&lt;label for="g-message" class="form-label"&gt;Message&lt;/label&gt;
-&lt;textarea class="form-control" id="g-message" name="message" rows="5" required&gt;&lt;/textarea&gt;</code></pre>
+<pre><code>&lt;label for="c-org" class="form-label"&gt;Organization&lt;/label&gt;
+&lt;input type="text" class="form-control" id="c-org" name="organization"&gt;</code></pre>
+</div>
+<div class="mb-3">
+<pre><code>&lt;label for="c-type" class="form-label"&gt;Type of Inquiry&lt;/label&gt;
+&lt;select class="form-select" id="c-type" name="inquiry_type"&gt;
+  &lt;option value=""&gt;Select...&lt;/option&gt;
+  &lt;option value="consulting"&gt;Research Consulting&lt;/option&gt;
+  &lt;option value="expert-witness"&gt;Expert Witness&lt;/option&gt;
+  &lt;option value="speaking"&gt;Speaking Engagement&lt;/option&gt;
+  &lt;option value="training"&gt;Training Consultation&lt;/option&gt;
+  &lt;option value="media"&gt;Media Request&lt;/option&gt;
+  &lt;option value="other"&gt;Other&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+</div>
+<div class="mb-3">
+<pre><code>&lt;label for="c-message" class="form-label"&gt;Message&lt;/label&gt;
+&lt;textarea class="form-control" id="c-message" name="message" rows="5" required&gt;&lt;/textarea&gt;</code></pre>
 </div>
 <button type="submit" class="btn btn-primary">
 Send
