@@ -29,6 +29,17 @@ h1, h2, h3, h4 {
   color: #1a2744 !important;
 }
 
+// Academicons (Scholar/ORCID) in navbar — match the GitHub/LinkedIn
+// icon color since the .menu-text wrapper otherwise leaves them invisible
+.navbar .nav-link .ai {
+  color: #2d3748;
+  vertical-align: middle;
+}
+
+.navbar .nav-link:hover .ai {
+  color: #1a365d;
+}
+
 // Scholar stats bar on homepage
 .scholar-stats {
   background: #f7fafc;
