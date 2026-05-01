@@ -6,7 +6,7 @@ page-layout: full
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-3 style="text-align: center; padding-top: 0.5rem;"}
-![](img/headshot.jpg){.img-fluid .rounded style="max-width: 200px;"}
+![](img/headshot-placeholder.svg){.img-fluid .rounded style="max-width: 200px;" alt="Hunter Martaindale headshot placeholder"}
 :::
 
 ::: {.g-col-12 .g-col-md-9 style="padding-left: 1.5rem;"}

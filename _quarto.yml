@@ -38,11 +38,6 @@ website:
         aria-label: LinkedIn
   page-footer:
     center: "Hunter Martaindale | Texas State University"
-    right:
-      - text: "Google Scholar"
-        href: https://scholar.google.com/citations?user=_7PlqKYAAAAJ
-      - text: "ORCID"
-        href: https://orcid.org/0000-0002-8100-7698
 
 format:
   html:
