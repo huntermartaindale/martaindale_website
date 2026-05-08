@@ -27,3 +27,67 @@ My research focuses on policing and public safety, with particular emphasis on a
 
 :::
 
+## Recent Publications
+
+```{r recent-pubs}
+library(yaml)
+library(htmltools)
+
+`%||%` <- function(a, b) if (!is.null(a)) a else b
+
+has_val <- function(x) !is.null(x) && length(x) > 0 && !(is.atomic(x) && length(x) == 1 && is.na(x))
+
+first_sentence <- function(text) {
+  if (!has_val(text)) return("")
+  text <- gsub("\\s+", " ", trimws(text))
+  m <- regmatches(text, regexpr("^[^.!?]*[.!?]", text))
+  if (length(m) == 0 || nchar(m) == 0) text else m
+}
+
+pubs <- yaml::read_yaml("data/publications.yaml")
+years <- sapply(pubs, function(p) as.integer(p$year))
+recent <- pubs[order(years, decreasing = TRUE)][1:min(5, length(pubs))]
+
+render_recent <- function(pub) {
+  authors_str <- paste(unlist(pub$authors), collapse = ", ")
+  journal_str <- pub$journal %||% ""
+  if (has_val(pub$volume))
+    journal_str <- paste0(journal_str, ", ", pub$volume)
+  if (has_val(pub$issue))
+    journal_str <- paste0(journal_str, "(", pub$issue, ")")
+
+  links <- character(0)
+  if (has_val(pub$doi))
+    links <- c(links, sprintf('<a href="https://doi.org/%s">DOI</a>', pub$doi))
+  if (has_val(pub$pdf))
+    links <- c(links, sprintf('<a href="%s">PDF</a>', pub$pdf))
+
+  links_html <- ""
+  if (length(links) > 0)
+    links_html <- sprintf('<div class="pub-links">%s</div>', paste(links, collapse = ""))
+
+  summary_html <- ""
+  if (has_val(pub$plain_summary))
+    summary_html <- sprintf('<div class="pub-summary">%s</div>', first_sentence(pub$plain_summary))
+
+  HTML(sprintf(
+    '<div class="pub-entry">
+  <div class="pub-title">%s</div>
+  <div class="pub-authors">%s</div>
+  <div class="pub-journal">%s (%s)</div>
+  %s
+  %s
+</div>',
+    pub$title,
+    authors_str,
+    journal_str,
+    pub$year,
+    summary_html,
+    links_html
+  ))
+}
+
+tagList(lapply(recent, render_recent))
+```
+
+[See all publications &rarr;](research.qmd){.btn .btn-outline-primary style="margin-top: 0.75rem;"}
