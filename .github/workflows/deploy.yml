@@ -18,6 +18,8 @@ on:
   schedule:
     - cron: '0 7 * * 1'      # Mondays 7am UTC: refresh Scholar stats
   workflow_dispatch:           # Manual trigger from Actions UI
+  repository_dispatch:         # Fired by huntermartaindale/cv on push to its main
+    types: [cv-updated]
 
 jobs:
   build-deploy:
@@ -68,6 +70,9 @@ jobs:
 
       - name: Sync publications from cv_data.yaml
         run: Rscript scripts/sync_publications.R cv-source/cv_data.yaml
+
+      - name: Sync grants from cv_data.yaml
+        run: Rscript scripts/sync_grants.R cv-source/cv_data.yaml
 
       - name: Render website
         run: quarto render
