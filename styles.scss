@@ -98,10 +98,11 @@ h1, h2, h3, h4 {
 }
 
 .scholar-stats-caption {
-  font-size: 0.7rem;
-  color: #a0aec0;
-  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  color: #718096;
+  margin-top: 0.5rem;
   text-align: center;
+  line-height: 1.5;
 }
 
 // Publication entries
@@ -163,6 +164,184 @@ h1, h2, h3, h4 {
   font-size: 0.78rem;
   color: #718096;
   margin-top: 0.4rem;
+}
+
+// Featured/recent publication cards (homepage)
+.pub-card-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.pub-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.03);
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.pub-card:hover {
+  box-shadow: 0 4px 14px rgba(26, 54, 93, 0.10), 0 2px 4px rgba(0, 0, 0, 0.04);
+  transform: translateY(-1px);
+}
+
+.pub-card-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #1a365d;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.4rem;
+}
+
+.pub-card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1a2744;
+  line-height: 1.4;
+  margin-bottom: 0.35rem;
+}
+
+.pub-card-meta {
+  font-size: 0.85rem;
+  color: #718096;
+  margin-bottom: 0.6rem;
+  line-height: 1.5;
+}
+
+.pub-card-summary {
+  font-size: 0.92rem;
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.grant-notes {
+  font-size: 0.85rem;
+  color: #4a5568;
+  margin-bottom: 0.3rem;
+}
+
+.grant-subaward {
+  font-size: 0.85rem;
+  color: #4a5568;
+  margin-bottom: 0.3rem;
+}
+
+.grant-subaward-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background: #1a365d;
+  padding: 0.1rem 0.45rem;
+  border-radius: 3px;
+  margin-right: 0.4rem;
+  vertical-align: 1px;
+}
+
+.grant-award {
+  font-size: 0.78rem;
+  color: #718096;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+// Publications filter bar (research page)
+.pub-filter {
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 0.9rem 1rem;
+  margin: 1.25rem 0 1.25rem 0;
+}
+
+.pub-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+  margin-top: 0.65rem;
+}
+
+.pub-year-label {
+  font-size: 0.85rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.pub-year-select {
+  padding: 0.45rem 0.6rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  background: #ffffff;
+  font-size: 0.9rem;
+  color: #2d3748;
+
+  &:focus {
+    outline: none;
+    border-color: #1a365d;
+    box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.15);
+  }
+}
+
+.pub-topic-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.topic-pill {
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #4a5568;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+
+  &:hover {
+    border-color: #1a365d;
+    color: #1a365d;
+  }
+
+  &.active {
+    background: #1a365d;
+    border-color: #1a365d;
+    color: #ffffff;
+  }
+}
+
+.pub-count {
+  font-size: 0.8rem;
+  color: #718096;
+  margin-left: auto;
+}
+
+// Topic chips inside each publication entry
+.pub-topic-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: 0.4rem;
+}
+
+.pub-topic-chip {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #1a365d;
+  background: #edf2f7;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
 }
 
 // Topic section headings on research page

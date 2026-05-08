@@ -1,0 +1,111 @@
+---
+title: "Grants"
+page-layout: full
+toc: false
+---
+
+```{r setup, include=FALSE}
+library(yaml)
+library(htmltools)
+
+`%||%` <- function(a, b) if (!is.null(a)) a else b
+has_val <- function(x) !is.null(x) && length(x) > 0 && !(is.atomic(x) && length(x) == 1 && is.na(x))
+
+grants <- yaml::read_yaml("data/grants.yaml")
+summary_stats <- tryCatch(
+  yaml::read_yaml("data/grants_summary.yaml"),
+  error = function(e) list(pass_count = 0, pass_total = 0)
+)
+total_amount <- sum(sapply(grants, function(g) as.numeric(g$amount %||% 0)))
+n_grants <- length(grants)
+
+fmt_money <- function(x) {
+  if (!has_val(x)) return("")
+  paste0("$", formatC(as.numeric(x), format = "d", big.mark = ","))
+}
+```
+
+This page lists my externally funded research, training, and evaluation grants. For ongoing recurring training awards (the COPS Office Preparing for Active Shooter Situations program), see [my CV](cv.qmd). I am also available for [grant consulting](#grant-consulting).
+
+::: {.scholar-stats}
+::: {.grid}
+::: {.g-col-6 .stat-item}
+<div class="stat-value">`r n_grants`</div>
+<div class="stat-label">Funded Grants</div>
+:::
+::: {.g-col-6 .stat-item}
+<div class="stat-value">`r fmt_money(total_amount)`</div>
+<div class="stat-label">Total Funding</div>
+:::
+:::
+<div class="scholar-stats-caption">Excludes the recurring COPS Office PASS training awards (Co-PI), which total `r fmt_money(summary_stats$pass_total)` across `r summary_stats$pass_count` awards.</div>
+:::
+
+## Awarded Grants
+
+```{r grant-cards}
+render_grant <- function(g) {
+  role_str <- g$role %||% ""
+  if (identical(role_str, "Co-PI") && has_val(g$pi)) {
+    role_str <- sprintf("Co-PI (PI: %s)", g$pi)
+  }
+
+  meta_parts <- c(
+    if (has_val(g$funder)) g$funder else NULL,
+    if (nzchar(role_str)) role_str else NULL,
+    if (has_val(g$amount)) fmt_money(g$amount) else NULL
+  )
+  meta_html <- paste(meta_parts, collapse = " &middot; ")
+
+  subaward_html <- ""
+  if (has_val(g$prime_institution)) {
+    prime_parts <- c()
+    if (has_val(g$prime_pi)) {
+      prime_parts <- c(prime_parts, sprintf("Prime PI: %s (%s)", g$prime_pi, g$prime_institution))
+    } else {
+      prime_parts <- c(prime_parts, sprintf("Prime: %s", g$prime_institution))
+    }
+    if (has_val(g$prime_total)) {
+      prime_parts <- c(prime_parts, sprintf("Prime total %s", fmt_money(g$prime_total)))
+    }
+    subaward_html <- sprintf(
+      '<div class="grant-subaward"><span class="grant-subaward-tag">Subaward</span> %s</div>',
+      paste(prime_parts, collapse = " &middot; ")
+    )
+  } else if (has_val(g$notes)) {
+    subaward_html <- sprintf('<div class="grant-notes">%s</div>', g$notes)
+  }
+
+  award_html <- ""
+  if (has_val(g$award_number))
+    award_html <- sprintf('<div class="grant-award">Award #%s</div>', g$award_number)
+
+  HTML(sprintf(
+    '<div class="pub-card">
+  <div class="pub-card-tag">%s</div>
+  <div class="pub-card-title">%s</div>
+  <div class="pub-card-meta">%s</div>
+  %s
+  %s
+</div>',
+    g$year,
+    g$title,
+    meta_html,
+    subaward_html,
+    award_html
+  ))
+}
+
+div(class = "pub-card-grid", tagList(lapply(grants, render_grant)))
+```
+
+## Grant Consulting
+
+I work with academic teams, practitioner agencies, and small businesses on competitive federal and foundation proposals, with particular emphasis on policing, active shooter response, and training program evaluation. Typical engagements include:
+
+- **Proposal review and feedback** on framing, design, and evaluation plans before submission
+- **Methodology and evaluation design** for training, intervention, and program evaluation grants (NIJ, BJA, COPS Office, FEMA, NSF, NIH, DHS, SBIR/STTR)
+- **Co-investigator and consulting roles** on submitted proposals where my background in active shooter research, officer stress and performance, or use of force is a fit
+- **Letters of support and advisory roles** for university and agency partners
+
+To discuss a specific opportunity, use the [contact form](contact.qmd) or email directly. Please include the funding announcement, deadline, and a brief description of the project so I can quickly assess fit and availability.

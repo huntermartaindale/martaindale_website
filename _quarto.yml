@@ -4,6 +4,7 @@ project:
   render:
     - "index.qmd"
     - "research.qmd"
+    - "grants.qmd"
     - "cv.qmd"
     - "contact.qmd"
   resources:
@@ -19,6 +20,8 @@ website:
     left:
       - text: "Research"
         href: research.qmd
+      - text: "Grants"
+        href: grants.qmd
       - text: "CV"
         href: cv.qmd
       - text: "Contact"

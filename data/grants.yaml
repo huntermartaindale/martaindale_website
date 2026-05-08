@@ -1,0 +1,67 @@
+# grants.yaml
+# AUTO-GENERATED from cv_data.yaml by scripts/sync_grants.R
+# Edit cv_data.yaml in huntermartaindale/cv, not this file.
+#
+# Filters: status == funded; PASS grants excluded.
+#
+# Generated: 2026-05-08 14:57:44 CDT
+# Source:    C:/Users/mm2025/Desktop/GitHub/cv/cv_data.yaml
+# Total:     8 grants
+
+- title: Assessing the effectiveness of door locks in school-based active shooter
+    events
+  funder: 'Security Industry Association: School Safety Project'
+  role: PI
+  amount: 80000
+  year: 2025
+- title: ALERRT micro-learning video creation and evaluation
+  funder: Texas State University Research Accelerator Program
+  role: PI
+  amount: 101205
+  year: 2025
+- title: The virtual reality consortium for training development for law enforcement
+  funder: BJA
+  role: PI
+  amount: 560675
+  year: 2025
+  prime_pi: V. Buitron
+  prime_institution: Florida International University
+  prime_total: 3982693
+  award_number: 15PBJA-23-GK-06160-VIRT
+- title: Understanding the leakage that precedes mass public shootings and its utility
+    for prevention efforts through public awareness
+  funder: Department of Homeland Security
+  role: PI
+  amount: 89861
+  year: 2024
+  prime_pi: J. Schildkraut
+  prime_institution: Rockefeller Institute of Government
+  prime_total: 339368
+  award_number: DHS-24-TTP-132-00-99
+- title: Adapting Commercial VR-Based Training to Support AFSOC Mission Sustainment
+    Team Protection & Security Training Objectives
+  funder: SBIR/STTR Phase 1
+  role: PI
+  amount: 32859
+  year: 2023
+  prime_institution: StreetSmarts VR
+  prime_total: 100000
+  award_number: FA864924P0116
+- title: Integrated ICS training for all first responders
+  funder: FEMA
+  role: PI
+  amount: 621971
+  year: 2023
+  award_number: EMW-2022-FP-00779
+- title: Fire as a Weapon (FAAW) In-Person and eLearning Training Opportunities
+  funder: FEMA
+  role: PI
+  amount: 439210
+  year: 2021
+  award_number: EMW-2020-FP-00930
+- title: Firearm Detection Data
+  funder: NEC Corporation
+  role: PI
+  amount: 10000
+  year: 2020
+

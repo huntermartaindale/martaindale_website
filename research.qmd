@@ -1,12 +1,10 @@
 ---
 title: "Research"
-toc: true
-toc-location: right
-toc-title: "Topics"
-toc-depth: 2
+page-layout: full
+toc: false
 ---
 
-My research spans two primary areas: policing (with emphases on officer stress and physiology, use of force and decision making, and public opinion) and active shooter preparedness and response. You can click on the topic headings on the right to view publications in each area. Summaries are written for a general audience. For full abstracts and citation information, use the DOI or PDF links.
+My research spans two primary areas: policing (with emphases on officer stress and physiology, use of force and decision making, and public opinion) and active shooter preparedness and response. Use the topic and year filters below to narrow the list. Summaries are written for a general audience. For full abstracts and citation information, use the DOI or PDF links.
 
 ```{r setup}
 library(yaml)
@@ -20,19 +18,19 @@ stats <- tryCatch(
 )
 ```
 
-::: {.scholar-stats-compact}
+::: {.scholar-stats}
 ::: {.grid}
-::: {.g-col-4 .stat-item-compact}
-<div class="stat-value-compact">`r stats$total_citations`</div>
-<div class="stat-label-compact">Citations</div>
+::: {.g-col-4 .stat-item}
+<div class="stat-value">`r stats$total_citations`</div>
+<div class="stat-label">Citations</div>
 :::
-::: {.g-col-4 .stat-item-compact}
-<div class="stat-value-compact">`r stats$h_index`</div>
-<div class="stat-label-compact">h-index</div>
+::: {.g-col-4 .stat-item}
+<div class="stat-value">`r stats$h_index`</div>
+<div class="stat-label">h-index</div>
 :::
-::: {.g-col-4 .stat-item-compact}
-<div class="stat-value-compact">`r stats$i10_index`</div>
-<div class="stat-label-compact">i10-index</div>
+::: {.g-col-4 .stat-item}
+<div class="stat-value">`r stats$i10_index`</div>
+<div class="stat-label">i10-index</div>
 :::
 :::
 <div class="scholar-stats-caption">Google Scholar, updated weekly.</div>
@@ -40,9 +38,29 @@ stats <- tryCatch(
 
 ```{r render-helpers}
 
-render_pub <- function(pub) {
-  has_val <- function(x) !is.null(x) && length(x) > 0 && !(is.atomic(x) && length(x) == 1 && is.na(x))
+`%||%` <- function(a, b) if (!is.null(a)) a else b
 
+has_val <- function(x) !is.null(x) && length(x) > 0 && !(is.atomic(x) && length(x) == 1 && is.na(x))
+
+topic_labels <- c(
+  "active-shooter"          = "Active Shooter Events",
+  "policing-stress"         = "Officer Stress & Performance",
+  "policing-decisions"      = "Decision Making & Use of Force",
+  "policing-public-opinion" = "Public Opinion & Legitimacy",
+  "other"                   = "Other"
+)
+
+esc <- function(x) {
+  if (is.null(x)) return("")
+  x <- as.character(x)
+  x <- gsub("&", "&amp;", x, fixed = TRUE)
+  x <- gsub("<", "&lt;", x, fixed = TRUE)
+  x <- gsub(">", "&gt;", x, fixed = TRUE)
+  x <- gsub('"', "&quot;", x, fixed = TRUE)
+  x
+}
+
+render_pub <- function(pub) {
   links <- character(0)
   if (has_val(pub$doi))
     links <- c(links, sprintf('<a href="https://doi.org/%s">DOI</a>', pub$doi))
@@ -75,8 +93,22 @@ render_pub <- function(pub) {
   if (length(links) > 0)
     links_html <- sprintf('<div class="pub-links">%s</div>', paste(links, collapse = ""))
 
+  topic_slugs <- if (has_val(pub$topics)) unlist(pub$topics) else character(0)
+  topic_attr  <- paste(topic_slugs, collapse = " ")
+  topic_tags_html <- ""
+  if (length(topic_slugs) > 0) {
+    tags <- vapply(topic_slugs, function(s) {
+      label <- if (s %in% names(topic_labels)) topic_labels[[s]] else s
+      sprintf('<span class="pub-topic-chip">%s</span>', esc(label))
+    }, character(1))
+    topic_tags_html <- sprintf('<div class="pub-topic-chips">%s</div>', paste(tags, collapse = ""))
+  }
+
+  search_text <- tolower(paste(pub$title, authors_str, journal_str, pub$year, sep = " "))
+
   HTML(sprintf(
-    '<div class="pub-entry">
+    '<div class="pub-entry" data-topics="%s" data-year="%s" data-search="%s">
+  %s
   <div class="pub-title">%s</div>
   <div class="pub-authors">%s</div>
   <div class="pub-journal">%s (%s)</div>
@@ -84,6 +116,10 @@ render_pub <- function(pub) {
   %s
   %s
 </div>',
+    esc(topic_attr),
+    esc(pub$year),
+    esc(search_text),
+    topic_tags_html,
     pub$title,
     authors_str,
     journal_str,
@@ -94,55 +130,91 @@ render_pub <- function(pub) {
   ))
 }
 
-`%||%` <- function(a, b) if (!is.null(a)) a else b
+# Sort all pubs by year descending for the flat list
+years_all <- sapply(pubs, function(p) as.integer(p$year))
+pubs_sorted <- pubs[order(years_all, decreasing = TRUE)]
+unique_years <- sort(unique(years_all), decreasing = TRUE)
+```
 
-render_topic <- function(topic_id, pubs) {
-  topic_pubs <- Filter(function(p) topic_id %in% p$topics, pubs)
-  if (length(topic_pubs) == 0) {
-    return(HTML('<p style="color: #a0aec0; font-style: italic; padding: 0.75rem 0; margin: 0;">No publications listed yet.</p>'))
+```{r filter-bar}
+year_opts <- c(
+  list(tags$option(value = "all", "All Years")),
+  lapply(unique_years, function(y) tags$option(value = as.character(y), as.character(y)))
+)
+
+topic_pills <- c(
+  list(tags$button(class = "topic-pill active", `data-topic` = "all", "All Topics")),
+  lapply(names(topic_labels), function(slug) {
+    tags$button(class = "topic-pill", `data-topic` = slug, topic_labels[[slug]])
+  })
+)
+
+div(
+  class = "pub-filter",
+  do.call(tags$div, c(list(class = "pub-topic-pills"), topic_pills)),
+  div(
+    class = "pub-filter-row",
+    tags$label(`for` = "pub-year-filter", class = "pub-year-label", "Year:"),
+    do.call(tags$select, c(
+      list(id = "pub-year-filter", class = "pub-year-select", `aria-label` = "Filter by year"),
+      year_opts
+    )),
+    div(
+      class = "pub-count",
+      `aria-live` = "polite",
+      "Showing ",
+      tags$span(id = "pub-visible-count", as.character(length(pubs_sorted))),
+      sprintf(" of %d publications", length(pubs_sorted))
+    )
+  )
+)
+```
+
+```{r render-flat-list}
+tagList(lapply(pubs_sorted, render_pub))
+```
+
+```{=html}
+<script>
+(function() {
+  const yearSelect = document.getElementById('pub-year-filter');
+  const pills      = document.querySelectorAll('.topic-pill');
+  const entries    = document.querySelectorAll('.pub-entry');
+  const countEl    = document.getElementById('pub-visible-count');
+
+  let activeTopic = 'all';
+
+  function apply() {
+    const yr = yearSelect.value;
+    let visible = 0;
+
+    entries.forEach(el => {
+      const topics = (el.dataset.topics || '').split(/\s+/).filter(Boolean);
+      const year   = el.dataset.year || '';
+
+      const topicMatch = activeTopic === 'all' || topics.includes(activeTopic);
+      const yearMatch  = yr === 'all' || year === yr;
+
+      if (topicMatch && yearMatch) {
+        el.style.display = '';
+        visible++;
+      } else {
+        el.style.display = 'none';
+      }
+    });
+
+    countEl.textContent = visible;
   }
-  years <- sapply(topic_pubs, function(p) as.integer(p$year))
-  topic_pubs <- topic_pubs[order(years, decreasing = TRUE)]
-  tagList(lapply(topic_pubs, render_pub))
-}
+
+  yearSelect.addEventListener('change', apply);
+  pills.forEach(btn => {
+    btn.addEventListener('click', () => {
+      pills.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeTopic = btn.dataset.topic;
+      apply();
+    });
+  });
+})();
+</script>
 ```
-
-::: {.topic-section}
-## Active Shooter Events
-
-```{r}
-render_topic("active-shooter", pubs)
-```
-:::
-
-::: {.topic-section}
-## Policing: Stress, Physiology, and Performance
-
-```{r}
-render_topic("policing-stress", pubs)
-```
-:::
-
-::: {.topic-section}
-## Policing: Decision Making and Use of Force
-
-```{r}
-render_topic("policing-decisions", pubs)
-```
-:::
-
-::: {.topic-section}
-## Policing: Public Opinion and Legitimacy
-
-```{r}
-render_topic("policing-public-opinion", pubs)
-```
-:::
-
-::: {.topic-section}
-## Other Publications
-
-```{r}
-render_topic("other", pubs)
-```
-:::

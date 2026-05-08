@@ -37,11 +37,24 @@ library(htmltools)
 
 has_val <- function(x) !is.null(x) && length(x) > 0 && !(is.atomic(x) && length(x) == 1 && is.na(x))
 
-first_sentence <- function(text) {
+first_sentences <- function(text, n = 2) {
   if (!has_val(text)) return("")
   text <- gsub("\\s+", " ", trimws(text))
-  m <- regmatches(text, regexpr("^[^.!?]*[.!?]", text))
-  if (length(m) == 0 || nchar(m) == 0) text else m
+  matches <- regmatches(text, gregexpr("[^.!?]*[.!?]", text))[[1]]
+  if (length(matches) == 0) return(text)
+  paste(trimws(matches[seq_len(min(n, length(matches)))]), collapse = " ")
+}
+
+topic_label <- function(slug) {
+  labels <- c(
+    "active-shooter"          = "Active Shooter Events",
+    "policing-stress"         = "Officer Stress & Performance",
+    "policing-decisions"      = "Decision Making & Use of Force",
+    "policing-public-opinion" = "Public Opinion & Legitimacy",
+    "other"                   = "Other"
+  )
+  if (is.null(slug) || is.na(slug) || !(slug %in% names(labels))) return("Research")
+  unname(labels[slug])
 }
 
 pubs <- yaml::read_yaml("data/publications.yaml")
@@ -56,6 +69,8 @@ render_recent <- function(pub) {
   if (has_val(pub$issue))
     journal_str <- paste0(journal_str, "(", pub$issue, ")")
 
+  tag <- topic_label(if (has_val(pub$topics)) unlist(pub$topics)[1] else NULL)
+
   links <- character(0)
   if (has_val(pub$doi))
     links <- c(links, sprintf('<a href="https://doi.org/%s">DOI</a>', pub$doi))
@@ -68,16 +83,17 @@ render_recent <- function(pub) {
 
   summary_html <- ""
   if (has_val(pub$plain_summary))
-    summary_html <- sprintf('<div class="pub-summary">%s</div>', first_sentence(pub$plain_summary))
+    summary_html <- sprintf('<div class="pub-card-summary">%s</div>', first_sentences(pub$plain_summary, 2))
 
   HTML(sprintf(
-    '<div class="pub-entry">
-  <div class="pub-title">%s</div>
-  <div class="pub-authors">%s</div>
-  <div class="pub-journal">%s (%s)</div>
+    '<div class="pub-card">
+  <div class="pub-card-tag">%s</div>
+  <div class="pub-card-title">%s</div>
+  <div class="pub-card-meta">%s &middot; <em>%s</em> (%s)</div>
   %s
   %s
 </div>',
+    tag,
     pub$title,
     authors_str,
     journal_str,
@@ -87,7 +103,7 @@ render_recent <- function(pub) {
   ))
 }
 
-tagList(lapply(recent, render_recent))
+div(class = "pub-card-grid", tagList(lapply(recent, render_recent)))
 ```
 
 [See all publications &rarr;](research.qmd){.btn .btn-outline-primary style="margin-top: 0.75rem;"}
