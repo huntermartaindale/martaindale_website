@@ -3,10 +3,19 @@ title: ""
 page-layout: full
 ---
 
-::: {.grid}
+::: {.grid style="align-items: center;"}
 
-::: {.g-col-12 .g-col-md-3 style="text-align: center; padding-top: 0.5rem;"}
-![](img/martaindale_headshot_2.png){.img-fluid .rounded style="max-width: 200px;" alt="Hunter Martaindale headshot"}
+::: {.g-col-12 .g-col-md-3 style="text-align: center;"}
+![](img/martaindale_headshot_2.png){.img-fluid .rounded style="max-width: 260px;" alt="Hunter Martaindale headshot"}
+
+```{=html}
+<div class="home-social-icons">
+  <a href="https://scholar.google.com/citations?user=_7PlqKYAAAAJ" aria-label="Google Scholar" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i></a>
+  <a href="https://orcid.org/0000-0002-8100-7698" aria-label="ORCID" target="_blank" rel="noopener"><i class="ai ai-orcid"></i></a>
+  <a href="https://github.com/huntermartaindale" aria-label="GitHub" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+  <a href="https://www.linkedin.com/in/hmartaindale/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+</div>
+```
 :::
 
 ::: {.g-col-12 .g-col-md-9 style="padding-left: 1.5rem;"}
@@ -19,6 +28,8 @@ Texas State University
 
 My research focuses on policing and public safety, with particular emphasis on active shooter preparedness and response, officer stress and performance under pressure, use of force decision making, and public opinion of police. As Director of Research at the [ALERRT Center](https://alerrt.org), I work to translate research findings into practical guidance for law enforcement training and policy.
 
+To follow my research lab's ongoing work, visit the [ALERRT Research website](https://alerrtresearch.org).
+
 [Research](research.qmd){.btn .btn-primary style="margin-right: 0.5rem; margin-bottom: 0.5rem;"}
 [CV](cv.qmd){.btn .btn-outline-primary style="margin-right: 0.5rem; margin-bottom: 0.5rem;"}
 [Contact](contact.qmd){.btn .btn-outline-primary style="margin-bottom: 0.5rem;"}
@@ -27,7 +38,7 @@ My research focuses on policing and public safety, with particular emphasis on a
 
 :::
 
-## Recent Publications
+## Recent Publications {style="margin-top: 4.5rem;"}
 
 ```{r recent-pubs}
 library(yaml)

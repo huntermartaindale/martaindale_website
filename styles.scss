@@ -40,6 +40,25 @@ h1, h2, h3, h4 {
   color: #1a365d;
 }
 
+// Social icons row under headshot on homepage
+.home-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.1rem;
+  margin-top: 0.9rem;
+  font-size: 1.4rem;
+
+  a {
+    color: #2d3748;
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+
+  a:hover {
+    color: #1a365d;
+  }
+}
+
 // Scholar stats bar on homepage
 .scholar-stats {
   background: #f7fafc;
