@@ -5,8 +5,8 @@ page-layout: full
 
 ::: {.grid style="align-items: center;"}
 
-::: {.g-col-12 .g-col-md-3 style="text-align: center;"}
-![](img/martaindale_headshot_2.png){.img-fluid .rounded style="max-width: 260px;" alt="Hunter Martaindale headshot"}
+::: {.g-col-12 .g-col-md-3 .home-headshot style="text-align: center;"}
+![](img/martaindale_headshot_2.png){.img-fluid .rounded .home-headshot style="max-width: 240px;" alt="Hunter Martaindale headshot"}
 
 ```{=html}
 <div class="home-social-icons">
@@ -18,13 +18,15 @@ page-layout: full
 ```
 :::
 
-::: {.g-col-12 .g-col-md-9 style="padding-left: 1.5rem;"}
+::: {.g-col-12 .g-col-md-9 .home-intro style="padding-left: 1.75rem;"}
 
 # Hunter Martaindale, PhD
 
+::: {.home-role}
 **Director of Research, ALERRT Center**\
 **Associate Research Professor, School of Criminal Justice and Criminology**\
 Texas State University
+:::
 
 My research focuses on policing and public safety, with particular emphasis on active shooter preparedness and response, officer stress and performance under pressure, use of force decision making, and public opinion of police. As Director of Research at the [ALERRT Center](https://alerrt.org), I work to translate research findings into practical guidance for law enforcement training and policy.
 
@@ -38,7 +40,9 @@ To follow my research lab's ongoing work, visit the [ALERRT Research website](ht
 
 :::
 
-## Recent Publications {style="margin-top: 4.5rem;"}
+::: {.section-rule}
+## Recent Publications
+:::
 
 ```{r recent-pubs}
 library(yaml)

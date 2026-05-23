@@ -1,0 +1,46 @@
+meta:
+  name: Hunter Martaindale
+  link: https://huntermartaindale.com
+
+color:
+  palette:
+    navy: "#1a365d"
+    navy-dark: "#13284a"
+    navy-deep: "#1a2744"
+    gold: "#8a6d1f"
+    gold-soft: "#a07e2c"
+    gold-pale: "#f3ecd9"
+    gold-on-dark: "#c9a94e"
+    ink: "#2d3748"
+    slate: "#5b6b7f"
+    mist: "#718096"
+    line: "#e2e8f0"
+    surface: "#f7fafc"
+    paper: "#ffffff"
+  primary: navy
+  secondary: slate
+  danger: "#c53030"
+  foreground: ink
+  background: paper
+  link: gold
+
+typography:
+  fonts:
+    - family: Inter
+      source: google
+      weight: [300, 400, 500, 600, 700]
+    - family: Source Serif 4
+      source: google
+      weight: [400, 600, 700]
+      style: [normal, italic]
+  base:
+    family: Inter
+    size: 1rem
+    line-height: 1.7
+  headings:
+    family: Source Serif 4
+    weight: 600
+    line-height: 1.25
+  link:
+    color: gold
+    decoration: underline

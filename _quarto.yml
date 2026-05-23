@@ -17,6 +17,8 @@ website:
   favicon: img/favicon.ico
   navbar:
     background: light
+    pinned: false
+    collapse-below: lg
     left:
       - text: "Research"
         href: research.qmd
@@ -44,12 +46,15 @@ website:
 
 format:
   html:
-    theme: [cosmo, styles.scss]
+    theme: [cosmo, brand, styles.scss]
     toc: false
     link-external-newwindow: true
     link-external-icon: false
     include-in-header:
       text: |
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.6/css/academicons.min.css" integrity="sha512-TNfdJEUUJmfj2DRlAKXBg7HroqoXYLon5XPEEWYa2+H/XSD2HAr0BwkRrAoNLAEz79x7XURTFRWDn9yhMNbbNQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
 execute:
