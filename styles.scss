@@ -855,6 +855,11 @@ img.home-headshot {
   // Hide Quarto's duplicate title block if it survives the script's strip
   #title-block-header { display: none; }
 
+  // The site-wide rule (`main p, main li { max-width: 70ch }`) cramps the
+  // CV's header lines into a narrow left column, which defeats the centered
+  // banner. Let paragraphs and list items inside the CV span the full width.
+  p, li { max-width: none; }
+
   // Header: name, title, contact line, with a navy underline
   .cv-header {
     text-align: center;
