@@ -844,15 +844,116 @@ img.home-headshot {
 }
 
 // ===========================================================================
-// CV iframe frame
+// CV embed
+// CV content is injected into the page at deploy time by scripts/embed_cv.py
+// in place of the <!-- CV_CONTENT --> marker. All rules below are scoped to
+// .cv-embed so the embedded CV's typography and section styling cannot leak
+// out to the rest of the site.
 // ===========================================================================
 
-.cv-frame {
-  width: 100%;
-  height: 1400px;
-  border: 1px solid $line;
-  border-radius: $border-radius;
-  box-shadow: 0 2px 10px rgba($navy-deep, 0.05);
+.cv-embed {
+  // Hide Quarto's duplicate title block if it survives the script's strip
+  #title-block-header { display: none; }
+
+  // Header: name, title, contact line, with a navy underline
+  .cv-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid $navy;
+  }
+
+  .cv-name {
+    font-family: $font-family-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: $navy;
+    margin-bottom: 0.25rem;
+  }
+
+  .cv-header .cv-title {
+    font-size: 1.05rem;
+    color: $slate;
+    margin-bottom: 0.5rem;
+  }
+
+  .cv-header .cv-contact {
+    font-size: 0.9rem;
+    color: $mist;
+  }
+
+  .cv-header .cv-contact a {
+    color: $navy;
+    text-decoration: none;
+  }
+
+  .cv-header .cv-contact a:hover {
+    text-decoration: underline;
+  }
+
+  // Scholar metrics: single centered line with surface background.
+  // Overrides the site-wide .scholar-stats grid panel via higher specificity.
+  .scholar-stats {
+    text-align: center;
+    font-size: 1rem;
+    color: $slate;
+    margin: 1rem 0 1.5rem 0;
+    padding: 0.75rem 1rem;
+    background: $surface;
+    border: 1px solid $line;
+    border-radius: $border-radius;
+    display: block;          // override the site's flex grid layout
+  }
+
+  .scholar-stats strong {
+    color: $navy;
+    font-size: 1.05rem;
+  }
+
+  // Section headings inside the CV: hairline underline, tighter rhythm
+  h2 {
+    border-bottom: 1px solid $line;
+    padding-bottom: 0.3rem;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    color: $slate;
+    margin-top: 1.5rem;
+    font-weight: 500;
+  }
+
+  // Education and similar tables
+  table {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  table td,
+  table th {
+    padding: 0.3rem 0.5rem;
+  }
+
+  // Publication / grant entries: hanging indent on the cell outputs
+  .cell-output p {
+    margin-bottom: 0.6rem;
+    line-height: 1.55;
+    padding-left: 2rem;
+    text-indent: -2rem;
+    max-width: none;         // override site rule that caps to 70ch
+  }
+
+  // Footer
+  .last-updated {
+    text-align: center;
+    color: $mist;
+    font-size: 0.8rem;
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid $line;
+  }
 }
 
 // ===========================================================================

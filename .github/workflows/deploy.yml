@@ -83,6 +83,9 @@ jobs:
           cp cv-source/cv.html _site/cv/index.html
           cp cv-source/cv.pdf  _site/cv/martaindale_cv.pdf
 
+      - name: Embed CV body into website CV page
+        run: python3 scripts/embed_cv.py
+
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v3
         with:
