@@ -10,6 +10,7 @@ project:
   resources:
     - CNAME
     - cv/
+    - robots.txt
 
 website:
   title: "Hunter Martaindale"
