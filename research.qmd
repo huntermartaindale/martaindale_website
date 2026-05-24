@@ -179,6 +179,11 @@ div(
 tagList(lapply(pubs_sorted, render_pub))
 ```
 
+```{r jsonld, results="asis"}
+source("scripts/jsonld_helpers.R")
+emit_publications_jsonld(pubs_sorted)
+```
+
 ```{=html}
 <script>
 (function() {

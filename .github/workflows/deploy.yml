@@ -50,7 +50,7 @@ jobs:
           use-public-rspm: true
 
       - name: Install R packages
-        run: install.packages(c("scholar", "yaml", "htmltools", "dplyr", "purrr", "stringr", "knitr", "rmarkdown"))
+        run: install.packages(c("scholar", "yaml", "htmltools", "dplyr", "purrr", "stringr", "knitr", "rmarkdown", "jsonlite"))
         shell: Rscript {0}
 
       - name: Refresh Google Scholar stats (website)

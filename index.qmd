@@ -128,6 +128,11 @@ div(class = "pub-card-grid", tagList(lapply(recent, render_recent)))
 
 [See all publications &rarr;](research.qmd){.btn .btn-outline-primary style="margin-top: 0.75rem;"}
 
+```{r jsonld-pubs, results="asis"}
+source("scripts/jsonld_helpers.R")
+emit_publications_jsonld(recent)
+```
+
 ```{=html}
 <script type="application/ld+json">
 {
