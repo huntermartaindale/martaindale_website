@@ -91,6 +91,14 @@ h1 { letter-spacing: -0.018em; }
   margin-bottom: 0.35rem;
 }
 
+// Suppress Quarto's visible rendering of the YAML `description:` field.
+// The same text is intentionally emitted as <meta name="description"> and
+// Open Graph / Twitter card tags — it should live only in metadata, not
+// as a visible lede under each page's H1.
+.quarto-title-block .description {
+  display: none;
+}
+
 main p,
 main li {
   max-width: 70ch;
