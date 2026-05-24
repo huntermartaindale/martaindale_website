@@ -13,7 +13,11 @@ project:
 
 website:
   title: "Hunter Martaindale"
+  site-url: https://huntermartaindale.com
   description: "Director of Research, ALERRT Center | Texas State University"
+  image: img/martaindale_headshot_2.png
+  open-graph: true
+  twitter-card: true
   favicon: img/favicon.ico
   navbar:
     background: light

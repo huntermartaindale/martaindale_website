@@ -1,6 +1,11 @@
 ---
 title: ""
+pagetitle: "Director of Research, ALERRT Center, Texas State University"
+description: "Hunter Martaindale, PhD — Director of Research at the ALERRT Center, Texas State University. Research on active shooter response and policing."
 page-layout: full
+include-in-header:
+  - text: |
+      <link rel="canonical" href="https://huntermartaindale.com/">
 ---
 
 ::: {.grid style="align-items: center;"}
@@ -103,7 +108,7 @@ render_recent <- function(pub) {
   HTML(sprintf(
     '<div class="pub-card">
   <div class="pub-card-tag">%s</div>
-  <div class="pub-card-title">%s</div>
+  <h3 class="pub-card-title">%s</h3>
   <div class="pub-card-meta">%s &middot; <em>%s</em> (%s)</div>
   %s
   %s
@@ -122,3 +127,51 @@ div(class = "pub-card-grid", tagList(lapply(recent, render_recent)))
 ```
 
 [See all publications &rarr;](research.qmd){.btn .btn-outline-primary style="margin-top: 0.75rem;"}
+
+```{=html}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Hunter Martaindale",
+  "givenName": "Hunter",
+  "familyName": "Martaindale",
+  "honorificSuffix": "PhD",
+  "jobTitle": "Director of Research",
+  "description": "Director of Research at the ALERRT Center and Associate Research Professor in the School of Criminal Justice and Criminology at Texas State University. Research focuses on active shooter preparedness and response, officer stress and performance under pressure, use of force decision making, and public opinion of police.",
+  "url": "https://huntermartaindale.com",
+  "image": "https://huntermartaindale.com/img/martaindale_headshot_2.png",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "ALERRT Center",
+    "url": "https://alerrt.org",
+    "parentOrganization": {
+      "@type": "CollegeOrUniversity",
+      "name": "Texas State University",
+      "url": "https://www.txstate.edu"
+    }
+  },
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "Texas State University",
+    "url": "https://www.txstate.edu"
+  },
+  "knowsAbout": [
+    "Active shooter response",
+    "Active shooter preparedness",
+    "Police officer stress",
+    "Police decision making under pressure",
+    "Use of force",
+    "Public opinion of police",
+    "Law enforcement training"
+  ],
+  "sameAs": [
+    "https://scholar.google.com/citations?user=_7PlqKYAAAAJ",
+    "https://orcid.org/0000-0002-8100-7698",
+    "https://github.com/huntermartaindale",
+    "https://www.linkedin.com/in/hmartaindale/",
+    "https://alerrtresearch.org"
+  ]
+}
+</script>
+```

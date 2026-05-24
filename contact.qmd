@@ -1,6 +1,11 @@
 ---
 title: "Contact"
+pagetitle: "Contact — Research Consulting & Expert Witness"
+description: "Contact Hunter Martaindale for research consulting, expert witness work, training consultation, speaking engagements, and media commentary."
 page-layout: full
+include-in-header:
+  - text: |
+      <link rel="canonical" href="https://huntermartaindale.com/contact.html">
 ---
 
 ::: {.grid}
@@ -31,7 +36,7 @@ I am available for research consulting; expert witness declaration, deposition, 
 
 ```{=html}
 <div class="contact-card">
-<h3>Send a Message</h3>
+<h2>Send a Message</h2>
 <form action="https://formspree.io/f/mykbwyyn" method="POST" class="contact-form" novalidate>
   <div class="row g-3">
     <div class="col-md-6">
@@ -76,3 +81,41 @@ I am available for research consulting; expert witness declaration, deposition, 
 :::
 
 :::
+
+```{=html}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Hunter Martaindale",
+  "honorificSuffix": "PhD",
+  "jobTitle": "Director of Research",
+  "url": "https://huntermartaindale.com",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "ALERRT Center",
+    "url": "https://alerrt.org",
+    "parentOrganization": {
+      "@type": "CollegeOrUniversity",
+      "name": "Texas State University"
+    }
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Research inquiries, consulting, expert witness, media",
+    "email": "hunter.martaindale@txstate.edu",
+    "availableLanguage": "English",
+    "areaServed": "US"
+  },
+  "knowsAbout": [
+    "Active shooter incident analysis",
+    "Active shooter response protocols",
+    "Training program evaluation",
+    "Officer decision making",
+    "Public opinion of police",
+    "Expert witness services in use of force",
+    "Expert witness services in police practices litigation"
+  ]
+}
+</script>
+```

@@ -1,7 +1,12 @@
 ---
 title: "Grants"
+pagetitle: "Research Grants — ALERRT Center"
+description: "Awarded grants supporting research on active shooter response, officer training, and police decision-making at the ALERRT Center."
 page-layout: full
 toc: false
+include-in-header:
+  - text: |
+      <link rel="canonical" href="https://huntermartaindale.com/grants.html">
 ---
 
 ```{r setup, include=FALSE}

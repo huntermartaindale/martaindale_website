@@ -1,7 +1,12 @@
 ---
 title: "Research"
+pagetitle: "Active Shooter & Policing Research"
+description: "Peer-reviewed research on active shooter response, officer stress and performance, use of force decision-making, and public opinion of police."
 page-layout: full
 toc: false
+include-in-header:
+  - text: |
+      <link rel="canonical" href="https://huntermartaindale.com/research.html">
 ---
 
 My research spans two primary areas: policing (with emphases on officer stress and physiology, use of force and decision making, and public opinion) and active shooter preparedness and response. Use the topic and year filters below to narrow the list. Summaries are written for a general audience. For full abstracts and citation information, use the DOI or PDF links.
@@ -109,7 +114,7 @@ render_pub <- function(pub) {
   HTML(sprintf(
     '<div class="pub-entry" data-topics="%s" data-year="%s" data-search="%s">
   %s
-  <div class="pub-title">%s</div>
+  <h3 class="pub-title">%s</h3>
   <div class="pub-authors">%s</div>
   <div class="pub-journal">%s (%s)</div>
   %s

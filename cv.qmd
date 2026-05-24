@@ -1,6 +1,11 @@
 ---
 title: "Curriculum Vitae"
+pagetitle: "CV — Director of Research, ALERRT Center"
+description: "Curriculum vitae of Hunter Martaindale, PhD — Director of Research at the ALERRT Center, Texas State University. Publications, grants, awards, service."
 page-layout: full
+include-in-header:
+  - text: |
+      <link rel="canonical" href="https://huntermartaindale.com/cv.html">
 ---
 
 [Download PDF](cv/martaindale_cv.pdf){.btn .btn-primary target="_blank" style="margin-bottom: 1rem;"}
