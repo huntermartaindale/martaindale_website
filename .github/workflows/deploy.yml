@@ -92,3 +92,20 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
           cname: huntermartaindale.com
+
+      # Runs last and with always() so the site always deploys first. Fails the
+      # run (red X -> GitHub emails the cron owner) when the cached Scholar stats
+      # have gone stale, which is the signal that Scholar is blocking the runner
+      # IP and the silent-preserve path in update_scholar.R has kicked in.
+      - name: Fail loudly if Scholar stats are stale
+        if: always()
+        run: |
+          STALE_AFTER_DAYS=8
+          last=$(grep '^last_updated:' data/scholar_stats.yaml | sed "s/.*'\(.*\)'.*/\1/")
+          age=$(( ( $(date +%s) - $(date -d "$last" +%s) ) / 86400 ))
+          echo "Scholar stats last updated $last ($age days ago)."
+          echo "Scholar stats last updated **$last** ($age days ago)." >> "$GITHUB_STEP_SUMMARY"
+          if [ "$age" -gt "$STALE_AFTER_DAYS" ]; then
+            echo "::error::Google Scholar stats are $age days old (> $STALE_AFTER_DAYS). The weekly CI fetch is being blocked by Scholar. Refresh locally with 'Rscript data/update_scholar.R' and commit data/scholar_stats.yaml."
+            exit 1
+          fi

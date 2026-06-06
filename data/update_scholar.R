@@ -17,6 +17,19 @@ suppressPackageStartupMessages({
 SCHOLAR_ID <- "_7PlqKYAAAAJ"
 OUT_PATH   <- "data/scholar_stats.yaml"
 
+# Emit a GitHub Actions workflow annotation (warning/error) when running in CI.
+# Locally these env vars are unset, so this is a no-op and the script stays quiet.
+emit_ci <- function(level, msg) {
+  if (Sys.getenv("GITHUB_ACTIONS") == "true") {
+    cat(sprintf("::%s::%s\n", level, msg))
+    summary_file <- Sys.getenv("GITHUB_STEP_SUMMARY")
+    if (nzchar(summary_file)) {
+      cat(sprintf("- **Scholar update %s:** %s\n", level, msg),
+          file = summary_file, append = TRUE)
+    }
+  }
+}
+
 cat("Fetching Google Scholar profile for ID:", SCHOLAR_ID, "\n")
 
 result <- tryCatch({
@@ -52,5 +65,11 @@ if (!is.null(result)) {
     result$total_citations, result$h_index, result$i10_index
   ))
 } else {
+  # Fetch failed (Google Scholar commonly blocks datacenter / CI IPs). The old
+  # stats file is preserved so the build still succeeds, but the failure is now
+  # visible as a CI warning. The workflow's staleness guard escalates to a hard
+  # failure (red run + email) once the cached stats age past the threshold.
   cat("Update skipped. Existing", OUT_PATH, "preserved.\n")
+  emit_ci("warning",
+          "Google Scholar fetch failed; preserving cached stats. If this persists, Scholar is blocking the runner IP. Refresh locally with 'Rscript data/update_scholar.R' and commit.")
 }
