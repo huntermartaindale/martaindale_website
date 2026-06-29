@@ -2,10 +2,36 @@
 # AUTO-GENERATED from cv_data.yaml by scripts/sync_publications.R
 # Edit cv_data.yaml in huntermartaindale/cv, not this file.
 #
-# Generated: 2026-04-30 15:17:27 CDT
-# Source:    ../cv/cv_data.yaml
-# Total:     39 publications
+# Generated: 2026-06-29 15:46:55 CDT
+# Source:    ..\cv\cv_data.yaml
+# Total:     41 publications
 
+- title: 'Introducing Sharing Information to Stop Mass Shootings (SISMS): A short
+    report on a behavioral and event-level dataset for the study of mass public shootings'
+  authors:
+  - Schildkraut, J., Greene-Colozzi, E. A., & Martaindale, M. H.
+  year: 2026
+  journal: American Journal of Criminal Justice
+  doi: 10.1007/s12103-026-09921-3
+  pdf: pubs/2026_schildkraut_introducing-sharing-information-to-stop-mass-shoot.pdf
+  plain_summary: |
+    This short report introduces Sharing Information to Stop Mass Shootings (SISMS), a new behavioral and event-level dataset built to support research on mass public shootings in the United States. The dataset currently documents 171 incidents and 175 perpetrators occurring between 1999 and 2024 for which pre-attack warning behaviors or leakage could be confirmed, drawing on public records, official documents, and triangulated open-source reporting. Beyond demographic and incident characteristics, SISMS captures grievances, concerning behaviors, planning and preparation, leakage, and other warning indicators along the pathway to targeted violence. By standardizing how these pre-attack behaviors are defined and coded, the dataset gives researchers and violence-prevention practitioners a more consistent foundation for studying how mass shootings develop and how they might be prevented.
+  topics:
+  - active-shooter
+- title: Box breathing and prolonged exhalation reduces markers of physiological stress
+    reactivity in response to a virtual Trier Social Stress Test
+  authors:
+  - McAllister, M. J., Martaindale, M. H., Sutton, N., & Andersen, J. P.
+  year: 2026
+  journal: Comprehensive Psychoneuroendocrinology
+  volume: '27'
+  pages: '100360'
+  doi: 10.1016/j.cpnec.2026.100360
+  pdf: pubs/2026_mcallister_box-breathing-and-prolonged-exhalation-reduces-mar.pdf
+  plain_summary: |
+    This randomized controlled trial tested whether simple breathing techniques can blunt the body's stress response during an acutely stressful task. Sixty-six participants were assigned to normal breathing, prolonged exhalation, or box breathing before completing a virtual version of the Trier Social Stress Test, a standardized laboratory stress challenge. The test reliably raised heart rate, state anxiety, and salivary stress markers across participants. Both prolonged exhalation and box breathing reduced the post-stress rise in heart rate, anxiety, and salivary alpha-amylase compared to normal breathing, while cortisol, heart rate variability, and cognitive performance were largely unaffected. The findings suggest that brief, easily taught breathing practices can help buffer the immediate physiological and psychological toll of acute stress, with potential value for high-stress occupations such as law enforcement, firefighting, and the military.
+  topics:
+  - policing-stress
 - title: Striking or grappling? Comparing public and officers' perceptions of police
     use of force
   authors:
