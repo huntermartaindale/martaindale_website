@@ -2,9 +2,9 @@
 # AUTO-GENERATED from cv_data.yaml by scripts/sync_publications.R
 # Edit cv_data.yaml in huntermartaindale/cv, not this file.
 #
-# Generated: 2026-06-29 15:46:55 CDT
+# Generated: 2026-06-29 15:49:32 CDT
 # Source:    ..\cv\cv_data.yaml
-# Total:     41 publications
+# Total:     42 publications
 
 - title: 'Introducing Sharing Information to Stop Mass Shootings (SISMS): A short
     report on a behavioral and event-level dataset for the study of mass public shootings'
@@ -558,4 +558,17 @@
     Workplaces are generally seen as safe, but active shooter incidents at businesses do occur, and leadership often makes hurried security decisions in their wake. This study compiled data on workplace active shooter events to give business leaders an empirical basis for those decisions. The findings detail patterns in attacker characteristics, weapons, response times, and casualty outcomes specific to workplace settings. From these patterns, the authors derive concrete policy recommendations for businesses on prevention, preparation, and response. The paper provides a research-based foundation for workplace security planning rather than reactive policy.
   topics:
   - active-shooter
+- title: 'Inflammation on the frontlines: Linking salivary and blood biomarkers to
+    cardiometabolic health and physical performance parameters in firefighters'
+  authors:
+  - '*McAllister, M. J., Tanksley, P. T., Martaindale, M. H., DeArman, A., Samora,
+    M., Martin, S. E., & Gonzalez, D. E.'
+  year: 2026
+  journal: Journal of Occupational and Environmental Medicine
+  doi: 10.1097/JOM.0000000000003792
+  pdf: pubs/2026_mcallister_inflammation-on-the-frontlines-linking-salivary-an.pdf
+  plain_summary: |
+    This study examined 140 career firefighters to see whether biomarkers of inflammation and stress measured in saliva could serve as a non-invasive substitute for traditional blood tests in flagging cardiometabolic disease risk. Firefighters with greater body fat and poorer fitness showed higher inflammatory markers, while those who were fitter and leaner showed healthier profiles. Salivary interleukin-6 (IL-6) in particular tracked closely with body composition, physical performance, and blood inflammation markers. The findings suggest that simple saliva-based testing may offer a practical, low-burden way to screen firefighters for heart and metabolic disease risk without drawing blood.
+  topics:
+  - policing-stress
 
