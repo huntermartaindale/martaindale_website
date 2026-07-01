@@ -12,8 +12,6 @@
   role: PI
   amount: 49999
   year: 2026
-  notes: |
-    Firearm suicide accounts for roughly 58% of U.S. gun deaths and more than 27,000 lives each year, yet rigorous evidence on whether Extreme Risk Protection Orders (ERPOs), civil court orders that temporarily remove firearm access from people at acute risk of harm, actually reduce it remains limited, and most prior work predates New York's law. This project evaluates New York's ERPO law through two complementary quasi-experimental analyses: a multi-state staggered difference-in-differences design estimating the effect of ERPO adoption on firearm suicide rates across all U.S. states from 2010 to 2024, and a within-New York fixed-effects panel testing whether counties with higher ERPO petition rates show lower firearm suicide rates across the state's 62 counties. Together the analyses assess both whether the law matters and whether how actively it is used matters, producing findings to inform New York legislators, the Division of Criminal Justice Services, and county-level implementers on ERPO resource allocation and potential expansion.
 - title: Assessing the effectiveness of door locks in school-based active shooter
     events
   funder: 'Security Industry Association: School Safety Project'
