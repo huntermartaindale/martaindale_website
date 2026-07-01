@@ -3,8 +3,8 @@
 # Used by grants.qmd to display summary stats including PASS totals
 # (PASS grants are excluded from grants.yaml itself).
 
-funded_count: 8
-funded_total: 1935781.0
+funded_count: 9
+funded_total: 1985780.0
 pass_count: 9
 pass_total: 8.2408987e+07
 
