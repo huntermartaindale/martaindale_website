@@ -46,6 +46,17 @@ dir.create("cv", showWarnings = FALSE)
 file.copy(src_html, "cv/index.html",        overwrite = TRUE)
 file.copy(src_pdf,  "cv/martaindale_cv.pdf", overwrite = TRUE)
 
+# Paper PDFs live in the CV repo (cv_repo/pubs). pubs/ is gitignored in the
+# website repo and populated from the CV repo: CI copies them at deploy time,
+# and this copies them for local preview so research.qmd's pubs/ links resolve.
+pubs_src <- file.path(cv_repo, "pubs")
+if (dir.exists(pubs_src)) {
+  dir.create("pubs", showWarnings = FALSE)
+  pdfs <- list.files(pubs_src, pattern = "\\.pdf$", full.names = TRUE)
+  file.copy(pdfs, "pubs", overwrite = TRUE)
+  cat(sprintf("Copied %d paper PDFs from %s to pubs/\n", length(pdfs), pubs_src))
+}
+
 cat("Synced:\n")
 cat("  cv/index.html         (", file.info("cv/index.html")$size, "bytes)\n")
 cat("  cv/martaindale_cv.pdf (", file.info("cv/martaindale_cv.pdf")$size, "bytes)\n")

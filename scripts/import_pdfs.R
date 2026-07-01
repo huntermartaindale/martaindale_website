@@ -13,9 +13,12 @@ suppressPackageStartupMessages({
   library(yaml)
 })
 
+# Paper PDFs are stored in the CV repo (huntermartaindale/cv at ../cv), which is
+# the source of truth the website copies from at deploy time. Matched PDFs are
+# therefore written to ../cv/pubs, not the website's own tree.
 cv_path  <- "../cv/cv_data.yaml"
-pdf_dir  <- "C:/Users/hunte/OneDrive - Texas State University/Research/published_articles"
-out_dir  <- "pubs"
+pdf_dir  <- "E:/OneDrive - Texas State University/Research/published_articles"
+out_dir  <- "../cv/pubs"
 report   <- "scripts/_pdf_match_report.csv"
 
 stopifnot(file.exists(cv_path), dir.exists(pdf_dir))

@@ -26,3 +26,8 @@ Thumbs.db
 # for preview with: Rscript scripts/sync_cv.R)
 /cv/index.html
 /cv/martaindale_cv.pdf
+
+# Paper PDFs now live in the CV repo (huntermartaindale/cv at pubs/) and are
+# copied in by CI at deploy time (and by scripts/sync_cv.R for local preview).
+# Not tracked here to avoid a second, drift-prone copy.
+/pubs/

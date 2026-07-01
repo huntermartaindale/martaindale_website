@@ -135,14 +135,15 @@ out <- lapply(pubs_pr, function(p) {
 
 # --- write ----------------------------------------------------------------
 
+# Header is intentionally free of timestamps / input-path so regeneration is
+# deterministic given the same cv_data.yaml. That lets CI commit this file back
+# on real content changes only, instead of on every build.
 header <- c(
   "# publications.yaml",
   "# AUTO-GENERATED from cv_data.yaml by scripts/sync_publications.R",
   "# Edit cv_data.yaml in huntermartaindale/cv, not this file.",
   "#",
-  paste0("# Generated: ", format(Sys.time(), "%Y-%m-%d %H:%M:%S %Z")),
-  paste0("# Source:    ", input_path),
-  paste0("# Total:     ", length(out), " publications"),
+  paste0("# Total: ", length(out), " publications"),
   ""
 )
 

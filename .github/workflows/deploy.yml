@@ -74,6 +74,20 @@ jobs:
       - name: Sync grants from cv_data.yaml
         run: Rscript scripts/sync_grants.R cv-source/cv_data.yaml
 
+      - name: Commit regenerated publications & grants if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/publications.yaml data/grants.yaml data/grants_summary.yaml
+          git diff --staged --quiet || git commit -m "chore: sync publications & grants from CV [skip ci]"
+          git push || true
+
+      - name: Copy paper PDFs from CV repo
+        run: |
+          mkdir -p pubs
+          cp -f cv-source/pubs/*.pdf pubs/ 2>/dev/null || true
+          echo "PDFs copied into pubs/: $(ls pubs/*.pdf 2>/dev/null | wc -l)"
+
       - name: Render website
         run: quarto render
 
