@@ -26,6 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pages: write
 
     steps:
       - name: Check out website repository
@@ -106,6 +107,37 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
           cname: huntermartaindale.com
+
+      # The gh-pages push above only queues GitHub's internal Pages build, and
+      # that build can fail transiently ("Deployment failed, try again later")
+      # with no retry, leaving the live site stale while this workflow stays
+      # green (happened 2026-07-06). Wait until Pages has published the exact
+      # commit just pushed, retrigger the build if it errors, and fail the run
+      # only if three attempts can't get it published.
+      - name: Verify Pages published the new gh-pages commit
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          expected=$(git ls-remote origin gh-pages | cut -f1)
+          echo "Expecting Pages to publish gh-pages commit $expected"
+          for attempt in 1 2 3; do
+            for i in $(seq 1 30); do
+              read -r status commit <<< "$(gh api "repos/${{ github.repository }}/pages/builds/latest" --jq '"\(.status) \(.commit)"' || echo "unknown unknown")"
+              echo "Pages build status: $status (commit $commit)"
+              if [ "$status" = "built" ] && [ "$commit" = "$expected" ]; then
+                echo "Pages published the new build."
+                echo "Pages published gh-pages commit \`$commit\`." >> "$GITHUB_STEP_SUMMARY"
+                exit 0
+              fi
+              [ "$status" = "errored" ] && break
+              sleep 10
+            done
+            echo "Pages has not published $expected yet; retriggering build (attempt $attempt of 3)."
+            gh api -X POST "repos/${{ github.repository }}/pages/builds" || true
+            sleep 15
+          done
+          echo "::error::GitHub Pages did not publish gh-pages commit $expected after 3 attempts; the live site is stale. Retrigger manually with: gh api repos/${{ github.repository }}/pages/builds -X POST"
+          exit 1
 
       # Runs last and with always() so the site always deploys first. Fails the
       # run (red X -> GitHub emails the cron owner) when the cached Scholar stats
