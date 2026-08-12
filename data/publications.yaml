@@ -2,8 +2,19 @@
 # AUTO-GENERATED from cv_data.yaml by scripts/sync_publications.R
 # Edit cv_data.yaml in huntermartaindale/cv, not this file.
 #
-# Total: 44 publications
+# Total: 45 publications
 
+- title: 'The threat of drones and police preparedness: A mixed-methods study'
+  authors:
+  - Corradi, A., Gartner, S. S., Lynn, M., Martaindale, M. H., & Somers, L. J.
+  year: 2026
+  journal: Crime & Delinquency
+  doi: 10.1177/00111287261474835
+  pdf: pubs/2026_corradi_the-threat-of-drones-and-police-preparedness-a-mix.pdf
+  plain_summary: |
+    This mixed-methods study surveyed 293 law enforcement officers nationwide to understand how police perceive and prepare for the threat posed by drones, or unmanned aerial systems. In open-ended responses, roughly two-thirds of officers described the drone threat to their own jurisdiction as moderate or high, citing contraband drops at correctional facilities, surveillance of police operations, and, at the most serious end, the potential for terrorism, attacks on critical infrastructure, and mass-casualty events at soft targets like concerts and sporting venues. Many officers linked these concerns to the rapid evolution of cheap, weaponized drones in the war in Ukraine, while repeatedly noting they have few practical tools to interdict a drone even when they recognize the risk. Statistical models showed that prior counter-drone training was by far the strongest predictor of officers feeling aware of the legal boundaries on response and of the issue being actively discussed within their agency, and that officers in local and county agencies felt less confident about their legal authority and responsibility than federal officers did. The findings point to training and clearer legal guidance, rather than awareness alone, as the levers most likely to improve police preparedness for drone threats.
+  topics:
+  - drones
 - title: 'Cumulative and co-occurring strains among mass public shooting perpetrators:
     implications for violence prevention'
   authors:
