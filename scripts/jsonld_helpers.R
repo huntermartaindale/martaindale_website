@@ -53,14 +53,8 @@ build_author_objects <- function(authors_str) {
   })
 }
 
-# Map our internal topic slugs to plain-English keywords for schema.org
-.topic_keywords <- c(
-  "active-shooter"          = "Active shooter events",
-  "policing-stress"         = "Officer stress and performance",
-  "policing-decisions"      = "Decision making and use of force",
-  "policing-public-opinion" = "Public opinion of police",
-  "other"                   = "Criminology"
-)
+# Plain-English keywords for schema.org live in the shared topic map.
+source("scripts/topic_labels.R")
 
 build_scholarly_article <- function(pub) {
   obj <- list(
@@ -94,7 +88,7 @@ build_scholarly_article <- function(pub) {
 
   if (.has_val(pub$topics)) {
     slugs <- unlist(pub$topics)
-    kws <- unname(.topic_keywords[slugs])
+    kws <- unname(TOPIC_KEYWORDS[slugs])
     kws <- kws[!is.na(kws)]
     if (length(kws) > 0) obj$keywords <- paste(kws, collapse = ", ")
   }

@@ -65,16 +65,11 @@ first_sentences <- function(text, n = 2) {
   paste(trimws(matches[seq_len(min(n, length(matches)))]), collapse = " ")
 }
 
+source("scripts/topic_labels.R")
+
 topic_label <- function(slug) {
-  labels <- c(
-    "active-shooter"          = "Active Shooter Events",
-    "policing-stress"         = "Officer Stress & Performance",
-    "policing-decisions"      = "Decision Making & Use of Force",
-    "policing-public-opinion" = "Public Opinion & Legitimacy",
-    "other"                   = "Other"
-  )
-  if (is.null(slug) || is.na(slug) || !(slug %in% names(labels))) return("Research")
-  unname(labels[slug])
+  label <- topic_label_for(slug)
+  if (is.na(label)) "Research" else label
 }
 
 pubs <- yaml::read_yaml("data/publications.yaml")

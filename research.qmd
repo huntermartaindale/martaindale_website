@@ -47,13 +47,7 @@ stats <- tryCatch(
 
 has_val <- function(x) !is.null(x) && length(x) > 0 && !(is.atomic(x) && length(x) == 1 && is.na(x))
 
-topic_labels <- c(
-  "active-shooter"          = "Active Shooter Events",
-  "policing-stress"         = "Officer Stress & Performance",
-  "policing-decisions"      = "Decision Making & Use of Force",
-  "policing-public-opinion" = "Public Opinion & Legitimacy",
-  "other"                   = "Other"
-)
+source("scripts/topic_labels.R")
 
 esc <- function(x) {
   if (is.null(x)) return("")
@@ -103,8 +97,7 @@ render_pub <- function(pub) {
   topic_tags_html <- ""
   if (length(topic_slugs) > 0) {
     tags <- vapply(topic_slugs, function(s) {
-      label <- if (s %in% names(topic_labels)) topic_labels[[s]] else s
-      sprintf('<span class="pub-topic-chip">%s</span>', esc(label))
+      sprintf('<span class="pub-topic-chip">%s</span>', esc(topic_label_for(s)))
     }, character(1))
     topic_tags_html <- sprintf('<div class="pub-topic-chips">%s</div>', paste(tags, collapse = ""))
   }
@@ -147,10 +140,12 @@ year_opts <- c(
   lapply(unique_years, function(y) tags$option(value = as.character(y), as.character(y)))
 )
 
+# Pills come from the topics actually present in publications.yaml, so a
+# newly tagged paper always gets a filter without editing this page.
 topic_pills <- c(
   list(tags$button(class = "topic-pill active", `data-topic` = "all", "All Topics")),
-  lapply(names(topic_labels), function(slug) {
-    tags$button(class = "topic-pill", `data-topic` = slug, topic_labels[[slug]])
+  lapply(topics_in_use(pubs), function(slug) {
+    tags$button(class = "topic-pill", `data-topic` = slug, topic_label_for(slug))
   })
 )
 
