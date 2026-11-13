@@ -37,7 +37,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./img/favicon.ico" rel="icon">
+<link href="./img/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
@@ -45,14 +45,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-3c9e3de8f8f416c3e3ac7ff25931c884.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-16db538b2ef1017a91ef9487759d17ba.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-3c9e3de8f8f416c3e3ac7ff25931c884.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-541d71a1a6053c80aaaed9b199a11dbc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-d2448bc35c050112b30da879dfbceb69.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-541d71a1a6053c80aaaed9b199a11dbc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-73d9c4ef6dc9ce2e5aa5cd3473a2e803.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-6241dfe30076290a8d515b18b75cb67d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-73d9c4ef6dc9ce2e5aa5cd3473a2e803.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -80,28 +80,41 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+  // Apply the saved theme before first paint so the page never flashes.
+  (function () {
+    try {
+      if (localStorage.getItem('site-theme') === 'dark')
+        document.documentElement.setAttribute('data-theme', 'dark');
+    } catch (e) {}
+  })();
+</script>
+<!-- PNG fallbacks for browsers that skip the SVG favicon, plus the iPhone home screen icon -->
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&amp;display=swap">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.6/css/academicons.min.css" integrity="sha512-TNfdJEUUJmfj2DRlAKXBg7HroqoXYLon5XPEEWYa2+H/XSD2HAr0BwkRrAoNLAEz79x7XURTFRWDn9yhMNbbNQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
 <link rel="canonical" href="https://huntermartaindale.com/">
 
 
 <meta property="og:title" content="Director of Research, ALERRT Center, Texas State University">
 <meta property="og:description" content="Hunter Martaindale, PhD — Director of Research at the ALERRT Center, Texas State University. Research on active shooter response and policing.">
-<meta property="og:image" content="https://huntermartaindale.com/img/martaindale_headshot_2.png">
+<meta property="og:image" content="https://huntermartaindale.com/img/martaindale_headshot_800.jpg">
 <meta property="og:site_name" content="Hunter Martaindale">
 <meta property="og:image:alt" content="Hunter Martaindale headshot">
-<meta property="og:image:height" content="2490">
-<meta property="og:image:width" content="1771">
+<meta property="og:image:height" content="1125">
+<meta property="og:image:width" content="800">
 <meta name="twitter:title" content="Director of Research, ALERRT Center, Texas State University">
 <meta name="twitter:description" content="Hunter Martaindale, PhD — Director of Research at the ALERRT Center, Texas State University. Research on active shooter response and policing.">
-<meta name="twitter:image" content="https://huntermartaindale.com/img/martaindale_headshot_2.png">
+<meta name="twitter:image" content="https://huntermartaindale.com/img/martaindale_headshot_800.jpg">
 <meta name="twitter:image:alt" content="Hunter Martaindale headshot">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+<body class="nav-fixed home quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -172,73 +185,197 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="grid" style="align-items: center;">
-<div class="g-col-12 g-col-md-3 home-headshot" style="text-align: center;">
-<p><img src="img/martaindale_headshot_2.png" class="img-fluid rounded home-headshot" style="max-width: 240px;" alt="Hunter Martaindale headshot"></p>
-<div class="home-social-icons">
-  <a href="https://scholar.google.com/citations?user=_7PlqKYAAAAJ" aria-label="Google Scholar" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i></a>
-  <a href="https://orcid.org/0000-0002-8100-7698" aria-label="ORCID" target="_blank" rel="noopener"><i class="ai ai-orcid"></i></a>
-  <a href="https://github.com/huntermartaindale" aria-label="GitHub" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
-  <a href="https://www.linkedin.com/in/hmartaindale/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
-</div>
-</div>
-<section id="hunter-martaindale-phd" class="level1 g-col-12 g-col-md-9 home-intro" style="padding-left: 1.75rem;">
-<h1>Hunter Martaindale, PhD</h1>
-<div class="home-role">
-<p><strong>Director of Research, ALERRT Center</strong><br>
-<strong>Associate Research Professor, School of Criminal Justice and Criminology</strong><br>
-Texas State University</p>
-</div>
-<p>My research focuses on policing and public safety, with particular emphasis on active shooter preparedness and response, officer stress and performance under pressure, use of force decision making, and public opinion of police. As Director of Research at the <a href="https://alerrt.org">ALERRT Center</a>, I work to translate research findings into practical guidance for law enforcement training and policy.</p>
-<p>To follow my research lab’s ongoing work, visit the <a href="https://alerrtresearch.org">ALERRT Research website</a>.</p>
-<p><a href="./research.html" class="btn btn-primary" style="margin-right: 0.5rem; margin-bottom: 0.5rem;">Research</a> <a href="./cv.html" class="btn btn-outline-primary" style="margin-right: 0.5rem; margin-bottom: 0.5rem;">CV</a> <a href="./contact.html" class="btn btn-outline-primary" style="margin-bottom: 0.5rem;">Contact</a></p>
-</section>
-</div>
-<section id="recent-publications" class="level2 section-rule">
-<h2 class="anchored" data-anchor-id="recent-publications">Recent Publications</h2>
+<section class="hero bleed">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <!-- A div with a heading role, not an h1: Quarto moves a leading h1 into its own title block, which is hidden on this page. -->
+      <div class="hero-name" role="heading" aria-level="1">Hunter Martaindale</div>
+      <p class="hero-role">
+        <strong>Director of Research, ALERRT Center</strong><br>
+        <strong>Associate Research Professor, School of Criminal Justice and Criminology</strong><br>
+        Texas State University
+      </p>
+      <p class="hero-bio">My research focuses on policing and public safety, with particular emphasis on active shooter preparedness and response, officer stress and performance under pressure, use of force decision making, and public opinion of police. As Director of Research at the <a href="https://alerrt.org">ALERRT Center</a>, I work to translate research findings into practical guidance for law enforcement training and policy.</p>
+      <p class="hero-bio hero-bio-secondary">To follow my research lab's ongoing work, visit the <a href="https://alerrtresearch.org">ALERRT Research website</a>.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="research.html">Research</a>
+        <a class="btn btn-outline-primary" href="cv.html">CV</a>
+        <a class="btn btn-outline-primary" href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="hero-portrait">
+      <div class="portrait-frame">
+        <img src="img/martaindale_headshot_800.jpg" alt="Hunter Martaindale headshot" width="800" height="1125" fetchpriority="high">
+      </div>
+      <div class="portrait-caption">
+        <div class="home-social-icons">
+          <a href="https://scholar.google.com/citations?user=_7PlqKYAAAAJ" aria-label="Google Scholar" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i></a>
+          <a href="https://orcid.org/0000-0002-8100-7698" aria-label="ORCID" target="_blank" rel="noopener"><i class="ai ai-orcid"></i></a>
+          <a href="https://github.com/huntermartaindale" aria-label="GitHub" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/hmartaindale/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <div class="cell">
 <div class="cell-output-display">
-<div class="pub-card-grid">
-<div class="pub-card">
-  <div class="pub-card-tag">Drones</div>
-  <h3 class="pub-card-title anchored">The threat of drones and police preparedness: A mixed-methods study</h3>
-  <div class="pub-card-meta">Corradi, A., Gartner, S. S., Lynn, M., Martaindale, M. H., &amp; Somers, L. J. · <em>Crime &amp; Delinquency</em> (2026)</div>
-  <div class="pub-card-summary">This mixed-methods study surveyed 293 law enforcement officers nationwide to understand how police perceive and prepare for the threat posed by drones, or unmanned aerial systems. In open-ended responses, roughly two-thirds of officers described the drone threat to their own jurisdiction as moderate or high, citing contraband drops at correctional facilities, surveillance of police operations, and, at the most serious end, the potential for terrorism, attacks on critical infrastructure, and mass-casualty events at soft targets like concerts and sporting venues.</div>
-  <div class="pub-links"><a href="https://doi.org/10.1177/00111287261474835">DOI</a><a href="pubs/2026_corradi_the-threat-of-drones-and-police-preparedness-a-mix.pdf">PDF</a></div>
-</div>
-<div class="pub-card">
-  <div class="pub-card-tag">Active Shooter Events</div>
-  <h3 class="pub-card-title anchored">Cumulative and co-occurring strains among mass public shooting perpetrators: implications for violence prevention</h3>
-  <div class="pub-card-meta">Schildkraut, J., Greene-Colozzi, E. A., &amp; Martaindale, M. H. · <em>Injury Epidemiology, 13</em> (2026)</div>
-  <div class="pub-card-summary">This study examined the life stressors, or strains, that build up in the lives of mass public shooters, drawing on a database of 171 mass public shooting incidents and 175 perpetrators in the United States between 1999 and 2024. Rather than looking for a single triggering grievance, the researchers coded eighteen different types of strain, such as psychiatric concerns, job-related difficulties, and interpersonal conflict, and measured how often they occurred together.</div>
-  <div class="pub-links"><a href="https://doi.org/10.1186/s40621-026-00690-5">DOI</a><a href="pubs/2026_schildkraut_cumulative-and-co-occurring-strains-among-mass-pub.pdf">PDF</a></div>
-</div>
-<div class="pub-card">
-  <div class="pub-card-tag">Active Shooter Events</div>
-  <h3 class="pub-card-title anchored">Introducing Sharing Information to Stop Mass Shootings (SISMS): A short report on a behavioral and event-level dataset for the study of mass public shootings</h3>
-  <div class="pub-card-meta">Schildkraut, J., Greene-Colozzi, E. A., &amp; Martaindale, M. H. · <em>American Journal of Criminal Justice</em> (2026)</div>
-  <div class="pub-card-summary">This short report introduces Sharing Information to Stop Mass Shootings (SISMS), a new behavioral and event-level dataset built to support research on mass public shootings in the United States. The dataset currently documents 171 incidents and 175 perpetrators occurring between 1999 and 2024 for which pre-attack warning behaviors or leakage could be confirmed, drawing on public records, official documents, and triangulated open-source reporting.</div>
-  <div class="pub-links"><a href="https://doi.org/10.1007/s12103-026-09921-3">DOI</a><a href="pubs/2026_schildkraut_introducing-sharing-information-to-stop-mass-shoot.pdf">PDF</a></div>
-</div>
-<div class="pub-card">
-  <div class="pub-card-tag">Officer Stress &amp; Performance</div>
-  <h3 class="pub-card-title anchored">Box breathing and prolonged exhalation reduces markers of physiological stress reactivity in response to a virtual Trier Social Stress Test</h3>
-  <div class="pub-card-meta">McAllister, M. J., Martaindale, M. H., Sutton, N., &amp; Andersen, J. P. · <em>Comprehensive Psychoneuroendocrinology, 27</em> (2026)</div>
-  <div class="pub-card-summary">This randomized controlled trial tested whether simple breathing techniques can blunt the body's stress response during an acutely stressful task. Sixty-six participants were assigned to normal breathing, prolonged exhalation, or box breathing before completing a virtual version of the Trier Social Stress Test, a standardized laboratory stress challenge.</div>
-  <div class="pub-links"><a href="https://doi.org/10.1016/j.cpnec.2026.100360">DOI</a><a href="pubs/2026_mcallister_box-breathing-and-prolonged-exhalation-reduces-mar.pdf">PDF</a></div>
-</div>
-<div class="pub-card">
-  <div class="pub-card-tag">Active Shooter Events</div>
-  <h3 class="pub-card-title anchored">Known to the system? Criminal history, pre-attack behaviors, and firearms acquisition among mass public shooters with documented warning behaviors</h3>
-  <div class="pub-card-meta">Martaindale, M. H., Greene-Colozzi, E. A., &amp; Schildkraut, J. · <em>Journal of Criminal Justice, 105</em> (2026)</div>
-  <div class="pub-card-summary">This study examined 175 perpetrators across 171 mass public shooting incidents in the United States between 1999 and 2024, all of whom had displayed documented pre-attack warning behaviors such as leaking their intent to others. The goal was to determine whether shooters with a prior criminal record differed from those without one in their demographics, warning signs, and how they obtained their firearms.</div>
-  <div class="pub-links"><a href="https://doi.org/10.1016/j.jcrimjus.2026.102700">DOI</a><a href="pubs/2026_martaindale_known-to-the-system-criminal-history-pre-attack-be.pdf">PDF</a></div>
+<div class="stat-band stat-band-4" style="--n:4"><a class="stat" href="research.html"><span class="stat-value">45</span><span class="stat-label">Journal articles</span></a><a class="stat" href="research.html"><span class="stat-value">875</span><span class="stat-label">Citations</span></a><a class="stat" href="research.html"><span class="stat-value">17</span><span class="stat-label">h-index</span></a><a class="stat" href="grants.html"><span class="stat-value">$84.4M</span><span class="stat-label">Grant funding</span><span class="stat-note">$2.0M as PI</span></a></div>
 </div>
 </div>
+<div class="cell">
+<div class="cell-output-display">
+<section class="record-section" aria-labelledby="record-heading">
+  <div class="section-head">
+    <p class="eyebrow">The record</p>
+    <h2 id="record-heading" class="anchored">45 articles, 2017 to 2026</h2>
+    <p class="section-lede">Each block is one peer-reviewed article, stacked by year and colored by topic. Select a block to read its plain-language summary, or a topic to see everything in that area.</p>
+  </div>
+  <div class="record">
+    <div class="record-chart" role="list"><div class="record-col" role="listitem" aria-label="2017: 2 articles"><div class="record-stack"><a class="record-cell" href="research.html#pub-2017-active-shooter-events-in-the-workplace-findings" data-topic="active-shooter" data-title="Active shooter events in the workplace: Findings and policy implications" data-meta="Journal of Business Continuity and Emergency Planning, 2017" aria-label="Active shooter events in the workplace: Findings and policy implications. Active Shooter Events, 2017"></a><a class="record-cell" href="research.html#pub-2017-throwing-a-chair-could-save-officers-lives-durin" data-topic="policing-decisions" data-title="Throwing a chair could save officers' lives during room entries" data-meta="International Journal of Police Science and Management, 2017" aria-label="Throwing a chair could save officers' lives during room entries. Decision Making &amp; Use of Force, 2017"></a></div><div class="record-n" aria-hidden="true">2</div><div class="record-year">2017</div></div><div class="record-col" role="listitem" aria-label="2018: 0 articles"><div class="record-stack"></div><div class="record-n" aria-hidden="true">&nbsp;</div><div class="record-year">2018</div></div><div class="record-col" role="listitem" aria-label="2019: 2 articles"><div class="record-stack"><a class="record-cell" href="research.html#pub-2019-peek-or-push-an-examination-of-two-types-of-room" data-topic="active-shooter" data-title="Peek or push: An examination of two types of room clearing tactics for active shooter event response" data-meta="Journal of Police Emergency Response, 2019" aria-label="Peek or push: An examination of two types of room clearing tactics for active shooter event response. Active Shooter Events, 2019"></a><a class="record-cell" href="research.html#pub-2019-the-evolution-of-active-shooter-response-trainin" data-topic="active-shooter" data-title="The evolution of active shooter response training protocols since Columbine: Lessons from the advanced law enforcement rapid response training center" data-meta="Journal of Contemporary Criminal Justice, 2019" aria-label="The evolution of active shooter response training protocols since Columbine: Lessons from the advanced law enforcement rapid response training center. Active Shooter Events, 2019"></a></div><div class="record-n" aria-hidden="true">2</div><div class="record-year">2019</div></div><div class="record-col" role="listitem" aria-label="2020: 2 articles"><div class="record-stack"><a class="record-cell" href="research.html#pub-2020-correlates-of-the-number-shot-and-killed-in-acti" data-topic="active-shooter" data-title="Correlates of the number shot and killed in active shooter events" data-meta="Homicide Studies, 2020" aria-label="Correlates of the number shot and killed in active shooter events. Active Shooter Events, 2020"></a><a class="record-cell" href="research.html#pub-2020-active-shooter-training-drill-increases-blood-an" data-topic="policing-stress" data-title="Active shooter training drill increases blood and salivary markers of stress" data-meta="International Journal of Environmental Research and Public Health, 2020" aria-label="Active shooter training drill increases blood and salivary markers of stress. Officer Stress &amp; Performance, 2020"></a></div><div class="record-n" aria-hidden="true">2</div><div class="record-year">2020</div></div><div class="record-col" role="listitem" aria-label="2021: 4 articles"><div class="record-stack"><a class="record-cell" href="research.html#pub-2021-women-demonstrate-lower-markers-of-stress-and-ox" data-topic="policing-stress" data-title="Women demonstrate lower markers of stress and oxidative stress during active shooter training drill" data-meta="Comprehensive Psychoneuroendocrinology, 2021" aria-label="Women demonstrate lower markers of stress and oxidative stress during active shooter training drill. Officer Stress &amp; Performance, 2021"></a><a class="record-cell" href="research.html#pub-2021-an-evaluation-of-light-positioning-on-suspect-ac" data-topic="policing-decisions" data-title="An evaluation of light positioning on suspect accuracy in low light environments" data-meta="Justice Evaluation Journal, 2021" aria-label="An evaluation of light positioning on suspect accuracy in low light environments. Decision Making &amp; Use of Force, 2021"></a><a class="record-cell" href="research.html#pub-2021-improving-the-accuracy-of-firearm-identification" data-topic="policing-decisions" data-title="Improving the accuracy of firearm identification in a dynamic use of force scenario" data-meta="Police Quarterly, 2021" aria-label="Improving the accuracy of firearm identification in a dynamic use of force scenario. Decision Making &amp; Use of Force, 2021"></a><a class="record-cell" href="research.html#pub-2021-a-scientific-examination-of-the-21-foot-rule" data-topic="policing-decisions" data-title="A scientific examination of the 21-foot rule" data-meta="Police Practice &amp; Research, 2021" aria-label="A scientific examination of the 21-foot rule. Decision Making &amp; Use of Force, 2021"></a></div><div class="record-n" aria-hidden="true">4</div><div class="record-year">2021</div></div><div class="record-col" role="listitem" aria-label="2022: 6 articles"><div class="record-stack"><a class="record-cell" href="research.html#pub-2022-what-are-we-talking-about-definitional-confusion" data-topic="active-shooter" data-title="What are we talking about? Definitional confusion within mass and active shooting research" data-meta="Journal of Mass Violence Research, 2022" aria-label="What are we talking about? Definitional confusion within mass and active shooting research. Active Shooter Events, 2022"></a><a class="record-cell" href="research.html#pub-2022-should-firearms-be-allowed-in-k-12-public-school" data-topic="active-shooter" data-title="Should firearms be allowed in K-12 public schools? An analysis of law enforcement's perceptions of armed teacher policies" data-meta="Security Journal, 2022" aria-label="Should firearms be allowed in K-12 public schools? An analysis of law enforcement's perceptions of armed teacher policies. Active Shooter Events, 2022"></a><a class="record-cell" href="research.html#pub-2022-firefighters-with-higher-cardiorespiratory-fitne" data-topic="policing-stress" data-title="Firefighters with higher cardiorespiratory fitness demonstrate lower markers of cardiovascular disease risk" data-meta="Journal of Occupational and Environmental Medicine, 2022" aria-label="Firefighters with higher cardiorespiratory fitness demonstrate lower markers of cardiovascular disease risk. Officer Stress &amp; Performance, 2022"></a><a class="record-cell" href="research.html#pub-2022-virtual-reality-based-active-shooter-training-dr" data-topic="policing-stress" data-title="Virtual reality based active shooter training drill increases salivary and subjective markers of stress" data-meta="Yale Journal of Biology and Medicine, 2022" aria-label="Virtual reality based active shooter training drill increases salivary and subjective markers of stress. Officer Stress &amp; Performance, 2022"></a><a class="record-cell" href="research.html#pub-2022-the-impact-of-swear-words-on-civilians-perceptio" data-topic="policing-public-opinion" data-title="#&amp;$@!!: The impact of swear words on civilians' perception of officer use of force" data-meta="Police Quarterly, 2022" aria-label="#&amp;$@!!: The impact of swear words on civilians' perception of officer use of force. Public Opinion &amp; Legitimacy, 2022"></a><a class="record-cell" href="research.html#pub-2022-armed-and-considered-capable-law-enforcement-off" data-topic="policing-public-opinion" data-title="Armed and considered capable? Law enforcement officers' attitudes about armed teacher policies in the United States" data-meta="Crime Prevention and Community Safety, 2022" aria-label="Armed and considered capable? Law enforcement officers' attitudes about armed teacher policies in the United States. Public Opinion &amp; Legitimacy, 2022"></a></div><div class="record-n" aria-hidden="true">6</div><div class="record-year">2022</div></div><div class="record-col" role="listitem" aria-label="2023: 4 articles"><div class="record-stack"><a class="record-cell" href="research.html#pub-2023-successfully-securing-a-classroom-door-in-an-act" data-topic="active-shooter" data-title="Successfully securing a classroom door in an active shooter event: Examining two types of door locks" data-meta="Journal of Mass Violence Research, 2023" aria-label="Successfully securing a classroom door in an active shooter event: Examining two types of door locks. Active Shooter Events, 2023"></a><a class="record-cell" href="research.html#pub-2023-slow-breathing-reduces-biomarkers-of-stress-in-r" data-topic="policing-stress" data-title="Slow breathing reduces biomarkers of stress in response to a virtual-reality active shooter training drill" data-meta="Healthcare, 2023" aria-label="Slow breathing reduces biomarkers of stress in response to a virtual-reality active shooter training drill. Officer Stress &amp; Performance, 2023"></a><a class="record-cell" href="research.html#pub-2023-risk-factors-for-cardiometabolic-disease-in-prof" data-topic="policing-stress" data-title="Risk factors for cardiometabolic disease in professional firefighters" data-meta="Safety and Health at Work, 2023" aria-label="Risk factors for cardiometabolic disease in professional firefighters. Officer Stress &amp; Performance, 2023"></a><a class="record-cell" href="research.html#pub-2023-wait-for-backup-or-not-how-police-officers-view" data-topic="policing-public-opinion" data-title="Wait for backup or not? How police officers view their role when responding to an active shooter event" data-meta="Journal of Experimental Criminology, 2023" aria-label="Wait for backup or not? How police officers view their role when responding to an active shooter event. Public Opinion &amp; Legitimacy, 2023"></a></div><div class="record-n" aria-hidden="true">4</div><div class="record-year">2023</div></div><div class="record-col" role="listitem" aria-label="2024: 8 articles"><div class="record-stack"><a class="record-cell" href="research.html#pub-2024-falseflag-exploring-themes-in-conspiracy-theory" data-topic="active-shooter" data-title="#FalseFlag: Exploring themes in conspiracy theory tweets regarding the Robb Elementary School active shooter event" data-meta="Journal of Qualitative Criminology, 2024" aria-label="#FalseFlag: Exploring themes in conspiracy theory tweets regarding the Robb Elementary School active shooter event. Active Shooter Events, 2024"></a><a class="record-cell" href="research.html#pub-2024-arm-the-educators-but-not-without-conditions-a-q" data-topic="active-shooter" data-title="Arm the educators - but not without conditions: A qualitative assessment of law enforcement officers' support for armed teacher policies" data-meta="Police Practice and Research, 2024" aria-label="Arm the educators - but not without conditions: A qualitative assessment of law enforcement officers' support for armed teacher policies. Active Shooter Events, 2024"></a><a class="record-cell" href="research.html#pub-2024-impact-of-l-theanine-and-l-tyrosine-on-markers-o" data-topic="policing-stress" data-title="Impact of L-theanine and L-tyrosine on markers of stress and cognitive performance in response to a virtual reality based active shooter training drill" data-meta="Stress, 2024" aria-label="Impact of L-theanine and L-tyrosine on markers of stress and cognitive performance in response to a virtual reality based active shooter training drill. Officer Stress &amp; Performance, 2024"></a><a class="record-cell" href="research.html#pub-2024-stress-response-to-virtual-reality-based-active" data-topic="policing-stress" data-title="Stress response to virtual reality based active shooter training: Impact of caffeine consumption" data-meta="Psychoneuroendocrinology, 2024" aria-label="Stress response to virtual reality based active shooter training: Impact of caffeine consumption. Officer Stress &amp; Performance, 2024"></a><a class="record-cell" href="research.html#pub-2024-can-a-virtual-reality-training-scenario-elicit-s" data-topic="policing-stress" data-title="Can a virtual reality training scenario elicit similar stress response as a realistic scenario-based training scenario?" data-meta="Police Quarterly, 2024" aria-label="Can a virtual reality training scenario elicit similar stress response as a realistic scenario-based training scenario?. Officer Stress &amp; Performance, 2024"></a><a class="record-cell" href="research.html#pub-2024-interviewing-and-interrogation-practices-and-bel" data-topic="policing-decisions" data-title="Interviewing and interrogation practices and beliefs, twenty years later: A national self-report survey of American police" data-meta="Law and Human Behavior, 2024" aria-label="Interviewing and interrogation practices and beliefs, twenty years later: A national self-report survey of American police. Decision Making &amp; Use of Force, 2024"></a><a class="record-cell" href="research.html#pub-2024-a-scientific-examination-of-the-21-foot-rule" data-topic="policing-decisions" data-title="A scientific examination of the 21-foot rule" data-meta="Applied Police Briefings, 2024" aria-label="A scientific examination of the 21-foot rule. Decision Making &amp; Use of Force, 2024"></a><a class="record-cell" href="research.html#pub-2024-oh-a-replication-and-expansion-of-martaindale-et" data-topic="policing-public-opinion" data-title="Oh, @#%$!: A replication and expansion of Martaindale et al. (2024)" data-meta="Policing: An International Journal, 2024" aria-label="Oh, @#%$!: A replication and expansion of Martaindale et al. (2024). Public Opinion &amp; Legitimacy, 2024"></a></div><div class="record-n" aria-hidden="true">8</div><div class="record-year">2024</div></div><div class="record-col" role="listitem" aria-label="2025: 8 articles"><div class="record-stack"><a class="record-cell" href="research.html#pub-2025-active-attacks-with-motor-vehicles-a-short-repor" data-topic="active-shooter" data-title="Active attacks with motor vehicles: A short report and case study of the 2025 New Year's Day attack in New Orleans, LA" data-meta="American Journal of Criminal Justice, 2025" aria-label="Active attacks with motor vehicles: A short report and case study of the 2025 New Year's Day attack in New Orleans, LA. Active Shooter Events, 2025"></a><a class="record-cell" href="research.html#pub-2025-mortality-among-law-enforcement-officers-in-the" data-topic="policing-stress" data-title="Mortality among law enforcement officers in the United States: A population-wide analysis of the National Occupational Mortality Surveillance data, 2020-2023" data-meta="The Lancet Regional Health - Americas, 2025" aria-label="Mortality among law enforcement officers in the United States: A population-wide analysis of the National Occupational Mortality Surveillance data, 2020-2023. Officer Stress &amp; Performance, 2025"></a><a class="record-cell" href="research.html#pub-2025-shift-schedule-change-from-24-48-to-1-3-2-3-impr" data-topic="policing-stress" data-title="Shift schedule change from 24/48 to 1/3/2/3 improves markers of stress and quality of life in career firefighters" data-meta="Journal of Occupational and Environmental Medicine, 2025" aria-label="Shift schedule change from 24/48 to 1/3/2/3 improves markers of stress and quality of life in career firefighters. Officer Stress &amp; Performance, 2025"></a><a class="record-cell" href="research.html#pub-2025-virtual-reality-based-active-shooter-training-ad" data-topic="policing-stress" data-title="Virtual reality based active shooter training: Added physical stress increases anxiety but not stress biomarkers" data-meta="Psychoneuroendocrinology, 2025" aria-label="Virtual reality based active shooter training: Added physical stress increases anxiety but not stress biomarkers. Officer Stress &amp; Performance, 2025"></a><a class="record-cell" href="research.html#pub-2025-relationships-between-physiological-stress-bioma" data-topic="policing-stress" data-title="Relationships between physiological stress biomarkers and cardiovascular disease risk factors among career firefighters" data-meta="Journal of Occupational and Environmental Medicine, 2025" aria-label="Relationships between physiological stress biomarkers and cardiovascular disease risk factors among career firefighters. Officer Stress &amp; Performance, 2025"></a><a class="record-cell" href="research.html#pub-2025-markers-of-fitness-stress-and-cardiometabolic-di" data-topic="policing-stress" data-title="Markers of fitness, stress, and cardiometabolic disease risk among law enforcement officers" data-meta="Journal of Occupational and Environmental Medicine, 2025" aria-label="Markers of fitness, stress, and cardiometabolic disease risk among law enforcement officers. Officer Stress &amp; Performance, 2025"></a><a class="record-cell" href="research.html#pub-2025-can-a-virtual-reality-training-scenario-elicit-a" data-topic="policing-stress" data-title="Can a Virtual Reality Training Scenario Elicit a Stress Response Similar to a Realistic Scenario Based Training Scenario?" data-meta="Applied Police Briefings, 2025" aria-label="Can a Virtual Reality Training Scenario Elicit a Stress Response Similar to a Realistic Scenario Based Training Scenario?. Officer Stress &amp; Performance, 2025"></a><a class="record-cell" href="research.html#pub-2025-to-what-are-we-inferring-the-widespread-misuse-o" data-topic="other" data-title="To what are we inferring? The widespread misuse of inferential testing in the most cited criminology and criminal justice journals" data-meta="American Journal of Criminal Justice, 2025" aria-label="To what are we inferring? The widespread misuse of inferential testing in the most cited criminology and criminal justice journals. Other, 2025"></a></div><div class="record-n" aria-hidden="true">8</div><div class="record-year">2025</div></div><div class="record-col" role="listitem" aria-label="2026: 9 articles"><div class="record-stack"><a class="record-cell" href="research.html#pub-2026-cumulative-and-co-occurring-strains-among-mass-p" data-topic="active-shooter" data-title="Cumulative and co-occurring strains among mass public shooting perpetrators: implications for violence prevention" data-meta="Injury Epidemiology, 2026" aria-label="Cumulative and co-occurring strains among mass public shooting perpetrators: implications for violence prevention. Active Shooter Events, 2026"></a><a class="record-cell" href="research.html#pub-2026-introducing-sharing-information-to-stop-mass-sho" data-topic="active-shooter" data-title="Introducing Sharing Information to Stop Mass Shootings (SISMS): A short report on a behavioral and event-level dataset for the study of mass public shootings" data-meta="American Journal of Criminal Justice, 2026" aria-label="Introducing Sharing Information to Stop Mass Shootings (SISMS): A short report on a behavioral and event-level dataset for the study of mass public shootings. Active Shooter Events, 2026"></a><a class="record-cell" href="research.html#pub-2026-known-to-the-system-criminal-history-pre-attack" data-topic="active-shooter" data-title="Known to the system? Criminal history, pre-attack behaviors, and firearms acquisition among mass public shooters with documented warning behaviors" data-meta="Journal of Criminal Justice, 2026" aria-label="Known to the system? Criminal history, pre-attack behaviors, and firearms acquisition among mass public shooters with documented warning behaviors. Active Shooter Events, 2026"></a><a class="record-cell" href="research.html#pub-2026-box-breathing-and-prolonged-exhalation-reduces-m" data-topic="policing-stress" data-title="Box breathing and prolonged exhalation reduces markers of physiological stress reactivity in response to a virtual Trier Social Stress Test" data-meta="Comprehensive Psychoneuroendocrinology, 2026" aria-label="Box breathing and prolonged exhalation reduces markers of physiological stress reactivity in response to a virtual Trier Social Stress Test. Officer Stress &amp; Performance, 2026"></a><a class="record-cell" href="research.html#pub-2026-clarifying-methods-and-interpretations-in-law-en" data-topic="policing-stress" data-title="Clarifying methods and interpretations in law enforcement mortality surveillance: Response to Kamal" data-meta="The Lancet Regional Health - Americas, 2026" aria-label="Clarifying methods and interpretations in law enforcement mortality surveillance: Response to Kamal. Officer Stress &amp; Performance, 2026"></a><a class="record-cell" href="research.html#pub-2026-inflammation-on-the-frontlines-linking-salivary" data-topic="policing-stress" data-title="Inflammation on the frontlines: Linking salivary and blood biomarkers to cardiometabolic health and physical performance parameters in firefighters" data-meta="Journal of Occupational and Environmental Medicine, 2026" aria-label="Inflammation on the frontlines: Linking salivary and blood biomarkers to cardiometabolic health and physical performance parameters in firefighters. Officer Stress &amp; Performance, 2026"></a><a class="record-cell" href="research.html#pub-2026-striking-or-grappling-comparing-public-and-offic" data-topic="policing-public-opinion" data-title="Striking or grappling? Comparing public and officers' perceptions of police use of force" data-meta="Journal of Criminal Justice, 2026" aria-label="Striking or grappling? Comparing public and officers' perceptions of police use of force. Public Opinion &amp; Legitimacy, 2026"></a><a class="record-cell" href="research.html#pub-2026-public-opinion-and-the-immediate-entry-dilemma-a" data-topic="policing-public-opinion" data-title="Public opinion and the immediate entry dilemma: A factorial survey experiment on active shooter response" data-meta="Journal of Criminal Justice, 2026" aria-label="Public opinion and the immediate entry dilemma: A factorial survey experiment on active shooter response. Public Opinion &amp; Legitimacy, 2026"></a><a class="record-cell" href="research.html#pub-2026-the-threat-of-drones-and-police-preparedness-a-m" data-topic="drones" data-title="The threat of drones and police preparedness: A mixed-methods study" data-meta="Crime &amp; Delinquency, 2026" aria-label="The threat of drones and police preparedness: A mixed-methods study. Drones, 2026"></a></div><div class="record-n" aria-hidden="true">9</div><div class="record-year">2026</div></div></div>
+    <ul class="record-legend" aria-label="Research topics"><li><a href="research.html#topic=active-shooter" data-topic="active-shooter"><i aria-hidden="true"></i><span class="legend-label">Active Shooter Events</span><span class="legend-n">13</span></a></li><li><a href="research.html#topic=policing-stress" data-topic="policing-stress"><i aria-hidden="true"></i><span class="legend-label">Officer Stress &amp; Performance</span><span class="legend-n">18</span></a></li><li><a href="research.html#topic=policing-decisions" data-topic="policing-decisions"><i aria-hidden="true"></i><span class="legend-label">Decision Making &amp; Use of Force</span><span class="legend-n">6</span></a></li><li><a href="research.html#topic=policing-public-opinion" data-topic="policing-public-opinion"><i aria-hidden="true"></i><span class="legend-label">Public Opinion &amp; Legitimacy</span><span class="legend-n">6</span></a></li><li><a href="research.html#topic=drones" data-topic="drones"><i aria-hidden="true"></i><span class="legend-label">Drones</span><span class="legend-n">1</span></a></li><li><a href="research.html#topic=other" data-topic="other"><i aria-hidden="true"></i><span class="legend-label">Other</span><span class="legend-n">1</span></a></li></ul>
+  </div>
+  <div class="record-tip" aria-hidden="true"></div>
+</section>
 </div>
 </div>
-<p><a href="./research.html" class="btn btn-outline-primary" style="margin-top: 0.75rem;">See all publications →</a></p>
+<div class="section-head section-head-row">
+  <div>
+    <p class="eyebrow">Latest work</p>
+    <h2 id="recent-publications" class="anchored">Recent Publications</h2>
+  </div>
+  <a class="arrow-link" href="research.html">See all publications <span aria-hidden="true">→</span></a>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="pub-list">
+<article class="pub-row" data-topic="drones" data-topics="drones" data-year="2026" data-search="the threat of drones and police preparedness: a mixed-methods study corradi, a., gartner, s. s., lynn, m., martaindale, m. h., &amp; somers, l. j. crime &amp; delinquency 2026">
+  <div class="pub-year" aria-hidden="true">2026</div>
+  <div class="pub-body">
+    <h3 class="pub-title anchored"><a href="research.html#pub-2026-the-threat-of-drones-and-police-preparedness-a-m">The threat of drones and police preparedness: A mixed-methods study</a></h3>
+    <p class="pub-meta"><span class="pub-authors">Corradi, A., Gartner, S. S., Lynn, M., <strong>Martaindale, M. H.</strong>, &amp; Somers, L. J.</span> <span class="pub-journal"><em>Crime &amp; Delinquency</em> (2026)</span></p>
+    <div class="pub-summary"><p>This mixed-methods study surveyed 293 law enforcement officers nationwide to understand how police perceive and prepare for the threat posed by drones, or unmanned aerial systems. In open-ended responses, roughly two-thirds of officers described the drone threat to their own jurisdiction as moderate or high, citing contraband drops at correctional facilities, surveillance of police operations, and, at the most serious end, the potential for terrorism, attacks on critical infrastructure, and mass-casualty events at soft targets like concerts and sporting venues.</p></div>
+  </div>
+  <div class="pub-side">
+    <div class="pub-topics"><span class="topic-tag" data-topic="drones"><i aria-hidden="true"></i>Drones</span></div>
+    <div class="pub-links"><a href="https://doi.org/10.1177/00111287261474835">DOI</a><a href="pubs/2026_corradi_the-threat-of-drones-and-police-preparedness-a-mix.pdf">PDF</a></div>
+    
+  </div>
+</article>
+<article class="pub-row" data-topic="active-shooter" data-topics="active-shooter" data-year="2026" data-search="cumulative and co-occurring strains among mass public shooting perpetrators: implications for violence prevention schildkraut, j., greene-colozzi, e. a., &amp; martaindale, m. h. injury epidemiology, 13, 52 2026">
+  <div class="pub-year" aria-hidden="true">2026</div>
+  <div class="pub-body">
+    <h3 class="pub-title anchored"><a href="research.html#pub-2026-cumulative-and-co-occurring-strains-among-mass-p">Cumulative and co-occurring strains among mass public shooting perpetrators: implications for violence prevention</a></h3>
+    <p class="pub-meta"><span class="pub-authors">Schildkraut, J., Greene-Colozzi, E. A., &amp; <strong>Martaindale, M. H.</strong></span> <span class="pub-journal"><em>Injury Epidemiology, 13, 52</em> (2026)</span></p>
+    <div class="pub-summary"><p>This study examined the life stressors, or strains, that build up in the lives of mass public shooters, drawing on a database of 171 mass public shooting incidents and 175 perpetrators in the United States between 1999 and 2024. Rather than looking for a single triggering grievance, the researchers coded eighteen different types of strain, such as psychiatric concerns, job-related difficulties, and interpersonal conflict, and measured how often they occurred together.</p></div>
+  </div>
+  <div class="pub-side">
+    <div class="pub-topics"><span class="topic-tag" data-topic="active-shooter"><i aria-hidden="true"></i>Active Shooter Events</span></div>
+    <div class="pub-links"><a href="https://doi.org/10.1186/s40621-026-00690-5">DOI</a><a href="pubs/2026_schildkraut_cumulative-and-co-occurring-strains-among-mass-pub.pdf">PDF</a></div>
+    
+  </div>
+</article>
+<article class="pub-row" data-topic="active-shooter" data-topics="active-shooter" data-year="2026" data-search="introducing sharing information to stop mass shootings (sisms): a short report on a behavioral and event-level dataset for the study of mass public shootings schildkraut, j., greene-colozzi, e. a., &amp; martaindale, m. h. american journal of criminal justice 2026">
+  <div class="pub-year" aria-hidden="true">2026</div>
+  <div class="pub-body">
+    <h3 class="pub-title anchored"><a href="research.html#pub-2026-introducing-sharing-information-to-stop-mass-sho">Introducing Sharing Information to Stop Mass Shootings (SISMS): A short report on a behavioral and event-level dataset for the study of mass public shootings</a></h3>
+    <p class="pub-meta"><span class="pub-authors">Schildkraut, J., Greene-Colozzi, E. A., &amp; <strong>Martaindale, M. H.</strong></span> <span class="pub-journal"><em>American Journal of Criminal Justice</em> (2026)</span></p>
+    <div class="pub-summary"><p>This short report introduces Sharing Information to Stop Mass Shootings (SISMS), a new behavioral and event-level dataset built to support research on mass public shootings in the United States. The dataset currently documents 171 incidents and 175 perpetrators occurring between 1999 and 2024 for which pre-attack warning behaviors or leakage could be confirmed, drawing on public records, official documents, and triangulated open-source reporting.</p></div>
+  </div>
+  <div class="pub-side">
+    <div class="pub-topics"><span class="topic-tag" data-topic="active-shooter"><i aria-hidden="true"></i>Active Shooter Events</span></div>
+    <div class="pub-links"><a href="https://doi.org/10.1007/s12103-026-09921-3">DOI</a><a href="pubs/2026_schildkraut_introducing-sharing-information-to-stop-mass-shoot.pdf">PDF</a></div>
+    
+  </div>
+</article>
+<article class="pub-row" data-topic="policing-stress" data-topics="policing-stress" data-year="2026" data-search="box breathing and prolonged exhalation reduces markers of physiological stress reactivity in response to a virtual trier social stress test mcallister, m. j., martaindale, m. h., sutton, n., &amp; andersen, j. p. comprehensive psychoneuroendocrinology, 27, 100360 2026">
+  <div class="pub-year" aria-hidden="true">2026</div>
+  <div class="pub-body">
+    <h3 class="pub-title anchored"><a href="research.html#pub-2026-box-breathing-and-prolonged-exhalation-reduces-m">Box breathing and prolonged exhalation reduces markers of physiological stress reactivity in response to a virtual Trier Social Stress Test</a></h3>
+    <p class="pub-meta"><span class="pub-authors">McAllister, M. J., <strong>Martaindale, M. H.</strong>, Sutton, N., &amp; Andersen, J. P.</span> <span class="pub-journal"><em>Comprehensive Psychoneuroendocrinology, 27, 100360</em> (2026)</span></p>
+    <div class="pub-summary"><p>This randomized controlled trial tested whether simple breathing techniques can blunt the body's stress response during an acutely stressful task. Sixty-six participants were assigned to normal breathing, prolonged exhalation, or box breathing before completing a virtual version of the Trier Social Stress Test, a standardized laboratory stress challenge.</p></div>
+  </div>
+  <div class="pub-side">
+    <div class="pub-topics"><span class="topic-tag" data-topic="policing-stress"><i aria-hidden="true"></i>Officer Stress &amp; Performance</span></div>
+    <div class="pub-links"><a href="https://doi.org/10.1016/j.cpnec.2026.100360">DOI</a><a href="pubs/2026_mcallister_box-breathing-and-prolonged-exhalation-reduces-mar.pdf">PDF</a></div>
+    
+  </div>
+</article>
+<article class="pub-row" data-topic="active-shooter" data-topics="active-shooter" data-year="2026" data-search="known to the system? criminal history, pre-attack behaviors, and firearms acquisition among mass public shooters with documented warning behaviors martaindale, m. h., greene-colozzi, e. a., &amp; schildkraut, j. journal of criminal justice, 105, 102700 2026">
+  <div class="pub-year" aria-hidden="true">2026</div>
+  <div class="pub-body">
+    <h3 class="pub-title anchored"><a href="research.html#pub-2026-known-to-the-system-criminal-history-pre-attack">Known to the system? Criminal history, pre-attack behaviors, and firearms acquisition among mass public shooters with documented warning behaviors</a></h3>
+    <p class="pub-meta"><span class="pub-authors"><strong>Martaindale, M. H.</strong>, Greene-Colozzi, E. A., &amp; Schildkraut, J.</span> <span class="pub-journal"><em>Journal of Criminal Justice, 105, 102700</em> (2026)</span></p>
+    <div class="pub-summary"><p>This study examined 175 perpetrators across 171 mass public shooting incidents in the United States between 1999 and 2024, all of whom had displayed documented pre-attack warning behaviors such as leaking their intent to others. The goal was to determine whether shooters with a prior criminal record differed from those without one in their demographics, warning signs, and how they obtained their firearms.</p></div>
+  </div>
+  <div class="pub-side">
+    <div class="pub-topics"><span class="topic-tag" data-topic="active-shooter"><i aria-hidden="true"></i>Active Shooter Events</span></div>
+    <div class="pub-links"><a href="https://doi.org/10.1016/j.jcrimjus.2026.102700">DOI</a><a href="pubs/2026_martaindale_known-to-the-system-criminal-history-pre-attack-be.pdf">PDF</a></div>
+    
+  </div>
+</article>
+</div>
+</div>
+</div>
+<section class="cta bleed">
+  <div class="wrap cta-grid">
+    <div>
+      <p class="eyebrow">Work with me</p>
+      <h2 class="anchored">Consulting, expert witness work, speaking, and media</h2>
+      <p>I am available for research consulting; expert witness declaration, deposition, or testimony; training consultation; speaking engagements; and media commentary.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-primary" href="contact.html">Get in touch</a>
+      <a class="btn btn-outline-primary" href="grants.html#grant-consulting">Grant consulting</a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var record = document.querySelector('.record');
+  var tip = document.querySelector('.record-tip');
+  if (!record || !tip) return;
+  var cells = record.querySelectorAll('.record-cell');
+
+  function show(cell) {
+    tip.textContent = '';
+    var t = document.createElement('strong'); t.textContent = cell.dataset.title;
+    var m = document.createElement('span');   m.textContent = cell.dataset.meta;
+    tip.appendChild(t); tip.appendChild(m);
+    tip.dataset.topic = cell.dataset.topic;
+    tip.classList.add('is-on');
+    var r = cell.getBoundingClientRect();
+    var w = tip.offsetWidth, pad = 12;
+    var x = Math.min(Math.max(r.left + r.width / 2 - w / 2, pad), window.innerWidth - w - pad);
+    var y = r.top - tip.offsetHeight - 10;
+    if (y < 70) y = r.bottom + 10;
+    tip.style.left = x + 'px';
+    tip.style.top = y + 'px';
+  }
+  function hide() { tip.classList.remove('is-on'); }
+
+  cells.forEach(function (c) {
+    c.addEventListener('mouseenter', function () { show(c); });
+    c.addEventListener('focus', function () { show(c); });
+    c.addEventListener('mouseleave', hide);
+    c.addEventListener('blur', hide);
+  });
+  window.addEventListener('scroll', hide, { passive: true });
+
+  // Hovering a topic in the legend spotlights its blocks in the chart.
+  record.querySelectorAll('.record-legend a').forEach(function (a) {
+    function on() {
+      cells.forEach(function (c) { c.classList.toggle('is-dim', c.dataset.topic !== a.dataset.topic); });
+    }
+    function off() {
+      cells.forEach(function (c) { c.classList.remove('is-dim'); });
+    }
+    a.addEventListener('mouseenter', on); a.addEventListener('focus', on);
+    a.addEventListener('mouseleave', off); a.addEventListener('blur', off);
+  });
+})();
+</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"ScholarlyArticle","headline":"The threat of drones and police preparedness: A mixed-methods study","name":"The threat of drones and police preparedness: A mixed-methods study","datePublished":"2026","author":[{"@type":"Person","name":"A. Corradi"},{"@type":"Person","name":"S. S. Gartner"},{"@type":"Person","name":"M. Lynn"},{"@type":"Person","name":"M. Hunter Martaindale","url":"https://huntermartaindale.com","sameAs":"https://orcid.org/0000-0002-8100-7698"},{"@type":"Person","name":"L. J. Somers"}],"isPartOf":{"@type":"Periodical","name":"Crime & Delinquency"},"identifier":{"@type":"PropertyValue","propertyID":"doi","value":"10.1177/00111287261474835"},"url":"https://doi.org/10.1177/00111287261474835","sameAs":"https://doi.org/10.1177/00111287261474835","abstract":"This mixed-methods study surveyed 293 law enforcement officers nationwide to understand how police perceive and prepare for the threat posed by drones, or unmanned aerial systems. In open-ended responses, roughly two-thirds of officers described the drone threat to their own jurisdiction as moderate or high, citing contraband drops at correctional facilities, surveillance of police operations, and, at the most serious end, the potential for terrorism, attacks on critical infrastructure, and mass-casualty events at soft targets like concerts and sporting venues. Many officers linked these concerns to the rapid evolution of cheap, weaponized drones in the war in Ukraine, while repeatedly noting they have few practical tools to interdict a drone even when they recognize the risk. Statistical models showed that prior counter-drone training was by far the strongest predictor of officers feeling aware of the legal boundaries on response and of the issue being actively discussed within their agency, and that officers in local and county agencies felt less confident about their legal authority and responsibility than federal officers did. The findings point to training and clearer legal guidance, rather than awareness alone, as the levers most likely to improve police preparedness for drone threats.","keywords":"Drones and counter-UAS"},{"@type":"ScholarlyArticle","headline":"Cumulative and co-occurring strains among mass public shooting perpetrators: implications for violence prevention","name":"Cumulative and co-occurring strains among mass public shooting perpetrators: implications for violence prevention","datePublished":"2026","author":[{"@type":"Person","name":"J. Schildkraut"},{"@type":"Person","name":"E. A. Greene-Colozzi"},{"@type":"Person","name":"M. Hunter Martaindale","url":"https://huntermartaindale.com","sameAs":"https://orcid.org/0000-0002-8100-7698"}],"isPartOf":{"@type":"Periodical","name":"Injury Epidemiology"},"volumeNumber":"13","pagination":"52","identifier":{"@type":"PropertyValue","propertyID":"doi","value":"10.1186/s40621-026-00690-5"},"url":"https://doi.org/10.1186/s40621-026-00690-5","sameAs":"https://doi.org/10.1186/s40621-026-00690-5","abstract":"This study examined the life stressors, or strains, that build up in the lives of mass public shooters, drawing on a database of 171 mass public shooting incidents and 175 perpetrators in the United States between 1999 and 2024. Rather than looking for a single triggering grievance, the researchers coded eighteen different types of strain, such as psychiatric concerns, job-related difficulties, and interpersonal conflict, and measured how often they occurred together. Perpetrators typically experienced nearly five overlapping strains at once, with psychological and interpersonal stressors frequently clustering together and structural stressors often linked to ideological motivations. The findings suggest that mass public shootings are rarely the product of one isolated problem but instead reflect an accumulation of co-occurring stressors, pointing toward prevention efforts that focus on patterns of warning signs, early identification, and coordinated, systems-level threat assessment.","keywords":"Active shooter events"},{"@type":"ScholarlyArticle","headline":"Introducing Sharing Information to Stop Mass Shootings (SISMS): A short report on a behavioral and event-level dataset for the study of mass public shootings","name":"Introducing Sharing Information to Stop Mass Shootings (SISMS): A short report on a behavioral and event-level dataset for the study of mass public shootings","datePublished":"2026","author":[{"@type":"Person","name":"J. Schildkraut"},{"@type":"Person","name":"E. A. Greene-Colozzi"},{"@type":"Person","name":"M. Hunter Martaindale","url":"https://huntermartaindale.com","sameAs":"https://orcid.org/0000-0002-8100-7698"}],"isPartOf":{"@type":"Periodical","name":"American Journal of Criminal Justice"},"identifier":{"@type":"PropertyValue","propertyID":"doi","value":"10.1007/s12103-026-09921-3"},"url":"https://doi.org/10.1007/s12103-026-09921-3","sameAs":"https://doi.org/10.1007/s12103-026-09921-3","abstract":"This short report introduces Sharing Information to Stop Mass Shootings (SISMS), a new behavioral and event-level dataset built to support research on mass public shootings in the United States. The dataset currently documents 171 incidents and 175 perpetrators occurring between 1999 and 2024 for which pre-attack warning behaviors or leakage could be confirmed, drawing on public records, official documents, and triangulated open-source reporting. Beyond demographic and incident characteristics, SISMS captures grievances, concerning behaviors, planning and preparation, leakage, and other warning indicators along the pathway to targeted violence. By standardizing how these pre-attack behaviors are defined and coded, the dataset gives researchers and violence-prevention practitioners a more consistent foundation for studying how mass shootings develop and how they might be prevented.","keywords":"Active shooter events"},{"@type":"ScholarlyArticle","headline":"Box breathing and prolonged exhalation reduces markers of physiological stress reactivity in response to a virtual Trier Social Stress Test","name":"Box breathing and prolonged exhalation reduces markers of physiological stress reactivity in response to a virtual Trier Social Stress Test","datePublished":"2026","author":[{"@type":"Person","name":"M. J. McAllister"},{"@type":"Person","name":"M. Hunter Martaindale","url":"https://huntermartaindale.com","sameAs":"https://orcid.org/0000-0002-8100-7698"},{"@type":"Person","name":"N. Sutton"},{"@type":"Person","name":"J. P. Andersen"}],"isPartOf":{"@type":"Periodical","name":"Comprehensive Psychoneuroendocrinology"},"volumeNumber":"27","pagination":"100360","identifier":{"@type":"PropertyValue","propertyID":"doi","value":"10.1016/j.cpnec.2026.100360"},"url":"https://doi.org/10.1016/j.cpnec.2026.100360","sameAs":"https://doi.org/10.1016/j.cpnec.2026.100360","abstract":"This randomized controlled trial tested whether simple breathing techniques can blunt the body's stress response during an acutely stressful task. Sixty-six participants were assigned to normal breathing, prolonged exhalation, or box breathing before completing a virtual version of the Trier Social Stress Test, a standardized laboratory stress challenge. The test reliably raised heart rate, state anxiety, and salivary stress markers across participants. Both prolonged exhalation and box breathing reduced the post-stress rise in heart rate, anxiety, and salivary alpha-amylase compared to normal breathing, while cortisol, heart rate variability, and cognitive performance were largely unaffected. The findings suggest that brief, easily taught breathing practices can help buffer the immediate physiological and psychological toll of acute stress, with potential value for high-stress occupations such as law enforcement, firefighting, and the military.","keywords":"Officer stress and performance"},{"@type":"ScholarlyArticle","headline":"Known to the system? Criminal history, pre-attack behaviors, and firearms acquisition among mass public shooters with documented warning behaviors","name":"Known to the system? Criminal history, pre-attack behaviors, and firearms acquisition among mass public shooters with documented warning behaviors","datePublished":"2026","author":[{"@type":"Person","name":"M. Hunter Martaindale","url":"https://huntermartaindale.com","sameAs":"https://orcid.org/0000-0002-8100-7698"},{"@type":"Person","name":"E. A. Greene-Colozzi"},{"@type":"Person","name":"J. Schildkraut"}],"isPartOf":{"@type":"Periodical","name":"Journal of Criminal Justice"},"volumeNumber":"105","pagination":"102700","identifier":{"@type":"PropertyValue","propertyID":"doi","value":"10.1016/j.jcrimjus.2026.102700"},"url":"https://doi.org/10.1016/j.jcrimjus.2026.102700","sameAs":"https://doi.org/10.1016/j.jcrimjus.2026.102700","abstract":"This study examined 175 perpetrators across 171 mass public shooting incidents in the United States between 1999 and 2024, all of whom had displayed documented pre-attack warning behaviors such as leaking their intent to others. The goal was to determine whether shooters with a prior criminal record differed from those without one in their demographics, warning signs, and how they obtained their firearms. Among the perpetrators whose criminal history status was known, those with criminal records tended to be older and actually exhibited fewer observable concerning behaviors before their attacks, while those without records more often acquired their guns legally through federally licensed dealers. The findings suggest that background checks may be most applicable to individuals with disqualifying histories, whereas behavioral warning signs may be more informative for those who have never had system contact, and that neither approach alone fully addresses both pathways to prevention.","keywords":"Active shooter events"}]}
 </script>
@@ -812,16 +949,65 @@ Texas State University</p>
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-      &nbsp;
-    </div>   
+<p><strong>Hunter Martaindale, PhD</strong><br>Director of Research, ALERRT Center<br>Texas State University</p>
+</div>   
     <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="./research.html">
+<p>Research</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./grants.html">
+<p>Grants</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./cv.html">
+<p>CV</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./contact.html">
+<p>Contact</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
 <p>2026 | Hunter Martaindale</p>
 </div>
-    <div class="nav-footer-right">
-      &nbsp;
-    </div>
   </div>
 </footer>
+<script>
+  // Light / dark switch in the navbar. The choice is kept in
+  // localStorage; with storage blocked it still works for the page.
+  (function () {
+    var nav = document.querySelector('#quarto-header .navbar-container');
+    if (!nav) return;
+    var root = document.documentElement;
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'theme-toggle';
+    btn.innerHTML = '<i class="bi bi-moon-stars" aria-hidden="true"></i><i class="bi bi-sun" aria-hidden="true"></i>';
+    function sync() {
+      var dark = root.getAttribute('data-theme') === 'dark';
+      var label = dark ? 'Switch to light mode' : 'Switch to dark mode';
+      btn.setAttribute('aria-label', label);
+      btn.title = label;
+    }
+    btn.addEventListener('click', function () {
+      var dark = root.getAttribute('data-theme') !== 'dark';
+      if (dark) root.setAttribute('data-theme', 'dark');
+      else root.removeAttribute('data-theme');
+      try { localStorage.setItem('site-theme', dark ? 'dark' : 'light'); } catch (e) {}
+      sync();
+    });
+    sync();
+    nav.appendChild(btn);
+  })();
+</script>
 
 
 

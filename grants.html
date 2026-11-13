@@ -37,7 +37,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./img/favicon.ico" rel="icon">
+<link href="./img/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
@@ -45,14 +45,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-3c9e3de8f8f416c3e3ac7ff25931c884.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-16db538b2ef1017a91ef9487759d17ba.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-3c9e3de8f8f416c3e3ac7ff25931c884.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-541d71a1a6053c80aaaed9b199a11dbc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-d2448bc35c050112b30da879dfbceb69.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-541d71a1a6053c80aaaed9b199a11dbc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-73d9c4ef6dc9ce2e5aa5cd3473a2e803.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-6241dfe30076290a8d515b18b75cb67d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-73d9c4ef6dc9ce2e5aa5cd3473a2e803.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -80,9 +80,22 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+  // Apply the saved theme before first paint so the page never flashes.
+  (function () {
+    try {
+      if (localStorage.getItem('site-theme') === 'dark')
+        document.documentElement.setAttribute('data-theme', 'dark');
+    } catch (e) {}
+  })();
+</script>
+<!-- PNG fallbacks for browsers that skip the SVG favicon, plus the iPhone home screen icon -->
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&amp;display=swap">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.6/css/academicons.min.css" integrity="sha512-TNfdJEUUJmfj2DRlAKXBg7HroqoXYLon5XPEEWYa2+H/XSD2HAr0BwkRrAoNLAEz79x7XURTFRWDn9yhMNbbNQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
 <link rel="canonical" href="https://huntermartaindale.com/grants.html">
 
@@ -191,103 +204,114 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="page-lede">
 <p>This page lists my externally funded research, training, and evaluation grants. For ongoing recurring training awards (the COPS Office Preparing for Active Shooter Situations program), see <a href="./cv.html">my CV</a>. I am also available for <a href="#grant-consulting">grant consulting</a>.</p>
-<div class="scholar-stats">
-<div class="grid">
-<div class="g-col-6 stat-item">
-<div class="stat-value">
-9
 </div>
-<div class="stat-label">
-Funded Grants
-</div>
-</div>
-<div class="g-col-6 stat-item">
-<div class="stat-value">
-$1,985,780
-</div>
-<div class="stat-label">
-Total Funding
-</div>
-</div>
-</div>
-<div class="scholar-stats-caption">
-Excludes the recurring COPS Office PASS training awards (Co-PI), which total $82,408,987 across 9 awards.
+<div class="cell">
+<div class="cell-output-display">
+<div class="stat-band stat-band-3" style="--n:3"><div class="stat"><span class="stat-value">$84.4M</span><span class="stat-label">Total external funding</span><span class="stat-note">PI and Co-PI</span></div><div class="stat"><span class="stat-value">$2.0M</span><span class="stat-label">As principal investigator</span><span class="stat-note">9 grants</span></div><div class="stat"><span class="stat-value">$82.4M</span><span class="stat-label">As Co-PI</span><span class="stat-note">COPS Office PASS training, 9 awards</span></div></div><p class="stat-caption">Exact totals: $84,394,767 overall, $1,985,780 as PI, and $82,408,987 as Co-PI. The Co-PI figure is the recurring COPS Office PASS training awards, which are itemized in my CV rather than below.</p>
 </div>
 </div>
 <section id="awarded-grants" class="level2">
 <h2 class="anchored" data-anchor-id="awarded-grants">Awarded Grants</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="pub-card-grid">
-<div class="pub-card">
-  <div class="pub-card-tag">2026</div>
-  <div class="pub-card-title">Extreme Risk Protection Orders and Firearm Suicide in New York: A Multi-State and Within-State Evaluation</div>
-  <div class="pub-card-meta">Regional Gun Violence Research Consortium · PI · $49,999</div>
-  
-  
-</div>
-<div class="pub-card">
-  <div class="pub-card-tag">2025</div>
-  <div class="pub-card-title">Assessing the effectiveness of door locks in school-based active shooter events</div>
-  <div class="pub-card-meta">Security Industry Association: School Safety Project · PI · $80,000</div>
-  
-  
-</div>
-<div class="pub-card">
-  <div class="pub-card-tag">2025</div>
-  <div class="pub-card-title">ALERRT micro-learning video creation and evaluation</div>
-  <div class="pub-card-meta">Texas State University Research Accelerator Program · PI · $101,205</div>
-  
-  
-</div>
-<div class="pub-card">
-  <div class="pub-card-tag">2025</div>
-  <div class="pub-card-title">The virtual reality consortium for training development for law enforcement</div>
-  <div class="pub-card-meta">BJA · PI · $560,675</div>
-  <div class="grant-subaward"><span class="grant-subaward-tag">Subaward</span> Prime PI: V. Buitron (Florida International University) · Prime total $3,982,693</div>
-  <div class="grant-award">Award #15PBJA-23-GK-06160-VIRT</div>
-</div>
-<div class="pub-card">
-  <div class="pub-card-tag">2024</div>
-  <div class="pub-card-title">Understanding the leakage that precedes mass public shootings and its utility for prevention efforts through public awareness</div>
-  <div class="pub-card-meta">Department of Homeland Security · PI · $89,861</div>
-  <div class="grant-subaward"><span class="grant-subaward-tag">Subaward</span> Prime PI: J. Schildkraut (Rockefeller Institute of Government) · Prime total $339,368</div>
-  <div class="grant-award">Award #DHS-24-TTP-132-00-99</div>
-</div>
-<div class="pub-card">
-  <div class="pub-card-tag">2023</div>
-  <div class="pub-card-title">Adapting Commercial VR-Based Training to Support AFSOC Mission Sustainment Team Protection &amp; Security Training Objectives</div>
-  <div class="pub-card-meta">SBIR/STTR Phase 1 · PI · $32,859</div>
-  <div class="grant-subaward"><span class="grant-subaward-tag">Subaward</span> Prime: StreetSmarts VR · Prime total $100,000</div>
-  <div class="grant-award">Award #FA864924P0116</div>
-</div>
-<div class="pub-card">
-  <div class="pub-card-tag">2023</div>
-  <div class="pub-card-title">Integrated ICS training for all first responders</div>
-  <div class="pub-card-meta">FEMA · PI · $621,971</div>
-  
-  <div class="grant-award">Award #EMW-2022-FP-00779</div>
-</div>
-<div class="pub-card">
-  <div class="pub-card-tag">2021</div>
-  <div class="pub-card-title">Fire as a Weapon (FAAW) In-Person and eLearning Training Opportunities</div>
-  <div class="pub-card-meta">FEMA · PI · $439,210</div>
-  
-  <div class="grant-award">Award #EMW-2020-FP-00930</div>
-</div>
-<div class="pub-card">
-  <div class="pub-card-tag">2020</div>
-  <div class="pub-card-title">Firearm Detection Data</div>
-  <div class="pub-card-meta">NEC Corporation · PI · $10,000</div>
-  
-  
-</div>
+<div class="grant-ledger">
+<article class="grant-row">
+  <div class="grant-year">2026</div>
+  <div class="grant-body">
+    <h3 class="grant-title anchored">Extreme Risk Protection Orders and Firearm Suicide in New York: A Multi-State and Within-State Evaluation</h3>
+    <div class="grant-meta"><span class="grant-funder">Regional Gun Violence Research Consortium</span><span class="grant-role">PI</span></div>
+    
+    
+  </div>
+  <div class="grant-amount">$49,999</div>
+</article>
+<article class="grant-row">
+  <div class="grant-year">2025</div>
+  <div class="grant-body">
+    <h3 class="grant-title anchored">Assessing the effectiveness of door locks in school-based active shooter events</h3>
+    <div class="grant-meta"><span class="grant-funder">Security Industry Association: School Safety Project</span><span class="grant-role">PI</span></div>
+    
+    
+  </div>
+  <div class="grant-amount">$80,000</div>
+</article>
+<article class="grant-row">
+  <div class="grant-year">2025</div>
+  <div class="grant-body">
+    <h3 class="grant-title anchored">ALERRT micro-learning video creation and evaluation</h3>
+    <div class="grant-meta"><span class="grant-funder">Texas State University Research Accelerator Program</span><span class="grant-role">PI</span></div>
+    
+    
+  </div>
+  <div class="grant-amount">$101,205</div>
+</article>
+<article class="grant-row">
+  <div class="grant-year">2025</div>
+  <div class="grant-body">
+    <h3 class="grant-title anchored">The virtual reality consortium for training development for law enforcement</h3>
+    <div class="grant-meta"><span class="grant-funder">BJA</span><span class="grant-role">PI</span></div>
+    <div class="grant-subaward"><span class="grant-subaward-tag">Subaward</span> Prime PI: V. Buitron (Florida International University) · Prime total $3,982,693</div>
+    <div class="grant-award">Award #15PBJA-23-GK-06160-VIRT</div>
+  </div>
+  <div class="grant-amount">$560,675</div>
+</article>
+<article class="grant-row">
+  <div class="grant-year">2024</div>
+  <div class="grant-body">
+    <h3 class="grant-title anchored">Understanding the leakage that precedes mass public shootings and its utility for prevention efforts through public awareness</h3>
+    <div class="grant-meta"><span class="grant-funder">Department of Homeland Security</span><span class="grant-role">PI</span></div>
+    <div class="grant-subaward"><span class="grant-subaward-tag">Subaward</span> Prime PI: J. Schildkraut (Rockefeller Institute of Government) · Prime total $339,368</div>
+    <div class="grant-award">Award #DHS-24-TTP-132-00-99</div>
+  </div>
+  <div class="grant-amount">$89,861</div>
+</article>
+<article class="grant-row">
+  <div class="grant-year">2023</div>
+  <div class="grant-body">
+    <h3 class="grant-title anchored">Adapting Commercial VR-Based Training to Support AFSOC Mission Sustainment Team Protection &amp; Security Training Objectives</h3>
+    <div class="grant-meta"><span class="grant-funder">SBIR/STTR Phase 1</span><span class="grant-role">PI</span></div>
+    <div class="grant-subaward"><span class="grant-subaward-tag">Subaward</span> Prime: StreetSmarts VR · Prime total $100,000</div>
+    <div class="grant-award">Award #FA864924P0116</div>
+  </div>
+  <div class="grant-amount">$32,859</div>
+</article>
+<article class="grant-row">
+  <div class="grant-year">2023</div>
+  <div class="grant-body">
+    <h3 class="grant-title anchored">Integrated ICS training for all first responders</h3>
+    <div class="grant-meta"><span class="grant-funder">FEMA</span><span class="grant-role">PI</span></div>
+    
+    <div class="grant-award">Award #EMW-2022-FP-00779</div>
+  </div>
+  <div class="grant-amount">$621,971</div>
+</article>
+<article class="grant-row">
+  <div class="grant-year">2021</div>
+  <div class="grant-body">
+    <h3 class="grant-title anchored">Fire as a Weapon (FAAW) In-Person and eLearning Training Opportunities</h3>
+    <div class="grant-meta"><span class="grant-funder">FEMA</span><span class="grant-role">PI</span></div>
+    
+    <div class="grant-award">Award #EMW-2020-FP-00930</div>
+  </div>
+  <div class="grant-amount">$439,210</div>
+</article>
+<article class="grant-row">
+  <div class="grant-year">2020</div>
+  <div class="grant-body">
+    <h3 class="grant-title anchored">Firearm Detection Data</h3>
+    <div class="grant-meta"><span class="grant-funder">NEC Corporation</span><span class="grant-role">PI</span></div>
+    
+    
+  </div>
+  <div class="grant-amount">$10,000</div>
+</article>
 </div>
 </div>
 </div>
 </section>
-<section id="grant-consulting" class="level2">
+<section id="grant-consulting" class="level2 consulting-panel">
 <h2 class="anchored" data-anchor-id="grant-consulting">Grant Consulting</h2>
 <p>I work with academic teams, practitioner agencies, and small businesses on competitive federal and foundation proposals, with particular emphasis on policing, active shooter response, and training program evaluation. Typical engagements include:</p>
 <ul>
@@ -297,9 +321,10 @@ Excludes the recurring COPS Office PASS training awards (Co-PI), which total $82
 <li><strong>Letters of support and advisory roles</strong> for university and agency partners</li>
 </ul>
 <p>To discuss a specific opportunity, use the <a href="./contact.html">contact form</a> or email directly. Please include the funding announcement, deadline, and a brief description of the project so I can quickly assess fit and availability.</p>
-
-
+<p><a href="./contact.html" class="btn btn-primary">Discuss a proposal</a></p>
 </section>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -806,16 +831,65 @@ Excludes the recurring COPS Office PASS training awards (Co-PI), which total $82
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-      &nbsp;
-    </div>   
+<p><strong>Hunter Martaindale, PhD</strong><br>Director of Research, ALERRT Center<br>Texas State University</p>
+</div>   
     <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="./research.html">
+<p>Research</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./grants.html">
+<p>Grants</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./cv.html">
+<p>CV</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./contact.html">
+<p>Contact</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
 <p>2026 | Hunter Martaindale</p>
 </div>
-    <div class="nav-footer-right">
-      &nbsp;
-    </div>
   </div>
 </footer>
+<script>
+  // Light / dark switch in the navbar. The choice is kept in
+  // localStorage; with storage blocked it still works for the page.
+  (function () {
+    var nav = document.querySelector('#quarto-header .navbar-container');
+    if (!nav) return;
+    var root = document.documentElement;
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'theme-toggle';
+    btn.innerHTML = '<i class="bi bi-moon-stars" aria-hidden="true"></i><i class="bi bi-sun" aria-hidden="true"></i>';
+    function sync() {
+      var dark = root.getAttribute('data-theme') === 'dark';
+      var label = dark ? 'Switch to light mode' : 'Switch to dark mode';
+      btn.setAttribute('aria-label', label);
+      btn.title = label;
+    }
+    btn.addEventListener('click', function () {
+      var dark = root.getAttribute('data-theme') !== 'dark';
+      if (dark) root.setAttribute('data-theme', 'dark');
+      else root.removeAttribute('data-theme');
+      try { localStorage.setItem('site-theme', dark ? 'dark' : 'light'); } catch (e) {}
+      sync();
+    });
+    sync();
+    nav.appendChild(btn);
+  })();
+</script>
 
 
 
