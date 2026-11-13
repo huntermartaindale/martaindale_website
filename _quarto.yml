@@ -12,6 +12,9 @@ project:
     - cv/
     - pubs/
     - robots.txt
+    - img/favicon-32.png
+    - img/favicon-192.png
+    - img/apple-touch-icon.png
 
 website:
   title: "Hunter Martaindale"
@@ -20,9 +23,10 @@ website:
   image: img/martaindale_headshot_2.png
   open-graph: true
   twitter-card: true
-  favicon: img/favicon.ico
+  favicon: img/favicon.svg
   navbar:
-    background: light
+    background: "#11151b"
+    foreground: "#d9d4c8"
     pinned: false
     collapse-below: lg
     left:
@@ -48,7 +52,18 @@ website:
         href: https://www.linkedin.com/in/hmartaindale/
         aria-label: LinkedIn
   page-footer:
-    center: "2026 | Hunter Martaindale"
+    left: |
+      **Hunter Martaindale, PhD**<br>Director of Research, ALERRT Center<br>Texas State University
+    center:
+      - text: "Research"
+        href: research.qmd
+      - text: "Grants"
+        href: grants.qmd
+      - text: "CV"
+        href: cv.qmd
+      - text: "Contact"
+        href: contact.qmd
+    right: "2026 | Hunter Martaindale"
 
 format:
   html:
@@ -58,10 +73,53 @@ format:
     link-external-icon: false
     include-in-header:
       text: |
+        <script>
+          // Apply the saved theme before first paint so the page never flashes.
+          (function () {
+            try {
+              if (localStorage.getItem('site-theme') === 'dark')
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } catch (e) {}
+          })();
+        </script>
+        <!-- PNG fallbacks for browsers that skip the SVG favicon, plus the iPhone home screen icon -->
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&display=swap">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.6/css/academicons.min.css" integrity="sha512-TNfdJEUUJmfj2DRlAKXBg7HroqoXYLon5XPEEWYa2+H/XSD2HAr0BwkRrAoNLAEz79x7XURTFRWDn9yhMNbbNQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    include-after-body:
+      text: |
+        <script>
+          // Light / dark switch in the navbar. The choice is kept in
+          // localStorage; with storage blocked it still works for the page.
+          (function () {
+            var nav = document.querySelector('#quarto-header .navbar-container');
+            if (!nav) return;
+            var root = document.documentElement;
+            var btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'theme-toggle';
+            btn.innerHTML = '<i class="bi bi-moon-stars" aria-hidden="true"></i><i class="bi bi-sun" aria-hidden="true"></i>';
+            function sync() {
+              var dark = root.getAttribute('data-theme') === 'dark';
+              var label = dark ? 'Switch to light mode' : 'Switch to dark mode';
+              btn.setAttribute('aria-label', label);
+              btn.title = label;
+            }
+            btn.addEventListener('click', function () {
+              var dark = root.getAttribute('data-theme') !== 'dark';
+              if (dark) root.setAttribute('data-theme', 'dark');
+              else root.removeAttribute('data-theme');
+              try { localStorage.setItem('site-theme', dark ? 'dark' : 'light'); } catch (e) {}
+              sync();
+            });
+            sync();
+            nav.appendChild(btn);
+          })();
+        </script>
 
 execute:
   freeze: auto

@@ -13,42 +13,50 @@ include-in-header:
 library(yaml)
 library(htmltools)
 
-`%||%` <- function(a, b) if (!is.null(a)) a else b
-has_val <- function(x) !is.null(x) && length(x) > 0 && !(is.atomic(x) && length(x) == 1 && is.na(x))
+source("scripts/site_helpers.R")
 
 grants <- yaml::read_yaml("data/grants.yaml")
 summary_stats <- tryCatch(
   yaml::read_yaml("data/grants_summary.yaml"),
   error = function(e) list(pass_count = 0, pass_total = 0)
 )
-total_amount <- sum(sapply(grants, function(g) as.numeric(g$amount %||% 0)))
-n_grants <- length(grants)
-
-fmt_money <- function(x) {
-  if (!has_val(x)) return("")
-  paste0("$", formatC(as.numeric(x), format = "d", big.mark = ","))
-}
+funding <- grant_funding(grants, summary_stats)
 ```
 
+::: {.page-lede}
 This page lists my externally funded research, training, and evaluation grants. For ongoing recurring training awards (the COPS Office Preparing for Active Shooter Situations program), see [my CV](cv.qmd). I am also available for [grant consulting](#grant-consulting).
+:::
 
-::: {.scholar-stats}
-::: {.grid}
-::: {.g-col-6 .stat-item}
-<div class="stat-value">`r n_grants`</div>
-<div class="stat-label">Funded Grants</div>
-:::
-::: {.g-col-6 .stat-item}
-<div class="stat-value">`r fmt_money(total_amount)`</div>
-<div class="stat-label">Total Funding</div>
-:::
-:::
-<div class="scholar-stats-caption">Excludes the recurring COPS Office PASS training awards (Co-PI), which total `r fmt_money(summary_stats$pass_total)` across `r summary_stats$pass_count` awards.</div>
-:::
+```{r stat-band}
+plural <- function(n, word) sprintf("%d %s%s", n, word, if (n == 1) "" else "s")
+
+# The Co-PI figure is the COPS Office PASS awards. If the CV ever gains a
+# Co-PI grant outside PASS, the label widens on its own.
+copi_note <- if (funding$other_copi == 0) {
+  sprintf("COPS Office PASS training, %s", plural(funding$copi_count, "award"))
+} else {
+  plural(funding$copi_count, "award")
+}
+
+render_stat_band(
+  list(
+    list(value = fmt_money_short(funding$total), label = "Total external funding",
+         note = "PI and Co-PI"),
+    list(value = fmt_money_short(funding$pi_total), label = "As principal investigator",
+         note = plural(funding$pi_count, "grant")),
+    list(value = fmt_money_short(funding$copi_total), label = "As Co-PI",
+         note = copi_note)
+  ),
+  caption = sprintf(
+    "Exact totals: %s overall, %s as PI, and %s as Co-PI. The Co-PI figure is the recurring COPS Office PASS training awards, which are itemized in my CV rather than below.",
+    fmt_money(funding$total), fmt_money(funding$pi_total), fmt_money(funding$copi_total)
+  )
+)
+```
 
 ## Awarded Grants
 
-```{r grant-cards}
+```{r grant-ledger}
 render_grant <- function(g) {
   role_str <- g$role %||% ""
   if (identical(role_str, "Co-PI") && has_val(g$pi)) {
@@ -56,11 +64,10 @@ render_grant <- function(g) {
   }
 
   meta_parts <- c(
-    if (has_val(g$funder)) g$funder else NULL,
-    if (nzchar(role_str)) role_str else NULL,
-    if (has_val(g$amount)) fmt_money(g$amount) else NULL
+    if (has_val(g$funder)) sprintf('<span class="grant-funder">%s</span>', g$funder) else NULL,
+    if (nzchar(role_str)) sprintf('<span class="grant-role">%s</span>', role_str) else NULL
   )
-  meta_html <- paste(meta_parts, collapse = " &middot; ")
+  meta_html <- paste(meta_parts, collapse = "")
 
   subaward_html <- ""
   if (has_val(g$prime_institution)) {
@@ -86,23 +93,29 @@ render_grant <- function(g) {
     award_html <- sprintf('<div class="grant-award">Award #%s</div>', g$award_number)
 
   HTML(sprintf(
-    '<div class="pub-card">
-  <div class="pub-card-tag">%s</div>
-  <div class="pub-card-title">%s</div>
-  <div class="pub-card-meta">%s</div>
-  %s
-  %s
-</div>',
+    '<article class="grant-row">
+  <div class="grant-year">%s</div>
+  <div class="grant-body">
+    <h3 class="grant-title">%s</h3>
+    <div class="grant-meta">%s</div>
+    %s
+    %s
+  </div>
+  <div class="grant-amount">%s</div>
+</article>',
     g$year,
     g$title,
     meta_html,
     subaward_html,
-    award_html
+    award_html,
+    if (has_val(g$amount)) fmt_money(g$amount) else ""
   ))
 }
 
-div(class = "pub-card-grid", tagList(lapply(grants, render_grant)))
+div(class = "grant-ledger", tagList(lapply(grants, render_grant)))
 ```
+
+::: {.consulting-panel}
 
 ## Grant Consulting
 
@@ -114,3 +127,7 @@ I work with academic teams, practitioner agencies, and small businesses on compe
 - **Letters of support and advisory roles** for university and agency partners
 
 To discuss a specific opportunity, use the [contact form](contact.qmd) or email directly. Please include the funding announcement, deadline, and a brief description of the project so I can quickly assess fit and availability.
+
+[Discuss a proposal](contact.qmd){.btn .btn-primary}
+
+:::

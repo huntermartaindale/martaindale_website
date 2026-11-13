@@ -8,8 +8,10 @@ include-in-header:
       <link rel="canonical" href="https://huntermartaindale.com/cv.html">
 ---
 
-[Download PDF](cv/martaindale_cv.pdf){.btn .btn-primary target="_blank" style="margin-bottom: 1rem;"}
-[Open Full Page](cv/index.html){.btn .btn-outline-primary target="_blank" style="margin-bottom: 1rem;"}
+::: {.cv-actions}
+[Download PDF](cv/martaindale_cv.pdf){.btn .btn-primary target="_blank"}
+[Open Full Page](cv/index.html){.btn .btn-outline-primary target="_blank"}
+:::
 
 ```{=html}
 <div class="cv-embed">

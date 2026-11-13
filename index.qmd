@@ -3,125 +3,214 @@ title: ""
 pagetitle: "Director of Research, ALERRT Center, Texas State University"
 description: "Hunter Martaindale, PhD — Director of Research at the ALERRT Center, Texas State University. Research on active shooter response and policing."
 page-layout: full
+body-classes: home
 include-in-header:
   - text: |
       <link rel="canonical" href="https://huntermartaindale.com/">
 ---
 
-::: {.grid style="align-items: center;"}
-
-::: {.g-col-12 .g-col-md-3 .home-headshot style="text-align: center;"}
-![](img/martaindale_headshot_2.png){.img-fluid .rounded .home-headshot style="max-width: 240px;" alt="Hunter Martaindale headshot"}
-
 ```{=html}
-<div class="home-social-icons">
-  <a href="https://scholar.google.com/citations?user=_7PlqKYAAAAJ" aria-label="Google Scholar" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i></a>
-  <a href="https://orcid.org/0000-0002-8100-7698" aria-label="ORCID" target="_blank" rel="noopener"><i class="ai ai-orcid"></i></a>
-  <a href="https://github.com/huntermartaindale" aria-label="GitHub" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
-  <a href="https://www.linkedin.com/in/hmartaindale/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
-</div>
+<section class="hero bleed">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <!-- A div with a heading role, not an h1: Quarto moves a leading h1 into its own title block, which is hidden on this page. -->
+      <div class="hero-name" role="heading" aria-level="1">Hunter Martaindale</div>
+      <p class="hero-role">
+        <strong>Director of Research, ALERRT Center</strong><br>
+        <strong>Associate Research Professor, School of Criminal Justice and Criminology</strong><br>
+        Texas State University
+      </p>
+      <p class="hero-bio">My research focuses on policing and public safety, with particular emphasis on active shooter preparedness and response, officer stress and performance under pressure, use of force decision making, and public opinion of police. As Director of Research at the <a href="https://alerrt.org">ALERRT Center</a>, I work to translate research findings into practical guidance for law enforcement training and policy.</p>
+      <p class="hero-bio hero-bio-secondary">To follow my research lab's ongoing work, visit the <a href="https://alerrtresearch.org">ALERRT Research website</a>.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="research.html">Research</a>
+        <a class="btn btn-outline-primary" href="cv.html">CV</a>
+        <a class="btn btn-outline-primary" href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="hero-portrait">
+      <div class="portrait-frame">
+        <img src="img/martaindale_headshot_800.jpg" alt="Hunter Martaindale headshot" width="800" height="1125" fetchpriority="high">
+      </div>
+      <div class="portrait-caption">
+        <div class="home-social-icons">
+          <a href="https://scholar.google.com/citations?user=_7PlqKYAAAAJ" aria-label="Google Scholar" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i></a>
+          <a href="https://orcid.org/0000-0002-8100-7698" aria-label="ORCID" target="_blank" rel="noopener"><i class="ai ai-orcid"></i></a>
+          <a href="https://github.com/huntermartaindale" aria-label="GitHub" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/hmartaindale/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 ```
-:::
 
-::: {.g-col-12 .g-col-md-9 .home-intro style="padding-left: 1.75rem;"}
-
-# Hunter Martaindale, PhD
-
-::: {.home-role}
-**Director of Research, ALERRT Center**\
-**Associate Research Professor, School of Criminal Justice and Criminology**\
-Texas State University
-:::
-
-My research focuses on policing and public safety, with particular emphasis on active shooter preparedness and response, officer stress and performance under pressure, use of force decision making, and public opinion of police. As Director of Research at the [ALERRT Center](https://alerrt.org), I work to translate research findings into practical guidance for law enforcement training and policy.
-
-To follow my research lab's ongoing work, visit the [ALERRT Research website](https://alerrtresearch.org).
-
-[Research](research.qmd){.btn .btn-primary style="margin-right: 0.5rem; margin-bottom: 0.5rem;"}
-[CV](cv.qmd){.btn .btn-outline-primary style="margin-right: 0.5rem; margin-bottom: 0.5rem;"}
-[Contact](contact.qmd){.btn .btn-outline-primary style="margin-bottom: 0.5rem;"}
-
-:::
-
-:::
-
-::: {.section-rule}
-## Recent Publications
-:::
-
-```{r recent-pubs}
+```{r setup}
 library(yaml)
 library(htmltools)
 
-`%||%` <- function(a, b) if (!is.null(a)) a else b
-
-has_val <- function(x) !is.null(x) && length(x) > 0 && !(is.atomic(x) && length(x) == 1 && is.na(x))
-
-first_sentences <- function(text, n = 2) {
-  if (!has_val(text)) return("")
-  text <- gsub("\\s+", " ", trimws(text))
-  matches <- regmatches(text, gregexpr("[^.!?]*[.!?]", text))[[1]]
-  if (length(matches) == 0) return(text)
-  paste(trimws(matches[seq_len(min(n, length(matches)))]), collapse = " ")
-}
-
 source("scripts/topic_labels.R")
+source("scripts/site_helpers.R")
 
-topic_label <- function(slug) {
-  label <- topic_label_for(slug)
-  if (is.na(label)) "Research" else label
-}
+pubs  <- yaml::read_yaml("data/publications.yaml")
+ids   <- pub_ids(pubs)
+years <- vapply(pubs, function(p) as.integer(p$year), integer(1))
 
-pubs <- yaml::read_yaml("data/publications.yaml")
-years <- sapply(pubs, function(p) as.integer(p$year))
-recent <- pubs[order(years, decreasing = TRUE)][1:min(5, length(pubs))]
+stats <- tryCatch(
+  yaml::read_yaml("data/scholar_stats.yaml"),
+  error = function(e) list(total_citations = "--", h_index = "--", i10_index = "--")
+)
+grants <- tryCatch(yaml::read_yaml("data/grants.yaml"), error = function(e) list())
+grant_summary <- tryCatch(
+  yaml::read_yaml("data/grants_summary.yaml"),
+  error = function(e) list(pass_count = 0, pass_total = 0)
+)
+funding <- grant_funding(grants, grant_summary)
 
-render_recent <- function(pub) {
-  authors_str <- paste(unlist(pub$authors), collapse = ", ")
-  journal_str <- pub$journal %||% ""
-  if (has_val(pub$volume))
-    journal_str <- paste0(journal_str, ", ", pub$volume)
-  if (has_val(pub$issue))
-    journal_str <- paste0(journal_str, "(", pub$issue, ")")
-
-  tag <- topic_label(if (has_val(pub$topics)) unlist(pub$topics)[1] else NULL)
-
-  links <- character(0)
-  if (has_val(pub$doi))
-    links <- c(links, sprintf('<a href="https://doi.org/%s">DOI</a>', pub$doi))
-  if (has_val(pub$pdf))
-    links <- c(links, sprintf('<a href="%s">PDF</a>', pub$pdf))
-
-  links_html <- ""
-  if (length(links) > 0)
-    links_html <- sprintf('<div class="pub-links">%s</div>', paste(links, collapse = ""))
-
-  summary_html <- ""
-  if (has_val(pub$plain_summary))
-    summary_html <- sprintf('<div class="pub-card-summary">%s</div>', first_sentences(pub$plain_summary, 2))
-
-  HTML(sprintf(
-    '<div class="pub-card">
-  <div class="pub-card-tag">%s</div>
-  <h3 class="pub-card-title">%s</h3>
-  <div class="pub-card-meta">%s &middot; <em>%s</em> (%s)</div>
-  %s
-  %s
-</div>',
-    tag,
-    pub$title,
-    authors_str,
-    journal_str,
-    pub$year,
-    summary_html,
-    links_html
-  ))
-}
-
-div(class = "pub-card-grid", tagList(lapply(recent, render_recent)))
+ord        <- order(years, decreasing = TRUE)
+n_recent   <- min(5, length(pubs))
+recent     <- pubs[ord][seq_len(n_recent)]
+recent_ids <- ids[ord][seq_len(n_recent)]
 ```
 
-[See all publications &rarr;](research.qmd){.btn .btn-outline-primary style="margin-top: 0.75rem;"}
+```{r stat-band}
+render_stat_band(list(
+  list(value = length(pubs), label = "Journal articles", href = "research.html"),
+  list(value = format(stats$total_citations, big.mark = ","), label = "Citations", href = "research.html"),
+  list(value = stats$h_index, label = "h-index", href = "research.html"),
+  list(value = fmt_money_short(funding$total), label = "Grant funding", href = "grants.html",
+       note = sprintf("%s as PI", fmt_money_short(funding$pi_total)))
+))
+```
+
+```{r record}
+# The research record: one block per paper, stacked by year, colored by
+# primary topic. Built straight from publications.yaml, so it grows on its
+# own every time the CV sync adds a paper.
+topic_order <- topics_in_use(pubs)
+primary     <- vapply(pubs, pub_primary_topic, character(1))
+year_range  <- seq(min(years), max(years))
+
+cols <- vapply(year_range, function(y) {
+  idx <- which(years == y)
+  idx <- idx[order(match(primary[idx], topic_order))]
+  cells <- vapply(idx, function(i) {
+    p <- pubs[[i]]
+    label <- topic_label_for(primary[i])
+    sprintf('<a class="record-cell" href="research.html#%s" data-topic="%s" data-title="%s" data-meta="%s" aria-label="%s"></a>',
+            esc(ids[i]), esc(primary[i]), esc(p$title),
+            esc(paste0(p$journal %||% "", ", ", p$year)),
+            esc(paste0(p$title, ". ", label, ", ", p$year)))
+  }, character(1))
+  sprintf('<div class="record-col" role="listitem" aria-label="%d: %d %s"><div class="record-stack">%s</div><div class="record-n" aria-hidden="true">%s</div><div class="record-year">%d</div></div>',
+          y, length(idx), if (length(idx) == 1) "article" else "articles",
+          paste(cells, collapse = ""),
+          if (length(idx) > 0) as.character(length(idx)) else "&nbsp;", y)
+}, character(1))
+
+legend <- vapply(topic_order, function(slug) {
+  n <- sum(vapply(pubs, function(p) slug %in% pub_topics(p), logical(1)))
+  sprintf('<li><a href="research.html#topic=%s" data-topic="%s"><i aria-hidden="true"></i><span class="legend-label">%s</span><span class="legend-n">%d</span></a></li>',
+          esc(slug), esc(slug), esc(topic_label_for(slug)), n)
+}, character(1))
+
+HTML(sprintf(
+'<section class="record-section" aria-labelledby="record-heading">
+  <div class="section-head">
+    <p class="eyebrow">The record</p>
+    <h2 id="record-heading">%d articles, %d to %d</h2>
+    <p class="section-lede">Each block is one peer-reviewed article, stacked by year and colored by topic. Select a block to read its plain-language summary, or a topic to see everything in that area.</p>
+  </div>
+  <div class="record">
+    <div class="record-chart" role="list">%s</div>
+    <ul class="record-legend" aria-label="Research topics">%s</ul>
+  </div>
+  <div class="record-tip" aria-hidden="true"></div>
+</section>',
+  length(pubs), min(years), max(years),
+  paste(cols, collapse = ""),
+  paste(legend, collapse = "")
+))
+```
+
+```{=html}
+<div class="section-head section-head-row">
+  <div>
+    <p class="eyebrow">Latest work</p>
+    <h2 id="recent-publications">Recent Publications</h2>
+  </div>
+  <a class="arrow-link" href="research.html">See all publications <span aria-hidden="true">&rarr;</span></a>
+</div>
+```
+
+```{r recent-pubs}
+div(class = "pub-list", tagList(lapply(seq_along(recent), function(i) {
+  render_pub_row(recent[[i]], href = paste0("research.html#", recent_ids[i]),
+                 sentences = 2, citations = FALSE)
+})))
+```
+
+```{=html}
+<section class="cta bleed">
+  <div class="wrap cta-grid">
+    <div>
+      <p class="eyebrow">Work with me</p>
+      <h2>Consulting, expert witness work, speaking, and media</h2>
+      <p>I am available for research consulting; expert witness declaration, deposition, or testimony; training consultation; speaking engagements; and media commentary.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-primary" href="contact.html">Get in touch</a>
+      <a class="btn btn-outline-primary" href="grants.html#grant-consulting">Grant consulting</a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var record = document.querySelector('.record');
+  var tip = document.querySelector('.record-tip');
+  if (!record || !tip) return;
+  var cells = record.querySelectorAll('.record-cell');
+
+  function show(cell) {
+    tip.textContent = '';
+    var t = document.createElement('strong'); t.textContent = cell.dataset.title;
+    var m = document.createElement('span');   m.textContent = cell.dataset.meta;
+    tip.appendChild(t); tip.appendChild(m);
+    tip.dataset.topic = cell.dataset.topic;
+    tip.classList.add('is-on');
+    var r = cell.getBoundingClientRect();
+    var w = tip.offsetWidth, pad = 12;
+    var x = Math.min(Math.max(r.left + r.width / 2 - w / 2, pad), window.innerWidth - w - pad);
+    var y = r.top - tip.offsetHeight - 10;
+    if (y < 70) y = r.bottom + 10;
+    tip.style.left = x + 'px';
+    tip.style.top = y + 'px';
+  }
+  function hide() { tip.classList.remove('is-on'); }
+
+  cells.forEach(function (c) {
+    c.addEventListener('mouseenter', function () { show(c); });
+    c.addEventListener('focus', function () { show(c); });
+    c.addEventListener('mouseleave', hide);
+    c.addEventListener('blur', hide);
+  });
+  window.addEventListener('scroll', hide, { passive: true });
+
+  // Hovering a topic in the legend spotlights its blocks in the chart.
+  record.querySelectorAll('.record-legend a').forEach(function (a) {
+    function on() {
+      cells.forEach(function (c) { c.classList.toggle('is-dim', c.dataset.topic !== a.dataset.topic); });
+    }
+    function off() {
+      cells.forEach(function (c) { c.classList.remove('is-dim'); });
+    }
+    a.addEventListener('mouseenter', on); a.addEventListener('focus', on);
+    a.addEventListener('mouseleave', off); a.addEventListener('blur', off);
+  });
+})();
+</script>
+```
 
 ```{r jsonld-pubs, results="asis"}
 source("scripts/jsonld_helpers.R")
